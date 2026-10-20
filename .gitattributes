@@ -258,3 +258,8 @@ Assets/**/*.worldmesh !filter !diff !merge text eol=lf linguist-language=yaml me
 Packages/**/*.worldmesh !filter !diff !merge text eol=lf linguist-language=yaml merge=lens-studio-yaml-merge
 
 # Shipped by Lens Studio
+
+# Original ShadeShift development tools remain reviewable text.
+Assets/**/*.mjs !filter !diff !merge text eol=lf
+Assets/**/*.py !filter !diff !merge text eol=lf
+Assets/**/*.swift !filter !diff !merge text eol=lf

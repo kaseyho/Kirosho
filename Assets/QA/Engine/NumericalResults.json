@@ -1,0 +1,250 @@
+{
+  "schema": "shadeshift-numerical-report-v1",
+  "modelVersion": "shade-rect-1.0.0",
+  "solarSha256": "66b249d8d122f56667d38c4af44e65bf022745b4361a6dbda719854d0fe3a1ee",
+  "units": {
+    "positions": "meters east/north from southwest site corner",
+    "time": "minutes since SGT midnight",
+    "scores": "modeled shaded person-minutes",
+    "changes": "percentage points"
+  },
+  "assumptions": "Fictional site and occupancy; uniformly distributed people; clear-sky direct sun geometry; flat identical rectangular roofs; no thermal, weather, energy or carbon model.",
+  "profiles": [
+    {
+      "profile": "school-day",
+      "scenarioFingerprint": "fnv1a32:2b11c69e",
+      "baseline": {
+        "revision": 0,
+        "minute": 900,
+        "inputHash": "fnv1a32:4dd12419",
+        "layoutHash": "fnv1a32:1f70eb40",
+        "zones": [
+          {
+            "id": "lunch",
+            "label": "Lunch queue",
+            "activityHeight": 1.6,
+            "currentPeople": 0,
+            "currentAreaPercent": 52.02276734996351,
+            "currentCoveragePercent": null,
+            "scheduledPersonMinutes": 1200,
+            "shadedPersonMinutes": 913.6973486018452,
+            "coveragePercent": 76.14144571682043
+          },
+          {
+            "id": "seating",
+            "label": "Outdoor seating",
+            "activityHeight": 1.2,
+            "currentPeople": 6,
+            "currentAreaPercent": 0,
+            "currentCoveragePercent": 0,
+            "scheduledPersonMinutes": 1680,
+            "shadedPersonMinutes": 0,
+            "coveragePercent": 0
+          },
+          {
+            "id": "pickup",
+            "label": "Pickup queue",
+            "activityHeight": 1.6,
+            "currentPeople": 18,
+            "currentAreaPercent": 52.02276734996347,
+            "currentCoveragePercent": 52.02276734996347,
+            "scheduledPersonMinutes": 2160,
+            "shadedPersonMinutes": 702.6443153860038,
+            "coveragePercent": 32.52982941601869
+          }
+        ],
+        "scheduledPersonMinutes": 5040,
+        "shadedPersonMinutes": 1616.341663987849,
+        "coveragePercent": 32.07027111087002,
+        "stepMinutes": 5
+      },
+      "suggestedLayout": {
+        "shelters": [
+          {
+            "id": "A",
+            "e": 2,
+            "n": 1.5
+          },
+          {
+            "id": "B",
+            "e": 8,
+            "n": 5.5
+          }
+        ]
+      },
+      "suggested": {
+        "revision": 0,
+        "minute": 900,
+        "inputHash": "fnv1a32:4dd12419",
+        "layoutHash": "fnv1a32:6ac548da",
+        "zones": [
+          {
+            "id": "lunch",
+            "label": "Lunch queue",
+            "activityHeight": 1.6,
+            "currentPeople": 0,
+            "currentAreaPercent": 0,
+            "currentCoveragePercent": null,
+            "scheduledPersonMinutes": 1200,
+            "shadedPersonMinutes": 0,
+            "coveragePercent": 0
+          },
+          {
+            "id": "seating",
+            "label": "Outdoor seating",
+            "activityHeight": 1.2,
+            "currentPeople": 6,
+            "currentAreaPercent": 79.26478031882343,
+            "currentCoveragePercent": 79.26478031882343,
+            "scheduledPersonMinutes": 1680,
+            "shadedPersonMinutes": 1341.7750395144656,
+            "coveragePercent": 79.86756187586104
+          },
+          {
+            "id": "pickup",
+            "label": "Pickup queue",
+            "activityHeight": 1.6,
+            "currentPeople": 18,
+            "currentAreaPercent": 70.44438186608615,
+            "currentCoveragePercent": 70.44438186608615,
+            "scheduledPersonMinutes": 2160,
+            "shadedPersonMinutes": 1797.8853424449453,
+            "coveragePercent": 83.23543252059933
+          }
+        ],
+        "scheduledPersonMinutes": 5040,
+        "shadedPersonMinutes": 3139.660381959411,
+        "coveragePercent": 62.29484884840102,
+        "stepMinutes": 5
+      },
+      "gainPercentagePoints": 30.224577737531,
+      "movementMeters": 6.671325041455274,
+      "candidateCenters": 132,
+      "validGridLayouts": 5436,
+      "convergence": {
+        "baselineOneMinutePercent": 32.06857765627441,
+        "suggestedOneMinutePercent": 62.29090131268056,
+        "baselineDifferencePercentagePoints": 0.001693454595610433,
+        "suggestedDifferencePercentagePoints": 0.003947535720456585
+      }
+    },
+    {
+      "profile": "lunch-event",
+      "scenarioFingerprint": "fnv1a32:7160d80e",
+      "baseline": {
+        "revision": 0,
+        "minute": 900,
+        "inputHash": "fnv1a32:94479c91",
+        "layoutHash": "fnv1a32:1f70eb40",
+        "zones": [
+          {
+            "id": "lunch",
+            "label": "Lunch queue",
+            "activityHeight": 1.6,
+            "currentPeople": 0,
+            "currentAreaPercent": 52.02276734996351,
+            "currentCoveragePercent": null,
+            "scheduledPersonMinutes": 2880,
+            "shadedPersonMinutes": 2149.737121877898,
+            "coveragePercent": 74.6436500652048
+          },
+          {
+            "id": "seating",
+            "label": "Outdoor seating",
+            "activityHeight": 1.2,
+            "currentPeople": 0,
+            "currentAreaPercent": 0,
+            "currentCoveragePercent": null,
+            "scheduledPersonMinutes": 1920,
+            "shadedPersonMinutes": 0,
+            "coveragePercent": 0
+          },
+          {
+            "id": "pickup",
+            "label": "Pickup queue",
+            "activityHeight": 1.6,
+            "currentPeople": 0,
+            "currentAreaPercent": 52.02276734996347,
+            "currentCoveragePercent": null,
+            "scheduledPersonMinutes": 0,
+            "shadedPersonMinutes": 0,
+            "coveragePercent": null
+          }
+        ],
+        "scheduledPersonMinutes": 4800,
+        "shadedPersonMinutes": 2149.737121877898,
+        "coveragePercent": 44.78619003912288,
+        "stepMinutes": 5
+      },
+      "suggestedLayout": {
+        "shelters": [
+          {
+            "id": "A",
+            "e": 2.5,
+            "n": 5.5
+          },
+          {
+            "id": "B",
+            "e": 2.5,
+            "n": 1.5
+          }
+        ]
+      },
+      "suggested": {
+        "revision": 0,
+        "minute": 900,
+        "inputHash": "fnv1a32:94479c91",
+        "layoutHash": "fnv1a32:6559bb0e",
+        "zones": [
+          {
+            "id": "lunch",
+            "label": "Lunch queue",
+            "activityHeight": 1.6,
+            "currentPeople": 0,
+            "currentAreaPercent": 69.08187937776064,
+            "currentCoveragePercent": null,
+            "scheduledPersonMinutes": 2880,
+            "shadedPersonMinutes": 2495.9606174436044,
+            "coveragePercent": 86.66529921679181
+          },
+          {
+            "id": "seating",
+            "label": "Outdoor seating",
+            "activityHeight": 1.2,
+            "currentPeople": 0,
+            "currentAreaPercent": 63.223852727142415,
+            "currentCoveragePercent": null,
+            "scheduledPersonMinutes": 1920,
+            "shadedPersonMinutes": 1681.3474819869102,
+            "coveragePercent": 87.57018135348491
+          },
+          {
+            "id": "pickup",
+            "label": "Pickup queue",
+            "activityHeight": 1.6,
+            "currentPeople": 0,
+            "currentAreaPercent": 0,
+            "currentCoveragePercent": null,
+            "scheduledPersonMinutes": 0,
+            "shadedPersonMinutes": 0,
+            "coveragePercent": null
+          }
+        ],
+        "scheduledPersonMinutes": 4800,
+        "shadedPersonMinutes": 4177.308099430515,
+        "coveragePercent": 87.02725207146906,
+        "stepMinutes": 5
+      },
+      "gainPercentagePoints": 42.241062032346186,
+      "movementMeters": 9.453534623454498,
+      "candidateCenters": 132,
+      "validGridLayouts": 5436,
+      "convergence": {
+        "baselineOneMinutePercent": 44.78607868964292,
+        "suggestedOneMinutePercent": 87.02715747354455,
+        "baselineDifferencePercentagePoints": 0.00011134947995827815,
+        "suggestedDifferencePercentagePoints": 0.00009459792451593785
+      }
+    }
+  ]
+}

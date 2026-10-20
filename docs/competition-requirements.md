@@ -13,6 +13,14 @@ generated `devpost/` documents: the overview requests them even though the rules
 describe their inclusion as optional. Disclose incorporated pre-existing work
 and comply with third-party licenses.
 
+Lens publication and Lens Studio account sign-in are not listed as submission
+requirements. The supported local build, package installation, actual
+interaction tests and native Preview recording have succeeded while signed out.
+The entry still needs a real working Lens project; a video by itself is
+insufficient. Devpost registration and YouTube upload require their respective
+accounts. [Rules, section 4](https://learn-specs.devpost.com/rules) and the
+[Preview-only FAQ](https://learn-specs.devpost.com/resources) support this route.
+
 Deadline: **9 November 2026, 5:00 pm EST**, which is **10 November, 6:00 am SGT**.
 Our internal readiness target remains 9 November, 6:00 pm SGT.
 

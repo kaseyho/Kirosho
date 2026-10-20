@@ -11,8 +11,11 @@ This is a working inventory. Update it as assets and dependencies are added.
 | Interaction package | Snap Spectacles Interaction Kit 2.0.0 | Installed native package; preserve original package and notices |
 | UI package | Snap Spectacles UI Kit 2.0.0 | Installed native package; preserve original package and notices |
 | Preview environment | Sunlit Room bundled with Lens Studio | Simulated editor environment, not an authored site or footage through glasses |
-| Courtyard and occupancy data | Illustrative scenario to be authored for this project | No field survey or stakeholder study claimed |
-| Solar fixtures | Planned pvlib/NREL SPA calculation | Generator, dependency license, reference cases, and hashes pending implementation |
+| Courtyard and occupancy data | Original illustrative scenario in `Assets/Data/CourtyardScenario.ts` | Fictional Singapore courtyard; no field survey or stakeholder study claimed |
+| Calculation and state code | Original ShadeShift TypeScript in `Assets/Scripts/Engine/ShadeEngine.ts` | Exact same source runs in Node numerical tests and the Lens; no third-party runtime library |
+| Solar fixtures | [pvlib 0.16.1](https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.solarposition.spa_python.html), NREL SPA | Offline generator, pinned development dependencies, reference case, explicit timezone, and SHA-256 retained in `Assets/Data/`; pvlib is BSD-3-Clause |
+| Numerical reference | [Official pvlib reference fixture](https://github.com/pvlib/pvlib-python/blob/main/tests/conftest.py) and [solar-position tests](https://github.com/pvlib/pvlib-python/blob/main/tests/test_solarposition.py) | SPA expected apparent zenith 50.111622° and azimuth 194.340241° verified within 0.000005° |
+| Native recording utility | Original ScreenCaptureKit Swift helper, built with Apple's supplied SDK | Genuine Lens window recording; no synthetic replacement of product pixels |
 
 The Snap template, packages, and bundled assets retain their original terms.
 Any project license must distinguish original ShadeShift code from third-party
