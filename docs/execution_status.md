@@ -7,7 +7,7 @@ The original user-supplied `implememtation_plan.md` is preserved at the reposito
 
 ## Current milestone
 
-**Milestone 0: prove the Lens Studio automation chain. In progress.**
+**Milestone 0: prove the Lens Studio automation chain. Blocked on SPECS sign-in.**
 
 Completed:
 
@@ -83,11 +83,34 @@ SPECS DevPortal uses the SPECS account for this project target. No account data,
 OAuth parameters, verification codes, or credentials are included in this report.
 The account-holder still owns sign-in and any account terms acceptance.
 
+### Blocked audit and resumption
+
+The sign-in condition persisted across three consecutive goal turns. On the last
+check, Safari still showed the error and its Network panel contained no new
+email-code request since the panel opened. `ListAllPanels` succeeded again, so
+the MCP connection remains available. No additional authorization query was
+polled without confirmation of a completed sign-in.
+
+The browser sign-in link expired at 16:22:30 UTC on 20 October (00:22:30 SGT on
+21 October). It must be renewed from **Login** in Lens Studio before another
+sign-in attempt. The 403 was observed while the original link was still valid;
+expiry does not establish the cause of that earlier rejection.
+
+The goal is blocked pending the account-holder's fresh sign-in attempt or a
+change in the account service. To resume, start Login in Lens Studio and complete
+the SPECS account flow. If it fails again, keep the error page and Safari's
+Network panel open so Codex can inspect the failed response. Do not share
+verification codes or credentials in the project documentation.
+
+Project and planning checkpoint: `7ced0fc` on `codex/shadeshift`. The checkpoint
+contains the starter Lens and planning documents, not an implemented ShadeShift
+runtime. Git LFS integrity verification passed; no remote publication occurred.
+
 ## Completion gates
 
 | Milestone | Status | Required evidence |
 |---|---|---|
-| 0: automated workflow | In progress | Running smoke Lens, passing interaction assertions, verified captured clip |
+| 0: automated workflow | Blocked | SPECS sign-in must complete before the running smoke Lens, interaction assertions, and captured clip |
 | 1: planning artifacts | Complete | `devpost/design-brief.md`, acceptance criteria, assumptions, attribution, and source-hash workflow record; template preservation check passed |
 | 2: calculation engine | Pending | Reproducible solar fixtures, numerical test results, occupancy-sensitive search |
 | 3: working Lens | Pending | Full user flow through SIK/UI Kit interactions |
