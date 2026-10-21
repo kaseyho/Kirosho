@@ -1,0 +1,54 @@
+- !<AssetImportMetadata/d8814edd-7e23-4773-b8c4-d3f9600995fa>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a307c06a-454a-4072-bf63-3e09b60e8b3b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a307c06a-454a-4072-bf63-3e09b60e8b3b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c27e60b4-e0d4-45e4-be1d-4c78440a1bb5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c27e60b4-e0d4-45e4-be1d-4c78440a1bb5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 6d580752-92c4-4255-a171-942cfbec3257
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    panelWidthCm: false
+    typeScale: false
+    warning: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelWidthCm: !<float> 26.000000
+      typeScale: !<float> 2.000000
+      warning: !<Vec4> {x: 1.000000, y: 0.680000, z: 0.300000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"ShadeShift • zones and tradeoffs"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input float panelWidthCm = 26 {"hint":"Detail panel width in centimetres", "widget":"slider", "min":22, "max":34, "step":1}'
+    - '// @input float typeScale = 2 {"hint":"Typography multiplier", "widget":"slider", "min":1.5, "max":2.5, "step":0.1}'
+    - '// @input vec4 warning = {1,0.68,0.3,1} {"hint":"Warning colour for a zone losing shade", "widget":"color"}'

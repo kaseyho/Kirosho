@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/5d736a55-f67f-4e92-b210-1b139ddba72e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d9989f97-63be-488b-a641-efcb3eaaaec7
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d9989f97-63be-488b-a641-efcb3eaaaec7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4924d92f-e53b-45a6-b2f2-01f3e557504f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4924d92f-e53b-45a6-b2f2-01f3e557504f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 517d9228-fb09-4f11-b83f-2714794053e9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    labels: false
+    material: false
+    overviewCmPerMeter: false
+    overviewTilt: false
+    shelterA: false
+    shelterB: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      shelterA: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      shelterB: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      labels: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      overviewCmPerMeter: !<float> 5.000000
+      overviewTilt: !<float> 50.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"ShadeShift • ENU scene adapter"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input Asset.Material material {"hint":"Official bundled vertex-colour material"}'
+    - '// @input AssignableType_1 shelterA {"hint":"Authored unit-scale shelter A handle"}'
+    - '// @input AssignableType_2 shelterB {"hint":"Authored unit-scale shelter B handle"}'
+    - '// @input AssignableType_3 labels {"hint":"Authored spatial annotation UI"}'
+    - '// @input float overviewCmPerMeter = 5 {"hint":"Overview centimetres representing one metre", "widget":"slider", "min":4, "max":6, "step":0.25}'
+    - '// @input float overviewTilt = 50 {"hint":"Overview drafting-table tilt in degrees", "widget":"slider", "min":35, "max":60, "step":1}'

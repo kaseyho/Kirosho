@@ -1,0 +1,72 @@
+- !<AssetImportMetadata/bcce06e7-1caf-46e0-a5b2-8f1a2a9369bc>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 113de242-2019-494e-8042-538123e9d0dc
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 113de242-2019-494e-8042-538123e9d0dc
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f65671dd-75b9-4e32-86a4-f280175aa48d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f65671dd-75b9-4e32-86a4-f280175aa48d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 274e7ca1-606b-4035-8b08-87eee8ae796d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    debugColliders: false
+    details: false
+    modelDistanceCm: false
+    panelDistanceCm: false
+    panelInsetCm: false
+    planner: false
+    searchWorkPerFrame: false
+    timeline: false
+    view: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - view: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      planner: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      details: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      timeline: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      searchWorkPerFrame: !<float> 512.000000
+      modelDistanceCm: !<float> 195.000000
+      panelDistanceCm: !<float> 200.000000
+      panelInsetCm: !<float> 44.000000
+      debugColliders: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"ShadeShift • session owner"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType_1 view {"hint":"Authored courtyard renderer and coordinate adapter"}'
+    - '// @input AssignableType_2 planner {"hint":"Authored planner UI"}'
+    - '// @input AssignableType_3 details {"hint":"Authored zone and comparison UI"}'
+    - '// @input AssignableType_4 timeline {"hint":"Authored timeline UI"}'
+    - '// @input float searchWorkPerFrame = 512 {"hint":"Search work units evaluated per rendered frame", "widget":"slider", "min":128, "max":512, "step":32}'
+    - '// @input float modelDistanceCm = 195 {"hint":"Overview model distance in centimetres", "widget":"slider", "min":140, "max":200, "step":5}'
+    - '// @input float panelDistanceCm = 200 {"hint":"Overview UI distance in centimetres; SIK indirect selection is supported", "widget":"slider", "min":150, "max":220, "step":5}'
+    - '// @input float panelInsetCm = 44 {"hint":"Horizontal offset of the side panels in centimetres", "widget":"slider", "min":38, "max":48, "step":1}'
+    - '// @input bool debugColliders {"hint":"Show physical interaction volumes for diagnostics"}'

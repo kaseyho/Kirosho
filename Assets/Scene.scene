@@ -4,6 +4,10 @@
     - !<own> 00000000-0000-0065-0000-000000000064
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> f5d74682-203a-4970-81ea-9fa7b88c96bb
+    - !<own> fbf561b9-6b69-4670-b9fc-7795da8158af
+    - !<own> 98825da7-95b9-4cbc-8fa9-75bc8cd4dc89
+    - !<own> a48f5f4b-de2e-4131-8013-b19e03c32c91
+    - !<own> 5c7cafbd-29c0-47c9-ae8b-6b2235df4248
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -236,6 +240,22 @@
     []
   Components:
     []
+- !<ScriptComponent/07229156-115f-4582-a08e-6fcdf59069b3>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftSmokeLeafIndex
+  Enabled: true
+  ScriptAsset: !<reference> d80ce75d-f967-4bde-bbba-6d730aa27aec
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/0847d2bb-a13f-4c4a-a404-169f67308f6f>
   PrefabRemaps:
     []
@@ -548,6 +568,22 @@
     []
   Components:
     - !<own> e1031f7e-3474-489f-a529-282f7192f812
+- !<ScriptComponent/21cac30d-af41-48e5-b428-eb55c5fbf20b>
+  PrefabRemaps:
+    []
+  Name: AgentInteractScript
+  Enabled: true
+  ScriptAsset: !<reference> 29091811-e792-46be-bfa4-28ddec5f11be
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/23018601-1041-4785-a20e-9ad5ab722f95>
   PrefabRemaps:
     []
@@ -745,6 +781,21 @@
     - !<own> e42bbb9f-e951-4432-be2e-3cc712b1fc33
   Components:
     []
+- !<SceneObject/353df657-ca2f-4cb5-905e-d4994c6bea81>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftCourtyard
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 8.000000, z: -195.000000}
+    Rotation: {x: 50.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 976d39d4-4903-4306-98a6-ab6865777724
 - !<RenderMeshVisual/35501b69-b651-41e6-9b64-72a252df8105>
   PrefabRemaps:
     []
@@ -765,6 +816,41 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/3551d201-7a9c-4e3a-b001-9ff45d4877ea>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftTimelineUI
+  Enabled: true
+  ScriptAsset: !<reference> 8360525b-6e43-4491-8331-0c8dfea76391
+  ScriptInputsDefault:
+    widthCm: true
+    typeScale: true
+    accent: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      widthCm: !<float> 60.000000
+      typeScale: !<float> 2.000000
+      accent: !<Vec4> {x: 1.000000, y: 0.800000, z: 0.350000, w: 1.000000}
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/3593fdbf-fc4a-449c-8a6d-6c8bd936d4a0>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftQA
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 3f03afae-7226-4db6-8044-04fe344ef2db
 - !<SceneObject/3661a02d-e367-4cf5-af47-407a191f4ce2>
   PrefabRemaps:
     []
@@ -781,6 +867,22 @@
     - !<own> cec12eef-3a06-4b4a-b0ba-3de212ca34dc
   Components:
     []
+- !<ScriptComponent/377553f9-6541-447a-b755-2942e2bd3e91>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftSmokeMain
+  Enabled: true
+  ScriptAsset: !<reference> fd68f1af-8fe5-49f2-9b67-a943c879c073
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      panel: !<MappingBased.AssignableType_1> ee40226a-c8c0-4703-bd94-c83ec9e18ed7
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/38562bff-09c5-4232-bff1-7ea62a1e7ec5>
   PrefabRemaps:
     []
@@ -826,6 +928,34 @@
     - !<own> 54130007-65c1-48d3-b9df-0866d8112e01
   Components:
     []
+- !<ScriptComponent/3b6e8e82-8b2b-4985-b4da-3327c7304cc1>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftMain
+  Enabled: true
+  ScriptAsset: !<reference> 113de242-2019-494e-8042-538123e9d0dc
+  ScriptInputsDefault:
+    searchWorkPerFrame: true
+    modelDistanceCm: true
+    panelDistanceCm: true
+    panelInsetCm: true
+    debugColliders: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      view: !<MappingBased.AssignableType_1> 976d39d4-4903-4306-98a6-ab6865777724
+      planner: !<MappingBased.AssignableType_2> 49409102-c91e-40db-a131-e61ac306279d
+      details: !<MappingBased.AssignableType_3> a614dcb7-e5ba-4cb9-a2af-ead9bda9822c
+      timeline: !<MappingBased.AssignableType_4> 3551d201-7a9c-4e3a-b001-9ff45d4877ea
+      searchWorkPerFrame: !<float> 512.000000
+      modelDistanceCm: !<float> 195.000000
+      panelDistanceCm: !<float> 200.000000
+      panelInsetCm: !<float> 44.000000
+      debugColliders: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/3de2c7ea-1525-465a-9056-68565a4014a7>
   PrefabRemaps:
     []
@@ -841,6 +971,22 @@
     - !<own> 988c408a-99dc-47e6-b7c4-efbf4bf8dc3c
   Components:
     []
+- !<ScriptComponent/3f03afae-7226-4db6-8044-04fe344ef2db>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftQAHarness
+  Enabled: true
+  ScriptAsset: !<reference> be3780b4-6083-4851-afe8-51d80465d2c6
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      main: !<MappingBased.AssignableType_1> 3b6e8e82-8b2b-4985-b4da-3327c7304cc1
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/4051028a-c608-4a97-b3d5-1a3912a7c007>
   PrefabRemaps:
     []
@@ -916,6 +1062,28 @@
     - !<own> 8fe2a532-9bf3-4cde-b598-04ce5470718d
   Components:
     []
+- !<ScriptComponent/49409102-c91e-40db-a131-e61ac306279d>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftPlannerUI
+  Enabled: true
+  ScriptAsset: !<reference> 78905d10-e505-4acf-b9cf-350ebdf0573d
+  ScriptInputsDefault:
+    panelWidthCm: true
+    typeScale: true
+    accent: true
+    heading: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      panelWidthCm: !<float> 26.000000
+      typeScale: !<float> 2.000000
+      accent: !<Vec4> {x: 0.300000, y: 0.950000, z: 1.000000, w: 1.000000}
+      heading: ShadeShift
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/4c195c04-c397-454e-bd08-3485f37d84fe>
   PrefabRemaps:
     []
@@ -946,6 +1114,21 @@
     []
   Components:
     - !<own> 5f153ad7-2baa-4fd9-a298-0dcfad86da3b
+- !<SceneObject/50324f29-a3c2-40fb-86b4-9f7075150d5c>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftTimeline
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -28.000000, z: -200.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 3551d201-7a9c-4e3a-b001-9ff45d4877ea
 - !<SceneObject/52ecefe4-5642-445a-ad16-52ce818076bc>
   PrefabRemaps:
     []
@@ -991,6 +1174,44 @@
     - !<own> bf2095b6-c6f8-48c8-b840-e0a6cec0dc99
   Components:
     []
+- !<ScriptComponent/591bdfef-08b4-4842-aeab-cb29d57563a8>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftShelterController
+  Enabled: true
+  ScriptAsset: !<reference> 40241a5e-9b08-4362-8959-b694f0c285cf
+  ScriptInputsDefault:
+    targetCm: true
+    handleCm: true
+    debugColliders: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      shelterId: B
+      material: !<reference.Material> 70d03593-c7b4-410a-ae5c-75cb82ee32dc
+      targetCm: !<float> 8.000000
+      handleCm: !<float> 4.000000
+      debugColliders: false
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/5c7cafbd-29c0-47c9-ae8b-6b2235df4248>
+  PrefabRemaps:
+    []
+  Name: AiPreviewAgent Handler
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 67428465-3955-41e5-ba78-459606c6b031
+    - !<own> 21cac30d-af41-48e5-b428-eb55c5fbf20b
 - !<ScriptComponent/5f153ad7-2baa-4fd9-a298-0dcfad86da3b>
   PrefabRemaps:
     []
@@ -1039,6 +1260,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/64b18cf2-376a-4de9-b844-4b291cf8f8df>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftShelterB
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 20.000000, y: 25.620001, z: -189.559998}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 591bdfef-08b4-4842-aeab-cb29d57563a8
 - !<ScriptComponent/64f27597-c99d-4c59-8a08-05459cc2258d>
   PrefabRemaps:
     []
@@ -1141,6 +1377,22 @@
     - !<own> 80574bd1-697b-4bb5-b9ce-13b340146d82
   Components:
     - !<own> ccf4d3bc-d3c2-4580-b9c5-62f164ef7eef
+- !<ScriptComponent/67428465-3955-41e5-ba78-459606c6b031>
+  PrefabRemaps:
+    []
+  Name: AgentInspectScript
+  Enabled: true
+  ScriptAsset: !<reference> 0b25079c-f5bf-4c6d-96c4-f43b89dfa213
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/6a7a67db-5675-49bb-8f31-ba0588e3cffc>
   PrefabRemaps:
     []
@@ -1261,6 +1513,21 @@
     - !<own> f666b5eb-6a03-4db0-9d84-5b34c6e8905a
   Components:
     []
+- !<SceneObject/756e4857-dc36-4d25-98be-46aed08757c5>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftPlanner
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -47.000000, y: 4.000000, z: -200.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 49409102-c91e-40db-a131-e61ac306279d
 - !<SceneObject/7605c62c-4c45-4fc0-b364-2d76d26f2b82>
   PrefabRemaps:
     []
@@ -1340,6 +1607,24 @@
     - !<own> 3b4f5057-b516-4d3b-9c8d-14c81af2f505
   Components:
     []
+- !<ScriptComponent/7c1e0abe-1070-4879-a318-de880a7ae826>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftLabelsUI
+  Enabled: true
+  ScriptAsset: !<reference> d36ab258-33b8-4222-b1a9-ced9f120689b
+  ScriptInputsDefault:
+    colour: true
+    labelWidthCm: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      colour: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      labelWidthCm: !<float> 21.000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/7e2075c6-0882-4275-8365-16a03da73298>
   PrefabRemaps:
     []
@@ -1430,6 +1715,27 @@
     - !<own> dcc36a33-e23d-48f3-8e96-f9c9fd3cd030
   Components:
     []
+- !<ScriptComponent/83725bde-c6b3-4662-b71b-995f05c5e06d>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftSmokeCube
+  Enabled: true
+  ScriptAsset: !<reference> 8fe73063-26f7-44da-afdf-3a00aed46132
+  ScriptInputsDefault:
+    sideCm: true
+    tint: true
+    debugColliders: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      material: !<reference.Material> 70d03593-c7b4-410a-ae5c-75cb82ee32dc
+      sideCm: !<float> 8.000000
+      tint: !<Vec4> {x: 0.200000, y: 0.900000, z: 1.000000, w: 1.000000}
+      debugColliders: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/83ef588c-5040-4344-b15f-0554c739da0b>
   PrefabRemaps:
     []
@@ -1562,6 +1868,43 @@
     - !<own> e9454e66-5d09-4a8a-bcd7-dea762326a48
   Components:
     []
+- !<ScriptComponent/976d39d4-4903-4306-98a6-ab6865777724>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftSceneView
+  Enabled: true
+  ScriptAsset: !<reference> d9989f97-63be-488b-a641-efcb3eaaaec7
+  ScriptInputsDefault:
+    overviewCmPerMeter: true
+    overviewTilt: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      material: !<reference.Material> 70d03593-c7b4-410a-ae5c-75cb82ee32dc
+      shelterA: !<MappingBased.AssignableType_1> 9ef785d0-2f5e-4ec2-887f-f6227da8a647
+      shelterB: !<MappingBased.AssignableType_2> 591bdfef-08b4-4842-aeab-cb29d57563a8
+      labels: !<MappingBased.AssignableType_3> 7c1e0abe-1070-4879-a318-de880a7ae826
+      overviewCmPerMeter: !<float> 5.000000
+      overviewTilt: !<float> 50.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/98825da7-95b9-4cbc-8fa9-75bc8cd4dc89>
+  PrefabRemaps:
+    []
+  Name: LEAF Plugin Bridge
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a18cc269-74c0-48a5-8bbb-a01f210d22b7
 - !<SceneObject/988c408a-99dc-47e6-b7c4-efbf4bf8dc3c>
   PrefabRemaps:
     []
@@ -1638,6 +1981,67 @@
     - !<own> 46ea93d6-d161-4453-9064-6ac11e1d6523
   Components:
     []
+- !<ScriptComponent/9ef785d0-2f5e-4ec2-887f-f6227da8a647>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftShelterController
+  Enabled: true
+  ScriptAsset: !<reference> 40241a5e-9b08-4362-8959-b694f0c285cf
+  ScriptInputsDefault:
+    shelterId: true
+    targetCm: true
+    handleCm: true
+    debugColliders: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      shelterId: A
+      material: !<reference.Material> 70d03593-c7b4-410a-ae5c-75cb82ee32dc
+      targetCm: !<float> 8.000000
+      handleCm: !<float> 4.000000
+      debugColliders: false
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/a18cc269-74c0-48a5-8bbb-a01f210d22b7>
+  PrefabRemaps:
+    []
+  Name: MessagingBridge
+  Enabled: true
+  ScriptAsset: !<reference> d3d549c9-eff0-4811-b96f-c251e3f7d85a
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/a48f5f4b-de2e-4131-8013-b19e03c32c91>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftApp
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 353df657-ca2f-4cb5-905e-d4994c6bea81
+    - !<own> d4b3bc76-8c38-42be-be74-4c50aa69983d
+    - !<own> 64b18cf2-376a-4de9-b844-4b291cf8f8df
+    - !<own> 756e4857-dc36-4d25-98be-46aed08757c5
+    - !<own> b14315bf-95f0-49f6-9f4f-48fa8555cbd6
+    - !<own> 50324f29-a3c2-40fb-86b4-9f7075150d5c
+    - !<own> a69cdfb8-fe98-42d0-903e-b4f1f0b6d67d
+    - !<own> 3593fdbf-fc4a-449c-8a6d-6c8bd936d4a0
+  Components:
+    - !<own> 3b6e8e82-8b2b-4985-b4da-3327c7304cc1
 - !<SceneObject/a4b1ce71-4840-4493-bc52-58f3c13933e1>
   PrefabRemaps:
     []
@@ -1672,6 +2076,26 @@
     - !<own> b93dfa60-41bd-4999-ac0f-4b2f1df2bdaf
   Components:
     []
+- !<ScriptComponent/a614dcb7-e5ba-4cb9-a2af-ead9bda9822c>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftDetailsUI
+  Enabled: true
+  ScriptAsset: !<reference> a307c06a-454a-4072-bf63-3e09b60e8b3b
+  ScriptInputsDefault:
+    panelWidthCm: true
+    typeScale: true
+    warning: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      panelWidthCm: !<float> 26.000000
+      typeScale: !<float> 2.000000
+      warning: !<Vec4> {x: 1.000000, y: 0.680000, z: 0.300000, w: 1.000000}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/a6305e2f-5379-4729-800a-d5ecae615edc>
   PrefabRemaps:
     []
@@ -1687,6 +2111,21 @@
     - !<own> 126f3577-bc27-4a20-8d6e-a511bc459c49
   Components:
     []
+- !<SceneObject/a69cdfb8-fe98-42d0-903e-b4f1f0b6d67d>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftLabels
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 7c1e0abe-1070-4879-a318-de880a7ae826
 - !<SceneObject/a6af4948-9adc-4052-ae22-db902dd2764e>
   PrefabRemaps:
     []
@@ -1777,6 +2216,36 @@
     - !<own> f6687ab7-52ac-408d-a892-8a9559125450
   Components:
     []
+- !<SceneObject/af2cb625-0a13-44be-8dc9-eabfcec95a4d>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftSmokeDraggable
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -10.000000, z: -110.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 83725bde-c6b3-4662-b71b-995f05c5e06d
+- !<SceneObject/b14315bf-95f0-49f6-9f4f-48fa8555cbd6>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftDetails
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 47.000000, y: 4.000000, z: -200.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a614dcb7-e5ba-4cb9-a2af-ead9bda9822c
 - !<SceneObject/b22d97e6-4c06-4135-af29-d26adb2b9d86>
   PrefabRemaps:
     []
@@ -1957,6 +2426,21 @@
     []
   Components:
     []
+- !<SceneObject/c4280f29-ba06-4eca-a52a-cf20155b0715>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftSmokePanel
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 15.000000, z: -110.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ee40226a-c8c0-4703-bd94-c83ec9e18ed7
 - !<ScriptComponent/c8e031d3-a8a1-468a-a419-427f8556de4c>
   PrefabRemaps:
     []
@@ -2135,6 +2619,21 @@
     - !<own> 38562bff-09c5-4232-bff1-7ea62a1e7ec5
   Components:
     []
+- !<SceneObject/d4b3bc76-8c38-42be-be74-4c50aa69983d>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftShelterA
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -15.000000, y: 25.620001, z: -189.559998}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9ef785d0-2f5e-4ec2-887f-f6227da8a647
 - !<SceneObject/d5f63266-b1ce-419f-847b-3c9f347b3ee2>
   PrefabRemaps:
     []
@@ -2315,6 +2814,21 @@
     - !<own> 0f983d21-20bc-4d89-a991-fbb95bacbd64
   Components:
     []
+- !<SceneObject/e88700e4-4bfd-4f63-9ca5-180c0306e935>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftSmokePreviewTools
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 07229156-115f-4582-a08e-6fcdf59069b3
 - !<SceneObject/e9454e66-5d09-4a8a-bcd7-dea762326a48>
   PrefabRemaps:
     []
@@ -2353,6 +2867,28 @@
     Fingers_length: 0.000000
     Thumb_inflate: 0.000000
     Thumb_length: 0.000000
+- !<ScriptComponent/ee40226a-c8c0-4703-bd94-c83ec9e18ed7>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftSmokePanelUI
+  Enabled: true
+  ScriptAsset: !<reference> 0f1737f0-d444-48cb-a6e7-58b0b7a21f63
+  ScriptInputsDefault:
+    widthCm: true
+    paddingCm: true
+    title: true
+    buttonLabel: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      widthCm: !<float> 34.000000
+      paddingCm: !<float> 2.000000
+      title: ShadeShift
+      buttonLabel: Test button
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/f0394c5d-4c44-4c65-a77c-e1c7e05ca905>
   PrefabRemaps:
     []
@@ -2575,6 +3111,23 @@
     - !<own> a7526b33-fca3-4f28-8e32-b0e9aa13c4b4
   Components:
     []
+- !<SceneObject/fbf561b9-6b69-4670-b9fc-7795da8158af>
+  PrefabRemaps:
+    []
+  Name: ShadeShiftSmoke
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c4280f29-ba06-4eca-a52a-cf20155b0715
+    - !<own> af2cb625-0a13-44be-8dc9-eabfcec95a4d
+    - !<own> e88700e4-4bfd-4f63-9ca5-180c0306e935
+  Components:
+    - !<own> 377553f9-6541-447a-b755-2942e2bd3e91
 - !<SceneObject/fcc185fc-4e88-4e9e-9c71-40bd83b1b0ed>
   PrefabRemaps:
     []

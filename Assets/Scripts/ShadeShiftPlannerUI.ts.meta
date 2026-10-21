@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/c63c5183-0c41-4bf7-970c-ff1848856d93>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 78905d10-e505-4acf-b9cf-350ebdf0573d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 78905d10-e505-4acf-b9cf-350ebdf0573d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f45feff7-fa2b-467e-8166-f99cac0056df
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f45feff7-fa2b-467e-8166-f99cac0056df>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 96f6b4df-9bef-4721-bca8-a7ff1c8e18f5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accent: false
+    heading: false
+    panelWidthCm: false
+    typeScale: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelWidthCm: !<float> 26.000000
+      typeScale: !<float> 2.000000
+      accent: !<Vec4> {x: 0.300000, y: 0.950000, z: 1.000000, w: 1.000000}
+      heading: ShadeShift
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"ShadeShift • planner controls"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input float panelWidthCm = 26 {"hint":"World-space panel width in centimetres", "widget":"slider", "min":22, "max":32, "step":1}'
+    - '// @input float typeScale = 2 {"hint":"Typography multiplier for this panel", "widget":"slider", "min":1.5, "max":2.5, "step":0.1}'
+    - '// @input vec4 accent = {0.3,0.95,1,1} {"hint":"Accent for modeled coverage values", "widget":"color"}'
+    - '// @input string heading = "ShadeShift" {"hint":"Product heading shown on the planner"}'

@@ -1,0 +1,29 @@
+{
+  "experience": "ShadeShift",
+  "tier": "mechanics-driven",
+  "meshBackend": "code-authored MeshBuilder",
+  "backendReason": "Approved plan: Build the full user sequence with procedural or locally generated assets. Exact planning dimensions must share the engine ENU coordinate model.",
+  "meshes": [
+    {"name": "ShadeGround", "source": "Assets/Scripts/ShadeShiftSceneView.ts", "role": "12 by 8 metre courtyard, 1 metre grid and blocked 1 metre access corridor"},
+    {"name": "ShadeShelterFrames", "source": "Assets/Scripts/ShadeShiftSceneView.ts", "role": "Two 3 by 3 metre north-aligned open roof frames, 2.8 metre height"},
+    {"name": "ShadeZoneFloors", "source": "Assets/Scripts/ShadeShiftSceneView.ts", "role": "Three exact scenario activity rectangles"},
+    {"name": "ShadeAnalysisPlane", "source": "Assets/Scripts/ShadeShiftSceneView.ts", "role": "Selected activity plane at 1.2 or 1.6 metre height"},
+    {"name": "ShadeCurrentShade", "source": "Assets/Scripts/ShadeShiftSceneView.ts", "role": "Exact intersection of projected roof rectangles with selected zone"},
+    {"name": "ShadeSuggestedLayout", "source": "Assets/Scripts/ShadeShiftSceneView.ts", "role": "Suggested roof footprints in violet"},
+    {"name": "ShadeSunDirection", "source": "Assets/Scripts/ShadeShiftSceneView.ts", "role": "Amber sun-direction marker from the same offline fixture"},
+    {"name": "ShadeShelterGrip", "source": "Assets/Scripts/ShadeShiftShelterController.ts", "role": "4 centimetre grip on an authored unit-scale root with an 8 centimetre collider"}
+  ],
+  "material": "Assets/SimpleVertexBaseColor.lspkg/vertexBaseColorMaterial.mat",
+  "uiModules": ["ShadeShiftLayoutUI.ts", "ShadeShiftPlannerUI.ts", "ShadeShiftDetailsUI.ts", "ShadeShiftTimelineUI.ts", "ShadeShiftLabelsUI.ts"],
+  "sfx": [],
+  "icons": [],
+  "imageAssets": [],
+  "spatialLayout": {
+    "worldAnchor": "Captured once after tracking starts; Recall explicitly repositions it.",
+    "overview": "5 cm per metre, courtyard 60 by 40 cm, drafting tilt 50 degrees. Model centre at captured camera plus (0,8,-195) cm after yaw rotation.",
+    "panels": "Planner and details at camera-yaw offsets (-44,4,-200) and (44,4,-200) cm; each 26 cm wide. Timeline at (0,-28,-200) cm, 60 cm wide. SIK indirect selection supported.",
+    "handles": "Independent authored siblings of the tilted model, unit scale, world-identity rotation; their world positions use the same ENU adapter.",
+    "fullscale": "100 cm per metre, unchanged exact geometry; fixed 1.65 metre eye-height observations at ENU (2.5,2), (2.5,-2), (9.5,2). Inspection panel at captured camera-yaw offset (-25,-2,-150) cm.",
+    "annotations": "Spatial text faces the captured yaw, including after Recall; 3x annotation size in fullscale. Controls retain centimetre dimensions."
+  }
+}

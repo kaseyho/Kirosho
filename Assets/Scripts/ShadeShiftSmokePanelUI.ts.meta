@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/907b0b45-3f3d-4161-a398-d81472eeb391>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0f1737f0-d444-48cb-a6e7-58b0b7a21f63
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0f1737f0-d444-48cb-a6e7-58b0b7a21f63
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a873a437-03dc-4742-8c56-c2a8b41f46ea
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a873a437-03dc-4742-8c56-c2a8b41f46ea>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 0dd49b81-ec47-4041-b09a-6da352d706bb
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    buttonLabel: false
+    paddingCm: false
+    title: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - widthCm: !<float> 34.000000
+      paddingCm: !<float> 2.000000
+      title: ShadeShift
+      buttonLabel: Test button
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"ShadeShift M0 - passive workflow check panel"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input float widthCm = 34 {"hint":"Width of the diagnostic panel in centimetres", "widget":"slider", "min":28, "max":44, "step":1}'
+    - '// @input float paddingCm = 2 {"hint":"Padding around the diagnostic rows in centimetres", "widget":"slider", "min":1, "max":3, "step":0.25}'
+    - '// @input string title = "ShadeShift" {"hint":"Heading shown above the local workflow controls"}'
+    - '// @input string buttonLabel = "Test button" {"hint":"Label on the button used by the automated smoke test"}'

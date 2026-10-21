@@ -1,0 +1,51 @@
+- !<AssetImportMetadata/2be24681-02bf-4a52-bfab-d3a449b0c001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d36ab258-33b8-4222-b1a9-ced9f120689b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d36ab258-33b8-4222-b1a9-ced9f120689b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6a0bba42-8b19-4b1a-a5d6-4c2450013e83
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6a0bba42-8b19-4b1a-a5d6-4c2450013e83>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a8496f18-a0d8-4986-aeeb-bf7779a78fac
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    colour: false
+    labelWidthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - colour: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      labelWidthCm: !<float> 21.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"ShadeShift • spatial annotations"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input vec4 colour = {1,1,1,1} {"hint":"Annotation colour", "widget":"color"}'
+    - '// @input float labelWidthCm = 21 {"hint":"Maximum annotation width in centimetres", "widget":"slider", "min":14, "max":30, "step":1}'

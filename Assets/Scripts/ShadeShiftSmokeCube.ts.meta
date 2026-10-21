@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/700bd912-cb27-47c0-a594-f7c03c731c82>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8fe73063-26f7-44da-afdf-3a00aed46132
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8fe73063-26f7-44da-afdf-3a00aed46132
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> cc8226a3-4b2a-44ee-902e-f6d53321ea6d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/cc8226a3-4b2a-44ee-902e-f6d53321ea6d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 51936d76-8473-4cec-b02c-fd89dff006f9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    debugColliders: false
+    material: false
+    sideCm: false
+    tint: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      sideCm: !<float> 8.000000
+      tint: !<Vec4> {x: 0.200000, y: 0.900000, z: 1.000000, w: 1.000000}
+      debugColliders: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"ShadeShift M0 - draggable diagnostic cube"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input Asset.Material material {"hint":"Official bundled vertex-color material"}'
+    - '// @input float sideCm = 8 {"hint":"Side length of both visual and collision box in centimetres", "widget":"slider", "min":6, "max":12, "step":0.5}'
+    - '// @input vec4 tint = "{0.2,0.9,1,1}" {"hint":"Color of the diagnostic prop", "widget":"color"}'
+    - '// @input bool debugColliders {"hint":"Show the collision box for debugging; keep off for capture"}'

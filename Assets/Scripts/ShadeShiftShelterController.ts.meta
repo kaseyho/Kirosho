@@ -1,0 +1,60 @@
+- !<AssetImportMetadata/ac8f16ce-d969-4c22-8d42-c0175220ee8d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 40241a5e-9b08-4362-8959-b694f0c285cf
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 40241a5e-9b08-4362-8959-b694f0c285cf
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f379d9fe-66dc-4a03-ad23-ca3acb2a72f8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f379d9fe-66dc-4a03-ad23-ca3acb2a72f8>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 304b1207-09f7-413f-b4f5-d8180925dbdc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    debugColliders: false
+    handleCm: false
+    material: false
+    shelterId: false
+    targetCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - shelterId: A
+      material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      targetCm: !<float> 8.000000
+      handleCm: !<float> 4.000000
+      debugColliders: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"ShadeShift • shelter grab handle"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input string shelterId = "A" {"hint":"Inventory identifier for this authored shelter handle"}'
+    - '// @input Asset.Material material {"hint":"Bundled vertex-colour material"}'
+    - '// @input float targetCm = 8 {"hint":"Forgiving axis-aligned grab volume in centimetres", "widget":"slider", "min":6, "max":12, "step":1}'
+    - '// @input float handleCm = 4 {"hint":"Visual grab handle width in centimetres", "widget":"slider", "min":3, "max":6, "step":0.5}'
+    - '// @input bool debugColliders {"hint":"Show collider bounds for diagnostics"}'

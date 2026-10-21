@@ -1,0 +1,48 @@
+- !<AssetImportMetadata/7d57ae31-ac47-43f4-831d-e649ab859c8b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> fd68f1af-8fe5-49f2-9b67-a943c879c073
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> fd68f1af-8fe5-49f2-9b67-a943c879c073
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 513cd85c-a0ab-4277-82be-3f54aea09cac
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/513cd85c-a0ab-4277-82be-3f54aea09cac>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 741bd08b-11a5-4d2e-a0f2-acf6cbef7b60
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    panel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panel: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"ShadeShift M0 - button state owner"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType_1 panel {"hint":"Authored smoke panel component"}'
