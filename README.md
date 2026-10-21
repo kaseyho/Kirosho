@@ -2,11 +2,11 @@
 
 Place the shelters you already own where they provide useful shade during the hours people actually occupy a space.
 
-Kirosho is a SPECS Lens for facilities and event planners. It uses a spatial courtyard model, activity schedules and a bounded solar model to compare two portable-shelter placements. It is being built for [Learn AR with SPECS](https://learn-specs.devpost.com/).
+Kirosho is a SPECS Lens for facilities and event planners. It uses a spatial courtyard model, activity schedules and a bounded solar model to compare two portable-shelter placements. It was built for [Learn AR with SPECS](https://learn-specs.devpost.com/).
 
-**Build status:** the functional prototype and actual Preview interaction footage are verified. The presenter recording and final narrated edit remain pending. Preview performance varies and the 30 fps target is not consistently met. See [verification](docs/verification.md) and [execution status](docs/execution_status.md).
+**Submitted on 21 October 2026.** The working Lens, 14 numerical checks, seven product interaction scenarios and narrated demonstration are verified. Devpost confirmed “Project submitted!” Preview performance varies and the 30 fps target is not consistently met. See [verification](docs/verification.md) and [execution status](docs/execution_status.md).
 
-[Watch the 74-second silent Preview sequence](docs/media/preview-sequence.mp4) · [Presentation script](docs/presentation_script.md) · [Model assumptions](devpost/model-assumptions.md)
+[Watch the 2:26 captioned demo](https://www.youtube.com/watch?v=5xc7pn-5Pfs) · [Devpost submission](https://devpost.com/software/kirosho) · [English subtitles](docs/media/Kirosho.en.srt) · [Model assumptions](devpost/model-assumptions.md)
 
 ## Why this problem
 

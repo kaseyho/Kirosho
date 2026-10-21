@@ -30,6 +30,8 @@ ls-live-instance.json.tmp
 # Kirosho local development
 # Local editor state, credentials, recordings, and generated caches
 .local/
+/video.mov
+/deliverables/
 .mcp.json
 .codex/
 .agents/

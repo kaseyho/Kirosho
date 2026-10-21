@@ -1,6 +1,6 @@
 # Kirosho
 
-Prepared project description. The working Lens, numerical checks, seven product scenarios and actual Preview footage are verified. The final narrated presentation, public YouTube URL and account-holder declarations remain pending. No Devpost submission or YouTube upload has been made.
+Submitted to Learn AR with SPECS on 21 October 2026. The working Lens, numerical checks, seven product scenarios and actual Preview footage are verified. The narrated video is public with timed English captions. Devpost confirmed “Project submitted!” at [Kirosho](https://devpost.com/software/kirosho). The final public story is retained in [project-story.md](project-story.md).
 
 ## Tagline
 
@@ -48,10 +48,10 @@ Future work would add planner-specified minimum coverage by zone, surveyed geome
 
 SPECS 27, Lens Studio 5.24.1, Snap CLAD, Lens Studio MCP, Codex, TypeScript, Spectacles Interaction Kit, Spectacles UI Kit, LEAF, Node.js, pvlib, Python, ScreenCaptureKit, FFmpeg.
 
-## Submission fields still to complete
+## Published submission links
 
 Public repository: [Kirosho](https://github.com/kaseyho/Kirosho), using the tested `codex/kirosho` branch.
 
-Public YouTube demonstration URL: pending final footage and talking-head recording.
+Public YouTube demonstration: [Kirosho — Place existing shelters around the hours people need shade](https://www.youtube.com/watch?v=5xc7pn-5Pfs).
 
-Final account-holder declarations: complete in Devpost at submission time; none are invented here.
+Devpost: [Kirosho](https://devpost.com/software/kirosho). Required personal declarations and experience ratings were supplied by the entrant and saved in the submission form.

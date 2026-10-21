@@ -1,27 +1,26 @@
 # Submission checklist
 
-Authoritative requirements: [official rules](https://learn-specs.devpost.com/rules) and [resources](https://learn-specs.devpost.com/resources). Official deadline: **10 November 2026, 06:00 Singapore time** (9 November, 17:00 EST). Internal target: 9 November, 18:00 Singapore time.
+**Submitted on 21 October 2026.** Devpost displayed **“Project submitted!”** for [Kirosho](https://devpost.com/software/kirosho), submission ID **1247892**, in [Learn AR with SPECS](https://learn-specs.devpost.com/).
 
-## Prepared and verified
+Authoritative requirements: [official rules](https://learn-specs.devpost.com/rules) and [resources](https://learn-specs.devpost.com/resources), checked again at submission. Official deadline: **10 November 2026, 06:00 Singapore time** (9 November, 17:00 EST).
 
-- Working, saved SPECS 27 Lens Studio project at repository root.
-- Required Devpost Learn planning workflow and `devpost/` artifacts.
-- CLAD and Lens Studio MCP used to build and verify the actual Lens.
-- English [project description](submission-draft.md), [model assumptions](model-assumptions.md) and [source attribution](source-attribution.md).
-- Shared calculation engine, reproducible SPA fixtures, 14 passing numerical checks and seven product integration scenarios with retained run history.
-- Actual Preview footage, selected exports, thumbnail, verification report and 331-word presenter script.
-- Existing public repository destination: [kaseyho/Kirosho](https://github.com/kaseyho/Kirosho), tested branch `codex/kirosho`.
-- Documented model, physical-device and inconsistent Preview frame-rate limits.
+## Completed and verified
 
-## Remaining before submission
+- Saved SPECS 27 Lens Studio project at repository root, with its required packages.
+- Devpost Learn planning workflow and planning artifacts; actual Lens built using Codex, Snap CLAD and Lens Studio MCP.
+- Shared calculation engine, reproducible SPA fixtures, 14 numerical checks and seven product integration scenarios, with retained failures and passing reruns.
+- [Public repository](https://github.com/kaseyho/Kirosho), default branch `codex/kirosho`; application checkpoint `ec87528`.
+- [Public YouTube demonstration](https://www.youtube.com/watch?v=5xc7pn-5Pfs): 2:26, 1080p source, original narration and actual simulated Preview footage. Public playback and completed HD processing verified.
+- 43 timed English cues burned into a separate strip; matching uploaded English caption track shown as **Published** in YouTube Studio. [SRT](../docs/media/Kirosho.en.srt) and [WebVTT](../docs/media/Kirosho.en.vtt) copies accompany the source.
+- English story, 13 technology tags, source link, video embed, actual Preview thumbnail and three captioned gallery screenshots.
+- Required technology explanation and observed setup feedback supplied; personal eligibility declarations and survey answers supplied by the entrant.
+- Submission terms accepted within the entrant's authorized submission; explicit Devpost confirmation and **Submitted to Learn AR with SPECS** section verified.
+- [Submission record](submission-record.json), [video verification notes](../docs/final_video.md) and local confirmation screenshots retained.
 
-1. Presenter supplies the single seated talking-head take from `docs/presentation_script.md`.
-2. Codex completes the narrated edit, audio normalization and synchronized captions; verifies actual runtime below 3:00 and readable Preview controls.
-3. Upload final video to YouTube as Public. Verify its public watch URL and playback.
-4. Populate the Devpost entry with the prepared English description, public repository and public YouTube link; include screenshots.
-5. Account holder completes any required personal/team declarations or terms. No identity, eligibility or legal declaration is invented.
-6. Submit once the concrete entry is reviewable and authorized; verify Devpost's explicit submission confirmation and public entry afterward.
+## Remaining input
 
-Lens Store publication, physical SPECS capture and Lens Studio sign-in are not listed prerequisites for the documented Preview route. A video alone does not replace the working Lens, repository and description.
+No required entrant input or submission step remains. Optional YouTube phone verification would enable a custom thumbnail and clickable external description links; the public video and Devpost entry are already published.
 
-This checklist is preparation evidence. No YouTube upload or Devpost submission is claimed.
+## Disclosed limits
+
+The site and occupancy are illustrative. No physical-glasses or field testing is claimed, and Desktop Preview does not consistently meet the 30 fps target. The model does not predict cooling, structural safety, energy demand or carbon savings.

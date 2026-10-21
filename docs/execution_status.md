@@ -7,13 +7,13 @@ The original user-supplied `implememtation_plan.md` is preserved at the reposito
 
 ## Current milestone
 
-**The working Lens, integration verification, recorded Preview footage and presentation script are ready. Final narration, edit, captions and public submission remain pending the presenter's recording.**
+**Kirosho was submitted to Learn AR with SPECS on 21 October 2026. The working Lens, verification, narrated video and timed English captions are complete. Devpost confirmed “Project submitted!”**
 
 Latest application checkpoint: **ec87528**. `Kirosho.esproj` and Lens metadata use Kirosho. Exact-root save verified at **21 October, 16:55:02 SGT**. All 21 renamed script/data assets retain their GUIDs. All 14 numerical checks and all seven product scenarios passed again with the new names; three passing runs also generated replacement footage. The final save includes the corrected active Leaf 2.0.2 bridge.
 
-The actual [68.5-second silent Kirosho Preview sequence](media/preview-sequence.mp4), [331-word script](presentation_script.md), [shot list](demo_shot_list.md), [verification report](verification.md), model provenance and Devpost description are prepared. All four clips and both stills were replaced with fresh Kirosho footage. The silent cut is review material, not the final narrated competition video.
+The final [2:26 narrated demonstration](https://www.youtube.com/watch?v=5xc7pn-5Pfs) is public on YouTube, with 43 burned-in English caption cues and a published English caption track. Public playback reported 146.021 seconds and readyState 4; YouTube Studio confirmed HD processing complete. The [68.5-second silent sequence](media/preview-sequence.mp4), [script](presentation_script.md), [shot list](demo_shot_list.md), [verification report](verification.md) and [final-video checks](final_video.md) retain production evidence.
 
-The renamed application checkpoint **ec87528** is published in the existing [public Kirosho repository](https://github.com/kaseyho/Kirosho). GitHub's default branch and the local development branch are now `codex/kirosho`. Git LFS integrity checks passed. No YouTube upload or Devpost submission has occurred.
+The renamed application checkpoint **ec87528** is published in the [public Kirosho repository](https://github.com/kaseyho/Kirosho). GitHub's default branch and the local branch are `codex/kirosho`. Git LFS integrity checks passed. The completed [Devpost entry](https://devpost.com/software/kirosho) includes the public video, repository, story, technology explanation, thumbnail and three captioned Preview screenshots. Required personal answers were supplied by the entrant. See the [submission record](../devpost/submission-record.json).
 
 **Known performance limit:** selected captures measured 12–16 updates/s; fast earlier runs reached approximately 30. The 30 fps target is not consistently met. Search was below two seconds in selected takes, with earlier slower runs retained. No physical SPECS result is claimed.
 
@@ -166,14 +166,12 @@ runtime. Git LFS integrity verification passed; no remote publication occurred.
 | 2: calculation engine | Complete | Reproducible solar fixtures, 14 passing numerical tests, all 5,436 pair scores checked, occupancy-sensitive search; see `Assets/QA/Engine/NumericalVerification.md` |
 | 3: working Lens | Complete | Saved real SIK/UI Kit flow at renamed application checkpoint ec87528 |
 | 4: verification and polish | Verified with performance limit | 14 numerical checks, seven product cases, final changed-case reruns, visual QA and measurements; 30 fps target remains inconsistent |
-| 5: presentation | Capture and script ready | Genuine Preview clips, consistent recommended-plan take, 331-word script; presenter recording pending |
-| 6: submission package | Prepared in part | Working repository, silent cut, stills, verification and English Devpost draft; final narrated edit, synchronized captions, upload and submission pending |
+| 5: presentation | Complete | Public 2:26 narrated demo, 43 timed English cues, published caption track, original voice and real Preview footage; decode and caption checks passed |
+| 6: submission package | Submitted | Public repository, video, story, thumbnail and three screenshots; entrant answers saved; Devpost displayed “Project submitted!” |
 
 ## Ownership boundary
 
-Codex owns development, scene operation, testing, capture, editing, and submission preparation.
-The user has allowed brief interventions for required sign-in, agreements, or OS permissions,
-and will provide the talking-head recording after receiving the finished script.
+Codex handled development, scene operation, testing, capture, editing, publication and submission. The user supplied the talking-head recording, resolved browser access and supplied the required personal declarations and survey answers. Local media and private account details remain outside Git.
 
 The implementation will retain the full plan. A browser-only mockup, a Blender render,
 an unrun test, or a draft submission does not satisfy the corresponding completion gate.

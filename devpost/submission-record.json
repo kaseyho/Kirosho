@@ -1,0 +1,46 @@
+{
+  "projectName": "Kirosho",
+  "submittedOnSgt": "2026-10-21",
+  "verifiedAtUtc": "2026-10-21T11:08:52.920717+00:00",
+  "hackathon": "Learn AR with SPECS",
+  "hackathonUrl": "https://learn-specs.devpost.com/",
+  "submissionId": 1247892,
+  "softwareId": 1493423,
+  "projectUrl": "https://devpost.com/software/kirosho",
+  "confirmation": "Project submitted!",
+  "submittedToLabel": "Learn AR with SPECS",
+  "publicRepository": "https://github.com/kaseyho/Kirosho",
+  "defaultBranch": "codex/kirosho",
+  "applicationCommit": "ec87528",
+  "youtube": {
+    "url": "https://www.youtube.com/watch?v=5xc7pn-5Pfs",
+    "videoId": "5xc7pn-5Pfs",
+    "visibility": "Public",
+    "sourceDurationSeconds": 146,
+    "observedPlaybackDurationSeconds": 146.021,
+    "observedReadyState": 4,
+    "hdProcessing": "Complete",
+    "englishSubtitles": "Published",
+    "timedCues": 43,
+    "burnedInCaptions": true,
+    "thumbnail": "Auto-generated thumbnail 2: recorded recommendation card"
+  },
+  "gallery": [
+    {
+      "file": "docs/media/recommendation.jpg",
+      "softwarePhotoId": 5634055
+    },
+    {
+      "file": "docs/media/full-scale.jpg",
+      "softwarePhotoId": 5634091
+    },
+    {
+      "file": "docs/media/committed-plan.jpg",
+      "softwarePhotoId": 5634100
+    }
+  ],
+  "technologyTagCount": 13,
+  "personalAnswers": "Provided by the entrant; retained in Devpost only.",
+  "evidence": "Publication and submission confirmations were read in the browser UI. Screenshots are retained locally in deliverables/.",
+  "remainingRequiredInput": null
+}

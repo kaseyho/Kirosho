@@ -3,7 +3,7 @@
   "environment": "Actual Lens Studio 5.24.1 / SPECS 27 simulated Plane Preview",
   "applicationCommit": "ec87528",
   "capturedOnSGT": "2026-10-21",
-  "disclosure": "Fresh silent Kirosho Preview sequence; final narrated competition video is pending. Encoded 30 fps is not measured Lens frame rate.",
+  "disclosure": "Actual simulated Preview source footage used in the completed narrated presentation. Encoded 30 fps is not measured Lens frame rate. No physical-glasses or field testing is claimed.",
   "nativeCapture": {
     "method": "macOS ScreenCaptureKit window frames",
     "windowTitle": "Kirosho* - Lens Studio v5.24.1.26100516",
@@ -102,6 +102,16 @@
       "file": "recommendation.jpg",
       "source": "plan-native.mp4",
       "sourceSecond": 20.2
+    },
+    {
+      "file": "full-scale.jpg",
+      "source": "04-inspect-commit.mp4",
+      "sourceSecond": 3.4
+    },
+    {
+      "file": "committed-plan.jpg",
+      "source": "04-inspect-commit.mp4",
+      "sourceSecond": 13.4
     }
   ],
   "files": [
@@ -139,6 +149,16 @@
       "file": "thumbnail.jpg",
       "bytes": 132198,
       "sha256": "aad58cacb6242dd4fbe377a523d53c49ca3bb5fa84829b907030efe0309eef97"
+    },
+    {
+      "file": "full-scale.jpg",
+      "bytes": 92002,
+      "sha256": "0b3663aac154e34af677943b576d935f005e2cbf45f2d9c06824727f394dc3f4"
+    },
+    {
+      "file": "committed-plan.jpg",
+      "bytes": 110532,
+      "sha256": "1f6b2af7f7fde9d6806f5d345a74b6b86f7ddd3cf8bc8ea59ba76f8244f6bedc"
     }
   ],
   "visualReview": [
@@ -146,5 +166,14 @@
     "Kirosho visible in actual Lens frames.",
     "Applied and committed endpoints both retain the same 62.3% layout.",
     "No editor chrome or test-status overlay in selected exports."
-  ]
+  ],
+  "finalPresentation": {
+    "youtubeUrl": "https://www.youtube.com/watch?v=5xc7pn-5Pfs",
+    "devpostUrl": "https://devpost.com/software/kirosho",
+    "sourceDurationSeconds": 146,
+    "sha256": "68bd8a311e91779fe53cf6b41ed0a26086e85ec5fa7e945df79f47ab327b864b",
+    "captionCueCount": 43,
+    "englishCaptionTrackPublished": true,
+    "rawPresenterVideoCommitted": false
+  }
 }

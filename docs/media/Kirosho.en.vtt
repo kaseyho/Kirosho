@@ -1,0 +1,132 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.000
+A shelter can look perfectly positioned at noon
+
+00:00:03.000 --> 00:00:04.467
+and miss the queue later.
+
+00:00:05.000 --> 00:00:08.900
+Kirosho helps facilities and event planners
+use the shelters they already own,
+
+00:00:08.900 --> 00:00:10.967
+around the hours people need shade.
+
+00:00:11.667 --> 00:00:16.467
+This is a fictional Singapore school courtyard,
+shown in the SPECS simulator.
+
+00:00:16.867 --> 00:00:19.300
+Two shelters serve three activities:
+
+00:00:19.533 --> 00:00:22.533
+lunch, outdoor seating and afternoon pickup.
+
+00:00:22.833 --> 00:00:26.400
+The timeline shows projected shade moving from noon to five.
+
+00:00:26.900 --> 00:00:30.400
+Each activity has its own schedule and analysis height.
+
+00:00:30.600 --> 00:00:33.300
+The score combines the fraction of its area shaded
+
+00:00:33.300 --> 00:00:36.500
+with the number of people present and how long they stay.
+
+00:00:36.900 --> 00:00:39.933
+I can move either shelter by pinching its handle.
+
+00:00:40.300 --> 00:00:42.467
+Valid placements snap to the grid.
+
+00:00:42.833 --> 00:00:46.533
+The model rejects overlaps, courtyard boundary violations,
+
+00:00:46.867 --> 00:00:49.800
+and shelters inside the marked access corridor.
+
+00:00:50.467 --> 00:00:52.933
+Find better placement evaluates all
+
+00:00:53.067 --> 00:00:56.667
+5,436 permitted layouts.
+
+00:00:56.933 --> 00:00:59.900
+It proposes the best evaluated grid arrangement
+
+00:00:59.900 --> 00:01:01.667
+and waits for a decision.
+
+00:01:02.300 --> 00:01:05.900
+Here, modeled coverage rises from 32.1%
+
+00:01:05.900 --> 00:01:11.100
+to 62.3%: a gain of 30.2 percentage points.
+
+00:01:11.667 --> 00:01:15.333
+But the lunch queue loses all its modeled whole-period coverage.
+
+00:01:15.733 --> 00:01:17.800
+Seating and pickup gain shade.
+
+00:01:18.167 --> 00:01:20.300
+That loss is visible before Apply.
+
+00:01:20.567 --> 00:01:22.733
+The planner can reject the suggestion,
+
+00:01:22.967 --> 00:01:27.167
+change the activity profile, or undo an applied layout.
+
+00:01:27.800 --> 00:01:31.533
+After applying, I inspect the same plan at full scale,
+
+00:01:31.733 --> 00:01:35.600
+return to the tabletop and commit a reproducible summary
+
+00:01:35.600 --> 00:01:37.467
+with its inputs and layout.
+
+00:01:37.967 --> 00:01:42.133
+The spatial view connects each score to the places people use,
+
+00:01:42.267 --> 00:01:45.867
+making the recommendation and its tradeoffs easier to review.
+
+00:01:46.600 --> 00:01:49.100
+I planned Kirosho with Devpost Learn,
+
+00:01:49.200 --> 00:01:51.467
+then used Codex, Snap's CLAD,
+
+00:01:51.467 --> 00:01:55.133
+and Lens Studio MCP to build the actual Lens.
+
+00:01:55.600 --> 00:01:59.400
+Fourteen numerical checks verify its calculations and behavior.
+
+00:01:59.900 --> 00:02:03.067
+This offline prototype uses illustrative occupancy
+
+00:02:03.067 --> 00:02:04.933
+and validated solar fixtures.
+
+00:02:05.167 --> 00:02:08.267
+It has not been field-tested or tested on physical glasses.
+
+00:02:08.500 --> 00:02:11.367
+It does not predict cooling, structural safety
+
+00:02:11.367 --> 00:02:13.067
+or carbon savings.
+
+00:02:13.800 --> 00:02:17.367
+Kirosho helps planners make a practical climate-adaptation choice
+
+00:02:17.367 --> 00:02:19.267
+before moving real shelters.
+
+00:02:19.800 --> 00:02:22.767
+Where can our existing shade serve our schedule better?
