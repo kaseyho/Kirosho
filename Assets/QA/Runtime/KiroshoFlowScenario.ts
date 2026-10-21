@@ -2,14 +2,14 @@ import {Scenario} from "Leaf 2.lspkg/Scenarios/scenario/Scenario"
 import {ScenarioConfig} from "Leaf 2.lspkg/Scenarios/scenario/ScenarioConfig"
 import {expect} from "Leaf 2.lspkg/Utils/common/Expect"
 import {findSceneObjectByName,sleep} from "Leaf 2.lspkg/Utils/common/Utils"
-import {ShadeShiftLeafInteractor,text,until} from "./ShadeShiftLeafInteractor"
+import {KiroshoLeafInteractor,text,until} from "./KiroshoLeafInteractor"
 import {layoutFingerprint,formatMinute,validateLayout} from "../../Scripts/Engine/ShadeEngine"
 
 @component
-export class ShadeShiftFlowScenario extends Scenario {
+export class KiroshoFlowScenario extends Scenario {
   async run(config?:ScenarioConfig):Promise<void> {
     await sleep(1500)
-    const input=new ShadeShiftLeafInteractor(config?.getNumber("demoPauseMs")??120)
+    const input=new KiroshoLeafInteractor(config?.getNumber("demoPauseMs")??120)
     await input.reset()
     const main=input.main,s=main.session!,flow=config?.get("flow")??"timeline"
     const startLayout=input.fingerprint(),startCoverage=s.evaluation!.coveragePercent!
@@ -141,7 +141,7 @@ export class ShadeShiftFlowScenario extends Scenario {
       expect(s.status).toBe("suggestion")
       expect(s.suggestion!.layout.shelters.every(p=>p.e<6)).toBe(true)
       expect(text("ShadeTradepickup").includes("No activity")).toBe(true)
-      const qaObject=findSceneObjectByName("ShadeShiftQA")
+      const qaObject=findSceneObjectByName("KiroshoQA")
       type QAInputFault=ScriptComponent & {loadInvalidScenario?:()=>void;loadNoFeasibleScenario?:()=>void}
       const harness=qaObject?.getComponents("Component.ScriptComponent").find(component=>
         typeof (component as QAInputFault).loadInvalidScenario==="function") as QAInputFault
@@ -162,7 +162,7 @@ export class ShadeShiftFlowScenario extends Scenario {
       expect(s.scenario.profile).toBe("school-day")
       expect(input.fingerprint()).toBe(startLayout)
       expect(s.evaluation!.coveragePercent).toBeCloseTo(startCoverage,5)
-    } else throw new Error("Unknown ShadeShift flow: "+flow)
-    console.info("[ShadeShiftLeafResult] "+JSON.stringify({flow,audit:main.audit()}))
+    } else throw new Error("Unknown Kirosho flow: "+flow)
+    console.info("[KiroshoLeafResult] "+JSON.stringify({flow,audit:main.audit()}))
   }
 }

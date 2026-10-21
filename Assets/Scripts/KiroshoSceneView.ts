@@ -1,22 +1,22 @@
 import Event from "SpectaclesInteractionKit.lspkg/Utils/Event"
 import {ShadeSession, Point, Rect as PlanRect, Layout, projectRoof, intersection, area, sunAt} from "./Engine/ShadeEngine"
-import {ShadeMesh,ShadeColour} from "./ShadeShiftGeometry"
-import {ShadeShiftShelterController} from "./ShadeShiftShelterController"
-import {ShadeShiftLabelsUI,MapLabel} from "./ShadeShiftLabelsUI"
+import {ShadeMesh,ShadeColour} from "./KiroshoGeometry"
+import {KiroshoShelterController} from "./KiroshoShelterController"
+import {KiroshoLabelsUI,MapLabel} from "./KiroshoLabelsUI"
 
 export type ShadeDragEvent={phase:"start"|"move"|"end";id:string;point?:Point}
 @component
-export class ShadeShiftSceneView extends BaseScriptComponent {
-  @ui.label("ShadeShift • ENU scene adapter")
+export class KiroshoSceneView extends BaseScriptComponent {
+  @ui.label("Kirosho • ENU scene adapter")
   @ui.separator
   @input @hint("Official bundled vertex-colour material")
   material!:Material
   @input @hint("Authored unit-scale shelter A handle")
-  shelterA!:ShadeShiftShelterController
+  shelterA!:KiroshoShelterController
   @input @hint("Authored unit-scale shelter B handle")
-  shelterB!:ShadeShiftShelterController
+  shelterB!:KiroshoShelterController
   @input @hint("Authored spatial annotation UI")
-  labels!:ShadeShiftLabelsUI
+  labels!:KiroshoLabelsUI
   @input @hint("Overview centimetres representing one metre") @widget(new SliderWidget(4,6,.25))
   overviewCmPerMeter:number=5
   @input @hint("Overview drafting-table tilt in degrees") @widget(new SliderWidget(35,60,1))
@@ -32,7 +32,7 @@ export class ShadeShiftSceneView extends BaseScriptComponent {
   private lastYaw=quat.quatIdentity()
   initialize():void {
     if(this.initialized)return
-    if(!this.material || !this.shelterA || !this.shelterB || !this.labels)throw new Error("ShadeShift scene inputs are missing")
+    if(!this.material || !this.shelterA || !this.shelterB || !this.labels)throw new Error("Kirosho scene inputs are missing")
     const overlay=this.material.clone();overlay.mainPass.blendMode=BlendMode.Normal
     overlay.mainPass.depthWrite=false;overlay.mainPass.depthTest=true
     for(const name of ["Ground","ShelterFrames","ZoneFloors","AnalysisPlane","CurrentShade","SuggestedLayout","SunDirection"]) {

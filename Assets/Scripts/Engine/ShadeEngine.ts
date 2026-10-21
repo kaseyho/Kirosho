@@ -444,7 +444,7 @@ export class ShadeSession {
     if(this.status==="updating" && !this.flushEvaluation())return null;
     if(!this.evaluation || !this.baselineEvaluation)return null;
     if(this.search)this.search.cancel();this.search=null;this.suggestion=null;
-    this.committedPlan=clone({schema:"shadeshift-plan-v1",modelVersion:MODEL_VERSION,scenarioId:this.scenario.id,profile:this.scenario.profile,
+    this.committedPlan=clone({schema:"kirosho-plan-v1",modelVersion:MODEL_VERSION,scenarioId:this.scenario.id,profile:this.scenario.profile,
       scenarioFingerprint:fingerprint(this.scenario),solarSha256:this.solar.sha256,layoutFingerprint:layoutFingerprint(this.layout),
       fingerprintScheme:"Canonical JSON + FNV-1a 32-bit (non-cryptographic); solar fixture SHA-256",
       layout:this.layout,minute:this.minute,evaluation:this.evaluation,baselineEvaluation:this.baselineEvaluation});

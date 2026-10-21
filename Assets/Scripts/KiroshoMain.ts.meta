@@ -59,7 +59,7 @@
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"ShadeShift • session owner"}'
+    - '// @ui {"widget":"label", "label":"Kirosho • session owner"}'
     - '// @ui {"widget":"separator"}'
     - '// @input AssignableType_1 view {"hint":"Authored courtyard renderer and coordinate adapter"}'
     - '// @input AssignableType_2 planner {"hint":"Authored planner UI"}'

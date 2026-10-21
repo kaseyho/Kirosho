@@ -4,28 +4,28 @@ import {findInteractableByName} from "Leaf 2.lspkg/Interactors/InteractableUtils
 import {findSceneObjectByName,sleep} from "Leaf 2.lspkg/Utils/common/Utils"
 import {expect} from "Leaf 2.lspkg/Utils/common/Expect"
 import {Interactable} from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
-import {ShadeShiftMain} from "../../Scripts/ShadeShiftMain"
+import {KiroshoMain} from "../../Scripts/KiroshoMain"
 import {Point,layoutFingerprint} from "../../Scripts/Engine/ShadeEngine"
 
-export function mainComponent():ShadeShiftMain {
-  const walk=(object:SceneObject):ShadeShiftMain|null=>{
-    const component=object.getComponent(ShadeShiftMain.getTypeName()) as ShadeShiftMain
+export function mainComponent():KiroshoMain {
+  const walk=(object:SceneObject):KiroshoMain|null=>{
+    const component=object.getComponent(KiroshoMain.getTypeName()) as KiroshoMain
     if(component)return component
     for(let i=0;i<object.getChildrenCount();i++){const found=walk(object.getChild(i));if(found)return found}
     return null
   }
   for(let i=0;i<global.scene.getRootObjectsCount();i++) {const found=walk(global.scene.getRootObject(i));if(found)return found}
-  throw new Error("No authored ShadeShiftMain component is present")
+  throw new Error("No authored KiroshoMain component is present")
 }
 export function control(name:string):Interactable {
   const target=findInteractableByName(name)
-  if(!target)throw new Error("Missing or unavailable ShadeShift interactable: "+name)
+  if(!target)throw new Error("Missing or unavailable Kirosho interactable: "+name)
   return target
 }
 export function text(name:string):string {
   const object=findSceneObjectByName(name)
   const component=object?.getComponent("Component.Text") as Text
-  if(!component)throw new Error("Missing ShadeShift text: "+name)
+  if(!component)throw new Error("Missing Kirosho text: "+name)
   return component.text
 }
 export async function until(predicate:()=>boolean,label:string,timeoutMs=10000):Promise<void> {
@@ -37,9 +37,9 @@ export async function until(predicate:()=>boolean,label:string,timeoutMs=10000):
 }
 
 /** Sends normal input only. Session/audit access is read-only. */
-export class ShadeShiftLeafInteractor extends DefaultLeafInteractor {
-  readonly main:ShadeShiftMain
-  constructor(private defaultSettleMs=120) {super("ShadeShiftFunctionalInteractor");this.main=mainComponent()}
+export class KiroshoLeafInteractor extends DefaultLeafInteractor {
+  readonly main:KiroshoMain
+  constructor(private defaultSettleMs=120) {super("KiroshoFunctionalInteractor");this.main=mainComponent()}
   async tap(name:string,settleMs=this.defaultSettleMs):Promise<void> {
     await this.trigger(control(name));if(settleMs>0)await sleep(settleMs)
   }
@@ -55,7 +55,7 @@ export class ShadeShiftLeafInteractor extends DefaultLeafInteractor {
     await sleep(Math.max(120,this.defaultSettleMs))
   }
   async dragShelter(id:string,destination:Point,durationMs=1500):Promise<{reasons:string[];sawGhost:boolean}> {
-    const target=control("ShadeShiftShelter"+id),main=this.main
+    const target=control("KiroshoShelter"+id),main=this.main
     const desired=main.view.pointToWorld(destination.e,destination.n,main.session!.scenario.roof.height+.3)
     const vector=new vec3(0,0,0),reasons:string[]=[];let sawGhost=false
     let previousUpdate=getRealTimeNanos(),closestCm=Number.POSITIVE_INFINITY
@@ -78,7 +78,7 @@ export class ShadeShiftLeafInteractor extends DefaultLeafInteractor {
     finally {unsubscribe()}
     await until(()=>!main.session!.drag && main.session!.status!=="updating","drag release and calculation")
     await sleep(Math.max(120,this.defaultSettleMs))
-    console.info("[ShadeShiftDragTest] "+JSON.stringify({id,destination,closestCm,reasons,sawGhost}))
+    console.info("[KiroshoDragTest] "+JSON.stringify({id,destination,closestCm,reasons,sawGhost}))
     return {reasons,sawGhost}
   }
   async dragTimeline():Promise<number> {

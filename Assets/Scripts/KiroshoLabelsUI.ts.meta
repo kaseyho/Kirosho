@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/7d57ae31-ac47-43f4-831d-e649ab859c8b>
+- !<AssetImportMetadata/2be24681-02bf-4a52-bfab-d3a449b0c001>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> fd68f1af-8fe5-49f2-9b67-a943c879c073
+    TypeScriptAsset: !<reference> d36ab258-33b8-4222-b1a9-ced9f120689b
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> fd68f1af-8fe5-49f2-9b67-a943c879c073
+  PrimaryAsset: !<reference> d36ab258-33b8-4222-b1a9-ced9f120689b
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> 513cd85c-a0ab-4277-82be-3f54aea09cac
+    TypeScriptAsset: !<own> 6a0bba42-8b19-4b1a-a5d6-4c2450013e83
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/513cd85c-a0ab-4277-82be-3f54aea09cac>
+- !<TypeScriptAssetData/6a0bba42-8b19-4b1a-a5d6-4c2450013e83>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -24,11 +24,12 @@
   VersionPatch: 0
   VersionPrerelease: ""
   UpdateOrder: 0
-  ComponentUid: 741bd08b-11a5-4d2e-a0f2-acf6cbef7b60
+  ComponentUid: a8496f18-a0d8-4986-aeeb-bf7779a78fac
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    panel: false
+    colour: false
+    labelWidthCm: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -38,11 +39,13 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - panel: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+    - colour: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      labelWidthCm: !<float> 21.000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"ShadeShift M0 - button state owner"}'
+    - '// @ui {"widget":"label", "label":"Kirosho • spatial annotations"}'
     - '// @ui {"widget":"separator"}'
-    - '// @input AssignableType_1 panel {"hint":"Authored smoke panel component"}'
+    - '// @input vec4 colour = {1,1,1,1} {"hint":"Annotation colour", "widget":"color"}'
+    - '// @input float labelWidthCm = 21 {"hint":"Maximum annotation width in centimetres", "widget":"slider", "min":14, "max":30, "step":1}'

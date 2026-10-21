@@ -1,9 +1,9 @@
-import {applyTextRole} from "./ShadeShiftLayoutUI"
+import {applyTextRole} from "./KiroshoLayoutUI"
 
 export type MapLabel={id:string;text:string;position:vec3}
 @component
-export class ShadeShiftLabelsUI extends BaseScriptComponent {
-  @ui.label("ShadeShift • spatial annotations")
+export class KiroshoLabelsUI extends BaseScriptComponent {
+  @ui.label("Kirosho • spatial annotations")
   @ui.separator
   @input @hint("Annotation colour") @widget(new ColorWidget())
   colour:vec4=new vec4(1,1,1,1)

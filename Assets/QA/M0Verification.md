@@ -1,20 +1,22 @@
 # Milestone 0: signed-out local workflow proof
 
 Observed 21 October 2026 in Lens Studio 5.24.1.26100516, project
-`/Users/kc/Work/Kirosho/ShadeShift.esproj`, Preview 1 / SPECS 27 / Sunlit Room.
-This is a diagnostic fixture. It does not implement ShadeShift's shade-analysis model.
+the pre-rename project, Preview 1 / SPECS 27 / Sunlit Room.
+Source paths below use the current Kirosho asset names; the historical recordings
+retain the original pre-rename title and log tags.
+This is a diagnostic fixture. It does not implement Kirosho's shade-analysis model.
 No account login, Lens publication, device connection, or remote application service
 was needed for these checks.
 
 ## Built fixture
 
-- `Assets/Scripts/ShadeShiftSmokePanelUI.ts`: passive UIKit BackPlate,
+- `Assets/Scripts/KiroshoSmokePanelUI.ts`: passive UIKit BackPlate,
   FlexLayout/FlexItem rows, real UIKit Button, count setter and button intent event.
-- `Assets/Scripts/ShadeShiftSmokeMain.ts`: owns the count and subscribes to the view.
-- `Assets/Scripts/ShadeShiftSmokeCube.ts`: an 8 cm MeshBuilder diagnostic cube,
+- `Assets/Scripts/KiroshoSmokeMain.ts`: owns the count and subscribes to the view.
+- `Assets/Scripts/KiroshoSmokeCube.ts`: an 8 cm MeshBuilder diagnostic cube,
   official vertex-colour material, box collider, SIK Interactable and manipulation.
-- `Assets/Scripts/ShadeShiftSmokeLeafIndex.ts` and `ShadeShiftSmokeScenario.ts`:
-  opt-in LEAF scenario `shadeshift-m0-smoke`, using the installed Leaf 2.lspkg namespace.
+- `Assets/Scripts/KiroshoSmokeLeafIndex.ts` and `KiroshoSmokeScenario.ts`:
+  opt-in LEAF scenario `kirosho-m0-smoke`, using the installed Leaf 2.lspkg namespace.
 - `Assets/Tools/RecordLensWindow.swift`: native macOS ScreenCaptureKit recorder.
   It selects exactly one `com.snap.LensStudio` window with the supplied exact title.
   It neither activates applications nor sends UI input nor requests permissions.
@@ -28,7 +30,7 @@ Inspect and Interact run on the same native tool-owned `AiPreviewAgent Handler`.
 
 | Check | Observed result |
 | --- | --- |
-| TypeScript and startup | Compilation succeeded. `[ShadeShiftSmoke] ready` printed. No script exception after the documented UIKit initialization fix. |
+| TypeScript and startup | Compilation succeeded. The smoke fixture printed its ready message. No script exception after the documented UIKit initialization fix. |
 | MCP button interaction | A Pinch of discovered `SmokeTestButton` changed actual Text from `Button presses: 0` to `Button presses: 1`. |
 | MCP 3D drag | A real Drag towards (10,-10,-110) moved the authored cube from (0,-10,-110) to approximately (9.097102,-9.999997,-110), unit scale. SIK smoothing does not land at exactly x=10. |
 | Camera control | lookAt(0,6,-110) produced camera rotation (3.12,0,0) degrees and exposed every row. lookAt(4,6,-110) produced yaw 357.92 degrees; restoring lookAt(0,6,-110) restored yaw 0. |
@@ -56,8 +58,8 @@ Private generated evidence is under `/Users/kc/Work/Kirosho/.local/evidence/`:
   20.74 s, 343 decoded frames, 3362400 bytes. The stream observer counted 342
   complete live frame callbacks during the requested 20 s capture.
 
-Capture was bound to the exact observed window title
-`ShadeShift* - Lens Studio v5.24.1.26100516`, window ID 272473, frame
+Capture was bound to the exact observed pre-rename project window title
+(Lens Studio v5.24.1.26100516), window ID 272473, frame
 (158,-940,1024,800) macOS points, pixel scale 2. The fresh Editor API Preview
 rectangle was (978,-835,199,690) global points. Its centre 3:4 crop is
 398 x 530 native pixels at (1640,635) within the recorded window, then upscaled
@@ -88,7 +90,7 @@ to overwrite output. Native video cadence is variable, then FFmpeg encodes 30 fp
   `addItems` with this installed version. This was verified and fixed after the
   initial runtime initialization exception.
 - The 398 x 530 source crop is adequate for a workflow proof and is upscaled.
-  It is not a final competition demonstration or polished ShadeShift interface.
+  It is not a final competition demonstration or polished Kirosho interface.
 - Physical SPECS hardware, real-world tracking, thermal/performance behaviour,
   Lens publication, and the competition submission were not tested in M0.
 

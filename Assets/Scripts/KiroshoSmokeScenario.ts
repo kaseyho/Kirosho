@@ -8,13 +8,13 @@ import {expect} from "Leaf 2.lspkg/Utils/common/Expect"
 import {findSceneObjectByName, sleep} from "Leaf 2.lspkg/Utils/common/Utils"
 
 @component
-export class ShadeShiftSmokeScenario extends Scenario {
+export class KiroshoSmokeScenario extends Scenario {
   async run(config?: ScenarioConfig): Promise<void> {
     await sleep(1200)
     const button = findInteractableByName("SmokeTestButton")
-    const cube = findInteractableByName("ShadeShiftSmokeDraggable")
+    const cube = findInteractableByName("KiroshoSmokeDraggable")
     const counterObject = findSceneObjectByName("SmokeButtonCount")
-    const cubeObject = findSceneObjectByName("ShadeShiftSmokeDraggable")
+    const cubeObject = findSceneObjectByName("KiroshoSmokeDraggable")
     if (!button || !cube || !counterObject || !cubeObject) {
       throw new Error("M0 smoke scene is missing a required named control")
     }
@@ -22,7 +22,7 @@ export class ShadeShiftSmokeScenario extends Scenario {
     const readCount = () => Number(counter.text.replace("Button presses: ", ""))
     const beforeCount = readCount()
     const beforePosition = cubeObject.getTransform().getWorldPosition()
-    const interactor = new DefaultLeafInteractor("ShadeShiftM0TestInteractor")
+    const interactor = new DefaultLeafInteractor("KiroshoM0TestInteractor")
     await interactor.trigger(button)
     await sleep(250)
     const expectedIncrement = config?.getNumber("expectedButtonIncrement") ?? 1
@@ -37,6 +37,6 @@ export class ShadeShiftSmokeScenario extends Scenario {
     expect(afterPosition.x - beforePosition.x < 30).toBe(true)
     expect(afterPosition.y).toBeCloseTo(beforePosition.y, 1)
     expect(afterPosition.z).toBeCloseTo(beforePosition.z, 1)
-    console.info(`[ShadeShiftM0Test] countDelta=${readCount() - beforeCount}; dragDeltaX=${afterPosition.x - beforePosition.x}`)
+    console.info(`[KiroshoM0Test] countDelta=${readCount() - beforeCount}; dragDeltaX=${afterPosition.x - beforePosition.x}`)
   }
 }

@@ -51,7 +51,7 @@
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"ShadeShift • shelter grab handle"}'
+    - '// @ui {"widget":"label", "label":"Kirosho • shelter grab handle"}'
     - '// @ui {"widget":"separator"}'
     - '// @input string shelterId = "A" {"hint":"Inventory identifier for this authored shelter handle"}'
     - '// @input Asset.Material material {"hint":"Bundled vertex-colour material"}'

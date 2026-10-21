@@ -43,15 +43,15 @@
   DefaultScriptInputs:
     - widthCm: !<float> 34.000000
       paddingCm: !<float> 2.000000
-      title: ShadeShift
+      title: Kirosho
       buttonLabel: Test button
   ScriptTypes:
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"ShadeShift M0 - passive workflow check panel"}'
+    - '// @ui {"widget":"label", "label":"Kirosho M0 - passive workflow check panel"}'
     - '// @ui {"widget":"separator"}'
     - '// @input float widthCm = 34 {"hint":"Width of the diagnostic panel in centimetres", "widget":"slider", "min":28, "max":44, "step":1}'
     - '// @input float paddingCm = 2 {"hint":"Padding around the diagnostic rows in centimetres", "widget":"slider", "min":1, "max":3, "step":0.25}'
-    - '// @input string title = "ShadeShift" {"hint":"Heading shown above the local workflow controls"}'
+    - '// @input string title = "Kirosho" {"hint":"Heading shown above the local workflow controls"}'
     - '// @input string buttonLabel = "Test button" {"hint":"Label on the button used by the automated smoke test"}'

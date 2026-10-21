@@ -1,7 +1,7 @@
 {
-  "schema": "shadeshift-numerical-report-v1",
+  "schema": "kirosho-numerical-report-v1",
   "modelVersion": "shade-rect-1.0.0",
-  "solarSha256": "66b249d8d122f56667d38c4af44e65bf022745b4361a6dbda719854d0fe3a1ee",
+  "solarSha256": "405dccbbcd144cf4a4a572c1efd3566e7e907d7338da2ab133d2f5b6b8249e7b",
   "units": {
     "positions": "meters east/north from southwest site corner",
     "time": "minutes since SGT midnight",
@@ -16,7 +16,7 @@
       "baseline": {
         "revision": 0,
         "minute": 900,
-        "inputHash": "fnv1a32:4dd12419",
+        "inputHash": "fnv1a32:53481f94",
         "layoutHash": "fnv1a32:1f70eb40",
         "zones": [
           {
@@ -75,7 +75,7 @@
       "suggested": {
         "revision": 0,
         "minute": 900,
-        "inputHash": "fnv1a32:4dd12419",
+        "inputHash": "fnv1a32:53481f94",
         "layoutHash": "fnv1a32:6ac548da",
         "zones": [
           {
@@ -134,7 +134,7 @@
       "baseline": {
         "revision": 0,
         "minute": 900,
-        "inputHash": "fnv1a32:94479c91",
+        "inputHash": "fnv1a32:28fce61c",
         "layoutHash": "fnv1a32:1f70eb40",
         "zones": [
           {
@@ -193,7 +193,7 @@
       "suggested": {
         "revision": 0,
         "minute": 900,
-        "inputHash": "fnv1a32:94479c91",
+        "inputHash": "fnv1a32:28fce61c",
         "layoutHash": "fnv1a32:6559bb0e",
         "zones": [
           {

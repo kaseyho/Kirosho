@@ -3,8 +3,8 @@ import {Interactable} from "SpectaclesInteractionKit.lspkg/Components/Interactio
 import {InteractableManipulation} from "SpectaclesInteractionKit.lspkg/Components/Interaction/InteractableManipulation/InteractableManipulation"
 
 @component
-export class ShadeShiftSmokeCube extends BaseScriptComponent {
-  @ui.label("ShadeShift M0 - draggable diagnostic cube")
+export class KiroshoSmokeCube extends BaseScriptComponent {
+  @ui.label("Kirosho M0 - draggable diagnostic cube")
   @ui.separator
   @input
   @hint("Official bundled vertex-color material")
@@ -73,7 +73,7 @@ export class ShadeShiftSmokeCube extends BaseScriptComponent {
       this.manipulation.onManipulationEnd.add(() => {
         this.dragCount += 1
         const position = this.sceneObject.getTransform().getWorldPosition()
-        console.info(`[ShadeShiftSmoke] dragCount=${this.dragCount} position=${position.toString()}`)
+        console.info(`[KiroshoSmoke] dragCount=${this.dragCount} position=${position.toString()}`)
       })
     })
   }

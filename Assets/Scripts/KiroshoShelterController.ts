@@ -1,11 +1,11 @@
 import Event from "SpectaclesInteractionKit.lspkg/Utils/Event"
 import {Interactable} from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
 import {InteractableManipulation} from "SpectaclesInteractionKit.lspkg/Components/Interaction/InteractableManipulation/InteractableManipulation"
-import {ShadeMesh} from "./ShadeShiftGeometry"
+import {ShadeMesh} from "./KiroshoGeometry"
 
 @component
-export class ShadeShiftShelterController extends BaseScriptComponent {
-  @ui.label("ShadeShift • shelter grab handle")
+export class KiroshoShelterController extends BaseScriptComponent {
+  @ui.label("Kirosho • shelter grab handle")
   @ui.separator
   @input @hint("Inventory identifier for this authored shelter handle")
   shelterId:string="A"

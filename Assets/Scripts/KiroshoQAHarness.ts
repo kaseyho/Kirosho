@@ -1,14 +1,14 @@
 /** Editor-only fault injection for testing real error display and Reset recovery. */
-import {ShadeShiftMain} from "./ShadeShiftMain"
+import {KiroshoMain} from "./KiroshoMain"
 import {courtyardScenario} from "../Data/CourtyardScenario"
-import {ShadeShiftSmokeLeafIndex} from "./ShadeShiftSmokeLeafIndex"
+import {KiroshoSmokeLeafIndex} from "./KiroshoSmokeLeafIndex"
 
 @component
-export class ShadeShiftQAHarness extends BaseScriptComponent {
+export class KiroshoQAHarness extends BaseScriptComponent {
   @input @hint("Session owner used only by the Editor integration tests")
-  main!:ShadeShiftMain
+  main!:KiroshoMain
   onAwake():void {
-    if(global.deviceInfoSystem.isEditor())this.sceneObject.createComponent(ShadeShiftSmokeLeafIndex.getTypeName())
+    if(global.deviceInfoSystem.isEditor())this.sceneObject.createComponent(KiroshoSmokeLeafIndex.getTypeName())
   }
   loadInvalidScenario():void {
     if(!global.deviceInfoSystem.isEditor())throw new Error("QA fixture is Editor-only")

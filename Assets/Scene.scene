@@ -5,9 +5,9 @@
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> f5d74682-203a-4970-81ea-9fa7b88c96bb
     - !<own> fbf561b9-6b69-4670-b9fc-7795da8158af
-    - !<own> 98825da7-95b9-4cbc-8fa9-75bc8cd4dc89
     - !<own> a48f5f4b-de2e-4131-8013-b19e03c32c91
     - !<own> 5c7cafbd-29c0-47c9-ae8b-6b2235df4248
+    - !<own> 5bd4660d-2e3b-456e-b842-bb2ce4282fd7
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -243,7 +243,7 @@
 - !<ScriptComponent/07229156-115f-4582-a08e-6fcdf59069b3>
   PrefabRemaps:
     []
-  Name: ShadeShiftSmokeLeafIndex
+  Name: KiroshoSmokeLeafIndex
   Enabled: true
   ScriptAsset: !<reference> d80ce75d-f967-4bde-bbba-6d730aa27aec
   ScriptInputsDefault:
@@ -644,6 +644,22 @@
     - !<own> d9071294-12e8-425f-98f1-bf308a02639e
   Components:
     []
+- !<ScriptComponent/26b8e333-d07b-45a7-a4ac-741a21678765>
+  PrefabRemaps:
+    []
+  Name: MessagingBridge
+  Enabled: true
+  ScriptAsset: !<reference> d3d549c9-eff0-4811-b96f-c251e3f7d85a
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/275aeb4d-77ac-4b1b-811e-907652542110>
   PrefabRemaps:
     []
@@ -784,7 +800,7 @@
 - !<SceneObject/353df657-ca2f-4cb5-905e-d4994c6bea81>
   PrefabRemaps:
     []
-  Name: ShadeShiftCourtyard
+  Name: KiroshoCourtyard
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -819,7 +835,7 @@
 - !<ScriptComponent/3551d201-7a9c-4e3a-b001-9ff45d4877ea>
   PrefabRemaps:
     []
-  Name: ShadeShiftTimelineUI
+  Name: KiroshoTimelineUI
   Enabled: true
   ScriptAsset: !<reference> 8360525b-6e43-4491-8331-0c8dfea76391
   ScriptInputsDefault:
@@ -839,7 +855,7 @@
 - !<SceneObject/3593fdbf-fc4a-449c-8a6d-6c8bd936d4a0>
   PrefabRemaps:
     []
-  Name: ShadeShiftQA
+  Name: KiroshoQA
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -870,7 +886,7 @@
 - !<ScriptComponent/377553f9-6541-447a-b755-2942e2bd3e91>
   PrefabRemaps:
     []
-  Name: ShadeShiftSmokeMain
+  Name: KiroshoSmokeMain
   Enabled: true
   ScriptAsset: !<reference> fd68f1af-8fe5-49f2-9b67-a943c879c073
   ScriptInputsDefault:
@@ -931,7 +947,7 @@
 - !<ScriptComponent/3b6e8e82-8b2b-4985-b4da-3327c7304cc1>
   PrefabRemaps:
     []
-  Name: ShadeShiftMain
+  Name: KiroshoMain
   Enabled: true
   ScriptAsset: !<reference> 113de242-2019-494e-8042-538123e9d0dc
   ScriptInputsDefault:
@@ -974,7 +990,7 @@
 - !<ScriptComponent/3f03afae-7226-4db6-8044-04fe344ef2db>
   PrefabRemaps:
     []
-  Name: ShadeShiftQAHarness
+  Name: KiroshoQAHarness
   Enabled: true
   ScriptAsset: !<reference> be3780b4-6083-4851-afe8-51d80465d2c6
   ScriptInputsDefault:
@@ -1065,7 +1081,7 @@
 - !<ScriptComponent/49409102-c91e-40db-a131-e61ac306279d>
   PrefabRemaps:
     []
-  Name: ShadeShiftPlannerUI
+  Name: KiroshoPlannerUI
   Enabled: true
   ScriptAsset: !<reference> 78905d10-e505-4acf-b9cf-350ebdf0573d
   ScriptInputsDefault:
@@ -1080,7 +1096,7 @@
       panelWidthCm: !<float> 26.000000
       typeScale: !<float> 2.000000
       accent: !<Vec4> {x: 0.300000, y: 0.950000, z: 1.000000, w: 1.000000}
-      heading: ShadeShift
+      heading: Kirosho
   ScriptTypes:
     "":
       {}
@@ -1117,7 +1133,7 @@
 - !<SceneObject/50324f29-a3c2-40fb-86b4-9f7075150d5c>
   PrefabRemaps:
     []
-  Name: ShadeShiftTimeline
+  Name: KiroshoTimeline
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -1177,7 +1193,7 @@
 - !<ScriptComponent/591bdfef-08b4-4842-aeab-cb29d57563a8>
   PrefabRemaps:
     []
-  Name: ShadeShiftShelterController
+  Name: KiroshoShelterController
   Enabled: true
   ScriptAsset: !<reference> 40241a5e-9b08-4362-8959-b694f0c285cf
   ScriptInputsDefault:
@@ -1196,6 +1212,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/5bd4660d-2e3b-456e-b842-bb2ce4282fd7>
+  PrefabRemaps:
+    []
+  Name: LEAF Plugin Bridge
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 26b8e333-d07b-45a7-a4ac-741a21678765
 - !<SceneObject/5c7cafbd-29c0-47c9-ae8b-6b2235df4248>
   PrefabRemaps:
     []
@@ -1263,7 +1294,7 @@
 - !<SceneObject/64b18cf2-376a-4de9-b844-4b291cf8f8df>
   PrefabRemaps:
     []
-  Name: ShadeShiftShelterB
+  Name: KiroshoShelterB
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -1516,7 +1547,7 @@
 - !<SceneObject/756e4857-dc36-4d25-98be-46aed08757c5>
   PrefabRemaps:
     []
-  Name: ShadeShiftPlanner
+  Name: KiroshoPlanner
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -1610,7 +1641,7 @@
 - !<ScriptComponent/7c1e0abe-1070-4879-a318-de880a7ae826>
   PrefabRemaps:
     []
-  Name: ShadeShiftLabelsUI
+  Name: KiroshoLabelsUI
   Enabled: true
   ScriptAsset: !<reference> d36ab258-33b8-4222-b1a9-ced9f120689b
   ScriptInputsDefault:
@@ -1718,7 +1749,7 @@
 - !<ScriptComponent/83725bde-c6b3-4662-b71b-995f05c5e06d>
   PrefabRemaps:
     []
-  Name: ShadeShiftSmokeCube
+  Name: KiroshoSmokeCube
   Enabled: true
   ScriptAsset: !<reference> 8fe73063-26f7-44da-afdf-3a00aed46132
   ScriptInputsDefault:
@@ -1871,7 +1902,7 @@
 - !<ScriptComponent/976d39d4-4903-4306-98a6-ab6865777724>
   PrefabRemaps:
     []
-  Name: ShadeShiftSceneView
+  Name: KiroshoSceneView
   Enabled: true
   ScriptAsset: !<reference> d9989f97-63be-488b-a641-efcb3eaaaec7
   ScriptInputsDefault:
@@ -1890,21 +1921,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/98825da7-95b9-4cbc-8fa9-75bc8cd4dc89>
-  PrefabRemaps:
-    []
-  Name: LEAF Plugin Bridge
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> a18cc269-74c0-48a5-8bbb-a01f210d22b7
 - !<SceneObject/988c408a-99dc-47e6-b7c4-efbf4bf8dc3c>
   PrefabRemaps:
     []
@@ -1984,7 +2000,7 @@
 - !<ScriptComponent/9ef785d0-2f5e-4ec2-887f-f6227da8a647>
   PrefabRemaps:
     []
-  Name: ShadeShiftShelterController
+  Name: KiroshoShelterController
   Enabled: true
   ScriptAsset: !<reference> 40241a5e-9b08-4362-8959-b694f0c285cf
   ScriptInputsDefault:
@@ -2004,26 +2020,10 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/a18cc269-74c0-48a5-8bbb-a01f210d22b7>
-  PrefabRemaps:
-    []
-  Name: MessagingBridge
-  Enabled: true
-  ScriptAsset: !<reference> d3d549c9-eff0-4811-b96f-c251e3f7d85a
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/a48f5f4b-de2e-4131-8013-b19e03c32c91>
   PrefabRemaps:
     []
-  Name: ShadeShiftApp
+  Name: KiroshoApp
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -2079,7 +2079,7 @@
 - !<ScriptComponent/a614dcb7-e5ba-4cb9-a2af-ead9bda9822c>
   PrefabRemaps:
     []
-  Name: ShadeShiftDetailsUI
+  Name: KiroshoDetailsUI
   Enabled: true
   ScriptAsset: !<reference> a307c06a-454a-4072-bf63-3e09b60e8b3b
   ScriptInputsDefault:
@@ -2114,7 +2114,7 @@
 - !<SceneObject/a69cdfb8-fe98-42d0-903e-b4f1f0b6d67d>
   PrefabRemaps:
     []
-  Name: ShadeShiftLabels
+  Name: KiroshoLabels
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -2219,7 +2219,7 @@
 - !<SceneObject/af2cb625-0a13-44be-8dc9-eabfcec95a4d>
   PrefabRemaps:
     []
-  Name: ShadeShiftSmokeDraggable
+  Name: KiroshoSmokeDraggable
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -2234,7 +2234,7 @@
 - !<SceneObject/b14315bf-95f0-49f6-9f4f-48fa8555cbd6>
   PrefabRemaps:
     []
-  Name: ShadeShiftDetails
+  Name: KiroshoDetails
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -2429,7 +2429,7 @@
 - !<SceneObject/c4280f29-ba06-4eca-a52a-cf20155b0715>
   PrefabRemaps:
     []
-  Name: ShadeShiftSmokePanel
+  Name: KiroshoSmokePanel
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -2622,7 +2622,7 @@
 - !<SceneObject/d4b3bc76-8c38-42be-be74-4c50aa69983d>
   PrefabRemaps:
     []
-  Name: ShadeShiftShelterA
+  Name: KiroshoShelterA
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -2817,7 +2817,7 @@
 - !<SceneObject/e88700e4-4bfd-4f63-9ca5-180c0306e935>
   PrefabRemaps:
     []
-  Name: ShadeShiftSmokePreviewTools
+  Name: KiroshoSmokePreviewTools
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -2870,7 +2870,7 @@
 - !<ScriptComponent/ee40226a-c8c0-4703-bd94-c83ec9e18ed7>
   PrefabRemaps:
     []
-  Name: ShadeShiftSmokePanelUI
+  Name: KiroshoSmokePanelUI
   Enabled: true
   ScriptAsset: !<reference> 0f1737f0-d444-48cb-a6e7-58b0b7a21f63
   ScriptInputsDefault:
@@ -2884,7 +2884,7 @@
     "":
       widthCm: !<float> 34.000000
       paddingCm: !<float> 2.000000
-      title: ShadeShift
+      title: Kirosho
       buttonLabel: Test button
   ScriptTypes:
     "":
@@ -3114,7 +3114,7 @@
 - !<SceneObject/fbf561b9-6b69-4670-b9fc-7795da8158af>
   PrefabRemaps:
     []
-  Name: ShadeShiftSmoke
+  Name: KiroshoSmoke
   Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>

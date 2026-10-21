@@ -1,13 +1,13 @@
 import Event from "SpectaclesInteractionKit.lspkg/Utils/Event"
-import {ShadeLayoutUI} from "./ShadeShiftLayoutUI"
-import {ShadePresentation} from "./ShadeShiftPresenter"
+import {ShadeLayoutUI} from "./KiroshoLayoutUI"
+import {ShadePresentation} from "./KiroshoPresenter"
 import {FlexDirection} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexTypes"
 import {FlexItem} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexItem"
 import {FlexLayout} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexLayout"
 
 @component
-export class ShadeShiftPlannerUI extends BaseScriptComponent {
-  @ui.label("ShadeShift • planner controls")
+export class KiroshoPlannerUI extends BaseScriptComponent {
+  @ui.label("Kirosho • planner controls")
   @ui.separator
   @input @hint("World-space panel width in centimetres") @widget(new SliderWidget(22,32,1))
   panelWidthCm:number=26
@@ -16,7 +16,7 @@ export class ShadeShiftPlannerUI extends BaseScriptComponent {
   @input @hint("Accent for modeled coverage values") @widget(new ColorWidget())
   accent:vec4=new vec4(.3,.95,1,1)
   @input @hint("Product heading shown on the planner")
-  heading:string="ShadeShift"
+  heading:string="Kirosho"
   readonly onAction=new Event<string>()
   private ui!:ShadeLayoutUI
   private normal!:SceneObject

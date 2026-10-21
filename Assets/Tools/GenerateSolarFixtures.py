@@ -1,4 +1,4 @@
-"""Generate offline ShadeShift sun vectors; no network is used by this script.
+"""Generate offline Kirosho sun vectors; no network is used by this script.
 
 Run: .venv/bin/python Assets/Tools/GenerateSolarFixtures.py
 Install: python3 -m pip install -r Assets/Tools/SolarRequirements.txt
@@ -81,7 +81,7 @@ def main() -> None:
     assert start.tz_convert("UTC").hour == 4
     assert end.tz_convert("UTC").hour == 9
     payload = {
-        "schema": "shadeshift-solar-v1",
+        "schema": "kirosho-solar-v1",
         "metadata": {
             "date": DATE, "timezone": TZ,
             "latitude": LATITUDE, "longitude": LONGITUDE,
@@ -117,7 +117,7 @@ def main() -> None:
     source += " as const;\n"
     OUT.mkdir(parents=True, exist_ok=True)
     write_changed(OUT / "SolarFixtures.json", canonical)
-    write_changed(OUT / "SolarFixtures.ts", source.encode())
+    write_changed(OUT / "KiroshoSolarFixtures.ts", source.encode())
     print(json.dumps({
         "sha256": digest, "inspectionSamples": len(payload["inspection"]),
         "fiveMinuteSamples": len(payload["evaluation5"]),

@@ -1,11 +1,11 @@
 import Event from "SpectaclesInteractionKit.lspkg/Utils/Event"
-import {ShadeLayoutUI} from "./ShadeShiftLayoutUI"
-import {ShadePresentation} from "./ShadeShiftPresenter"
+import {ShadeLayoutUI} from "./KiroshoLayoutUI"
+import {ShadePresentation} from "./KiroshoPresenter"
 import {Slider} from "SpectaclesUIKit.lspkg/Scripts/Components/Slider/Slider"
 
 @component
-export class ShadeShiftTimelineUI extends BaseScriptComponent {
-  @ui.label("ShadeShift • afternoon timeline")
+export class KiroshoTimelineUI extends BaseScriptComponent {
+  @ui.label("Kirosho • afternoon timeline")
   @ui.separator
   @input @hint("Width of the timeline in centimetres") @widget(new SliderWidget(54,66,1))
   widthCm:number=60

@@ -17,8 +17,8 @@ function applyTextRole(text: Text, role: TextRole): void {
 }
 
 @component
-export class ShadeShiftSmokePanelUI extends BaseScriptComponent {
-  @ui.label("ShadeShift M0 - passive workflow check panel")
+export class KiroshoSmokePanelUI extends BaseScriptComponent {
+  @ui.label("Kirosho M0 - passive workflow check panel")
   @ui.separator
   @input
   @hint("Width of the diagnostic panel in centimetres")
@@ -32,7 +32,7 @@ export class ShadeShiftSmokePanelUI extends BaseScriptComponent {
 
   @input
   @hint("Heading shown above the local workflow controls")
-  title: string = "ShadeShift"
+  title: string = "Kirosho"
 
   @input
   @hint("Label on the button used by the automated smoke test")

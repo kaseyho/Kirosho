@@ -1,7 +1,7 @@
 // Run with Node >=22: node --experimental-default-type=module --experimental-strip-types Assets/Tools/GenerateNumericalReport.mjs
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {performance} from 'node:perf_hooks';
-import {SOLAR_FIXTURES as solar} from '../Data/SolarFixtures.ts';
+import {SOLAR_FIXTURES as solar} from '../Data/KiroshoSolarFixtures.ts';
 import {courtyardScenario} from '../Data/CourtyardScenario.ts';
 import {MODEL_VERSION,LayoutSearch,evaluateLayout,fingerprint} from '../Scripts/Engine/ShadeEngine.ts';
 
@@ -24,7 +24,7 @@ for(const profile of ['school-day','lunch-event']) {
       suggestedDifferencePercentagePoints:Math.abs(fineSuggested.coveragePercent-result.evaluation.coveragePercent)}};
   profiles.push(sample);performanceSamples.push({profile,batches,elapsedMs});
 }
-const report={schema:'shadeshift-numerical-report-v1',modelVersion:MODEL_VERSION,solarSha256:solar.sha256,
+const report={schema:'kirosho-numerical-report-v1',modelVersion:MODEL_VERSION,solarSha256:solar.sha256,
   units:{positions:'meters east/north from southwest site corner',time:'minutes since SGT midnight',scores:'modeled shaded person-minutes',changes:'percentage points'},
   assumptions:'Fictional site and occupancy; uniformly distributed people; clear-sky direct sun geometry; flat identical rectangular roofs; no thermal, weather, energy or carbon model.',
   profiles};

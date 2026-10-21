@@ -47,7 +47,7 @@
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"ShadeShift • afternoon timeline"}'
+    - '// @ui {"widget":"label", "label":"Kirosho • afternoon timeline"}'
     - '// @ui {"widget":"separator"}'
     - '// @input float widthCm = 60 {"hint":"Width of the timeline in centimetres", "widget":"slider", "min":54, "max":66, "step":1}'
     - '// @input float typeScale = 2 {"hint":"Typography multiplier", "widget":"slider", "min":1.5, "max":2.5, "step":0.1}'

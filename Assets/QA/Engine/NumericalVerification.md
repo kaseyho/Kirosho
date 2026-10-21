@@ -22,7 +22,7 @@ The generator uses pvlib 0.16.1's NREL SPA implementation, aware timestamps in A
 There are 301 one-minute inspection samples, 60 five-minute midpoint scoring samples, and 300 one-minute midpoint check samples. Generation inputs and versions are embedded in the fixtures. Running the generator twice produced the same JSON SHA-256:
 
 ```text
-66b249d8d122f56667d38c4af44e65bf022745b4361a6dbda719854d0fe3a1ee
+405dccbbcd144cf4a4a572c1efd3566e7e907d7338da2ab133d2f5b6b8249e7b
 ```
 
 This hashes the raw canonical `SolarFixtures.json` bytes. The TypeScript export embeds that hash and the same payload; the test recomputes it independently.

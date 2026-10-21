@@ -53,7 +53,7 @@
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"ShadeShift • ENU scene adapter"}'
+    - '// @ui {"widget":"label", "label":"Kirosho • ENU scene adapter"}'
     - '// @ui {"widget":"separator"}'
     - '// @input Asset.Material material {"hint":"Official bundled vertex-colour material"}'
     - '// @input AssignableType_1 shelterA {"hint":"Authored unit-scale shelter A handle"}'

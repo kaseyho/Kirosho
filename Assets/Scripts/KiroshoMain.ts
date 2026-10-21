@@ -1,26 +1,26 @@
 import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider"
 import {ShadeSession,SiteScenario,clone,layoutFingerprint} from "./Engine/ShadeEngine"
 import {courtyardScenario} from "../Data/CourtyardScenario"
-import {SOLAR_FIXTURES} from "../Data/SolarFixtures"
-import {ShadeShiftSceneView,ShadeDragEvent} from "./ShadeShiftSceneView"
-import {ShadeShiftPlannerUI} from "./ShadeShiftPlannerUI"
-import {ShadeShiftDetailsUI} from "./ShadeShiftDetailsUI"
-import {ShadeShiftTimelineUI} from "./ShadeShiftTimelineUI"
-import {presentShade} from "./ShadeShiftPresenter"
-import {ShadePerformance} from "./ShadeShiftPerformance"
+import {SOLAR_FIXTURES} from "../Data/KiroshoSolarFixtures"
+import {KiroshoSceneView,ShadeDragEvent} from "./KiroshoSceneView"
+import {KiroshoPlannerUI} from "./KiroshoPlannerUI"
+import {KiroshoDetailsUI} from "./KiroshoDetailsUI"
+import {KiroshoTimelineUI} from "./KiroshoTimelineUI"
+import {presentShade} from "./KiroshoPresenter"
+import {ShadePerformance} from "./KiroshoPerformance"
 
 @component
-export class ShadeShiftMain extends BaseScriptComponent {
-  @ui.label("ShadeShift • session owner")
+export class KiroshoMain extends BaseScriptComponent {
+  @ui.label("Kirosho • session owner")
   @ui.separator
   @input @hint("Authored courtyard renderer and coordinate adapter")
-  view!:ShadeShiftSceneView
+  view!:KiroshoSceneView
   @input @hint("Authored planner UI")
-  planner!:ShadeShiftPlannerUI
+  planner!:KiroshoPlannerUI
   @input @hint("Authored zone and comparison UI")
-  details!:ShadeShiftDetailsUI
+  details!:KiroshoDetailsUI
   @input @hint("Authored timeline UI")
-  timeline!:ShadeShiftTimelineUI
+  timeline!:KiroshoTimelineUI
   @input @hint("Search work units evaluated per rendered frame") @widget(new SliderWidget(128,512,32))
   searchWorkPerFrame:number=512
   @input @hint("Overview model distance in centimetres") @widget(new SliderWidget(140,200,5))
@@ -52,7 +52,7 @@ export class ShadeShiftMain extends BaseScriptComponent {
   }
   private start():void {
     if(!this.view || !this.planner || !this.details || !this.timeline) {
-      console.info("[ShadeShift] Waiting for authored component wiring");return
+      console.info("[Kirosho] Waiting for authored component wiring");return
     }
     this.camera=WorldCameraFinderProvider.getInstance().getComponent().getTransform()
     this.session=new ShadeSession(courtyardScenario(),SOLAR_FIXTURES)
@@ -70,7 +70,7 @@ export class ShadeShiftMain extends BaseScriptComponent {
     })
     this.ready=true;this.dirty=true
     if(this.debugColliders)for(let i=0;i<global.scene.getRootObjectsCount();i++)this.debugWalk(global.scene.getRootObject(i))
-    console.info("[ShadeShift] Ready • local offline courtyard • "+this.session.evaluation?.coveragePercent)
+    console.info("[Kirosho] Ready • local offline courtyard • "+this.session.evaluation?.coveragePercent)
   }
   private debugWalk(object:SceneObject):void {
     for(const component of object.getComponents("Physics.ColliderComponent"))component.debugDrawEnabled=true
@@ -83,7 +83,7 @@ export class ShadeShiftMain extends BaseScriptComponent {
     if(!this.anchored && ++this.startupFrames>=3) {
       this.reanchor();this.anchored=true
       this.performance.beginActiveWindow()
-      console.info("[ShadeShift] World anchor set at camera "+this.camera.getWorldPosition().toString())
+      console.info("[Kirosho] World anchor set at camera "+this.camera.getWorldPosition().toString())
     }
     this.performance.frame()
     const s=this.session
@@ -99,8 +99,8 @@ export class ShadeShiftMain extends BaseScriptComponent {
       if(s.status!=="searching" && this.searchStarted) {
         const elapsed=(getRealTimeNanos()-this.searchStarted)/1e6
         this.performance.searchWallMs.push(elapsed);this.searchStarted=0
-        console.info(`[ShadeShift] search ${s.status}; wallMs=${elapsed}; layouts=${s.search?.evaluatedCount}`)
-        console.info("[ShadeShiftSearchAudit] "+JSON.stringify(this.audit()))
+        console.info(`[Kirosho] search ${s.status}; wallMs=${elapsed}; layouts=${s.search?.evaluatedCount}`)
+        console.info("[KiroshoSearchAudit] "+JSON.stringify(this.audit()))
       }
     }
     if(s.status!==this.previousPhase) {
@@ -150,10 +150,10 @@ export class ShadeShiftMain extends BaseScriptComponent {
     else if(action==="overview") {s.setViewMode("overview");this.reanchor()}
     else if(action==="next-observation") {s.nextObservation();s.selectZone(["lunch","seating","pickup"][s.observationIndex]);this.reanchor()}
     else if(action==="recall")this.reanchor()
-    else if(action==="commit") {const plan=s.commit();if(plan)console.info("[ShadeShiftPlan] "+JSON.stringify(plan))}
+    else if(action==="commit") {const plan=s.commit();if(plan)console.info("[KiroshoPlan] "+JSON.stringify(plan))}
     this.evaluationRequestedAt=s.status==="updating"?started:0
     this.dirty=true
-    console.info(`[ShadeShiftAction] ${action}; revision=${s.revision}; phase=${s.status}`)
+    console.info(`[KiroshoAction] ${action}; revision=${s.revision}; phase=${s.status}`)
   }
   private drag(event:ShadeDragEvent):void {
     const s=this.session;if(!s || s.viewMode!=="overview")return
@@ -161,7 +161,7 @@ export class ShadeShiftMain extends BaseScriptComponent {
     if(event.phase==="start")s.beginDrag(event.id)
     else if(event.phase==="move" && event.point) {s.previewDrag(event.point);this.dragChangedAt=started}
     else if(event.phase==="end") {
-      const valid=s.endDrag();console.info(`[ShadeShiftDrag] ${event.id}; valid=${valid}; layout=${layoutFingerprint(s.layout)}`)
+      const valid=s.endDrag();console.info(`[KiroshoDrag] ${event.id}; valid=${valid}; layout=${layoutFingerprint(s.layout)}`)
       this.evaluationRequestedAt=s.status==="updating"?started:0
     }
     this.dirty=true

@@ -91,7 +91,7 @@ private struct RecordLensWindow {
         let observer = CaptureObserver()
         let stream = SCStream(filter: filter, configuration: config, delegate: nil)
         try stream.addStreamOutput(observer, type: .screen,
-            sampleHandlerQueue: DispatchQueue(label: "shadeshift.capture.frames"))
+            sampleHandlerQueue: DispatchQueue(label: "kirosho.capture.frames"))
         let recordConfig = SCRecordingOutputConfiguration()
         recordConfig.outputURL = outputURL
         recordConfig.outputFileType = .mp4

@@ -44,14 +44,14 @@
     - panelWidthCm: !<float> 26.000000
       typeScale: !<float> 2.000000
       accent: !<Vec4> {x: 0.300000, y: 0.950000, z: 1.000000, w: 1.000000}
-      heading: ShadeShift
+      heading: Kirosho
   ScriptTypes:
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"ShadeShift • planner controls"}'
+    - '// @ui {"widget":"label", "label":"Kirosho • planner controls"}'
     - '// @ui {"widget":"separator"}'
     - '// @input float panelWidthCm = 26 {"hint":"World-space panel width in centimetres", "widget":"slider", "min":22, "max":32, "step":1}'
     - '// @input float typeScale = 2 {"hint":"Typography multiplier for this panel", "widget":"slider", "min":1.5, "max":2.5, "step":0.1}'
     - '// @input vec4 accent = {0.3,0.95,1,1} {"hint":"Accent for modeled coverage values", "widget":"color"}'
-    - '// @input string heading = "ShadeShift" {"hint":"Product heading shown on the planner"}'
+    - '// @input string heading = "Kirosho" {"hint":"Product heading shown on the planner"}'

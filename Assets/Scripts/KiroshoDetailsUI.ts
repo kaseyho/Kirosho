@@ -1,12 +1,12 @@
 import Event from "SpectaclesInteractionKit.lspkg/Utils/Event"
 import {FlexDirection} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexTypes"
-import {ShadeLayoutUI,applyTextRole} from "./ShadeShiftLayoutUI"
-import {ShadePresentation} from "./ShadeShiftPresenter"
+import {ShadeLayoutUI,applyTextRole} from "./KiroshoLayoutUI"
+import {ShadePresentation} from "./KiroshoPresenter"
 
 type Page="zones"|"review"|"model"|"commit"
 @component
-export class ShadeShiftDetailsUI extends BaseScriptComponent {
-  @ui.label("ShadeShift • zones and tradeoffs")
+export class KiroshoDetailsUI extends BaseScriptComponent {
+  @ui.label("Kirosho • zones and tradeoffs")
   @ui.separator
   @input @hint("Detail panel width in centimetres") @widget(new SliderWidget(22,34,1))
   panelWidthCm:number=26

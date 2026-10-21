@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import * as E from '../../Scripts/Engine/ShadeEngine.ts';
-import {SOLAR_FIXTURES as solar} from '../../Data/SolarFixtures.ts';
+import {SOLAR_FIXTURES as solar} from '../../Data/KiroshoSolarFixtures.ts';
 import {courtyardScenario} from '../../Data/CourtyardScenario.ts';
 
 const near=(actual,expected,tolerance=1e-8)=>assert.ok(Math.abs(actual-expected)<=tolerance,`${actual} != ${expected} (tolerance ${tolerance})`);
