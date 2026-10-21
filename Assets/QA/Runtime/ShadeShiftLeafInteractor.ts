@@ -58,11 +58,17 @@ export class ShadeShiftLeafInteractor extends DefaultLeafInteractor {
     const target=control("ShadeShiftShelter"+id),main=this.main
     const desired=main.view.pointToWorld(destination.e,destination.n,main.session!.scenario.roof.height+.3)
     const vector=new vec3(0,0,0),reasons:string[]=[];let sawGhost=false
+    let previousUpdate=getRealTimeNanos(),closestCm=Number.POSITIVE_INFINITY
     const update=()=>{
       const delta=desired.sub(target.getSceneObject().getTransform().getWorldPosition())
       // LEAF drag vectors are per update, not destinations. Follow observable
-      // position with bounded feedback; normal SIK movement owns the transform.
-      const limit=(v:number)=>Math.max(-1.2,Math.min(1.2,v*.45))
+      // position at a wall-clock speed even when Preview drops frames. A fixed
+      // per-frame cap could stop a long drag at the corridor before its intended
+      // overlap target. Normal SIK movement still owns every transform update.
+      const now=getRealTimeNanos(),seconds=Math.max(1/60,Math.min(.2,(now-previousUpdate)/1e9))
+      previousUpdate=now;closestCm=Math.min(closestCm,delta.length)
+      const maxStep=36*seconds
+      const limit=(v:number)=>Math.max(-maxStep,Math.min(maxStep,v*.45))
       vector.x=limit(delta.x);vector.y=limit(delta.y);vector.z=limit(delta.z)
       const drag=main.session!.drag
       if(drag){sawGhost=true;if(!drag.check.valid && !reasons.includes(drag.check.reason))reasons.push(drag.check.reason)}
@@ -72,6 +78,7 @@ export class ShadeShiftLeafInteractor extends DefaultLeafInteractor {
     finally {unsubscribe()}
     await until(()=>!main.session!.drag && main.session!.status!=="updating","drag release and calculation")
     await sleep(Math.max(120,this.defaultSettleMs))
+    console.info("[ShadeShiftDragTest] "+JSON.stringify({id,destination,closestCm,reasons,sawGhost}))
     return {reasons,sawGhost}
   }
   async dragTimeline():Promise<number> {

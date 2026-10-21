@@ -61,7 +61,9 @@ private struct RecordLensWindow {
                 "Usage: RecordLensWindow output.mp4 durationSeconds exactWindowTitle. Existing Screen Recording permission is required."])
         }
         let outputURL = URL(fileURLWithPath: CommandLine.arguments[1])
-        let seconds = min(28, max(1, Double(CommandLine.arguments[2]) ?? 5))
+        // Hackathon takes include Preview warmup; trim to the actual interaction
+        // after capture. The final presentation has its own duration limit.
+        let seconds = min(120, max(1, Double(CommandLine.arguments[2]) ?? 5))
         let title = CommandLine.arguments[3]
         guard !FileManager.default.fileExists(atPath: outputURL.path) else {
             throw NSError(domain: "LensCapture", code: 2, userInfo: [NSLocalizedDescriptionKey:

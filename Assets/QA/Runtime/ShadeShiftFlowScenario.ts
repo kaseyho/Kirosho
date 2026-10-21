@@ -18,6 +18,14 @@ export class ShadeShiftFlowScenario extends Scenario {
       const minute=await input.dragTimeline()
       expect((main.actionCounts["timeline-drag"]??0)-before).toBeGreaterThan(0)
       expect(text("ShadeClock")).toBe(formatMinute(minute)+" SGT")
+      // Exercise the full planning period through the real preset controls.
+      // The configurable holds also make this same verified path readable in
+      // the recorded demonstration without inserting time or shade results.
+      for(const hour of [12,13,14,15,16,17]) {
+        await input.tap("ShadeTime"+hour)
+        expect(s.minute).toBe(hour*60)
+        expect(text("ShadeClock")).toBe(formatMinute(hour*60)+" SGT")
+      }
       for(const [id,height] of [["lunch",1.6],["seating",1.2],["pickup",1.6]] as Array<[string,number]>) {
         const count=main.actionCounts["zone:"+id]??0
         await input.tap("ShadeZone"+id)
@@ -91,6 +99,12 @@ export class ShadeShiftFlowScenario extends Scenario {
       expect(input.fingerprint()).toBe(startLayout)
       expect(s.suggestion===null).toBe(true)
     } else if(flow==="inspect-commit") {
+      await input.find()
+      expect(s.status).toBe("suggestion")
+      await input.tap("ShadeApply")
+      await until(()=>s.status!=="updating","inspection plan calculation")
+      const planLayout=input.fingerprint(),planCoverage=s.evaluation!.coveragePercent!
+      expect(planCoverage).toBeGreaterThan(startCoverage)
       const revision=s.revision
       const span=()=>main.view.pointToWorld(12,4,0).sub(main.view.pointToWorld(0,4,0)).length
       const overviewSpan=span()
@@ -103,15 +117,15 @@ export class ShadeShiftFlowScenario extends Scenario {
         expect(s.observationIndex).toBe((observation+1)%3)
       }
       expect(s.revision).toBe(revision)
-      expect(input.fingerprint()).toBe(startLayout)
+      expect(input.fingerprint()).toBe(planLayout)
       await input.tap("ShadeOverview")
       expect(s.viewMode).toBe("overview")
       expect(span()).toBeCloseTo(overviewSpan,3)
-      expect(s.evaluation!.coveragePercent).toBeCloseTo(startCoverage,5)
+      expect(s.evaluation!.coveragePercent).toBeCloseTo(planCoverage,5)
       await input.tap("ShadeCommit")
       expect(!!s.committedPlan).toBe(true)
-      expect(s.committedPlan!.layoutFingerprint).toBe(startLayout)
-      expect(text("ShadeCommittedPlan").includes(startLayout)).toBe(true)
+      expect(s.committedPlan!.layoutFingerprint).toBe(planLayout)
+      expect(text("ShadeCommittedPlan").includes(planLayout)).toBe(true)
       await input.tap("ShadeReset")
       expect(s.committedPlan===null).toBe(true)
       expect(input.fingerprint()).toBe(startLayout)
