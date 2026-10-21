@@ -1,6 +1,6 @@
 # ShadeShift
 
-Draft: numerical results are verified; final wording awaits completed Lens interaction verification and the final recorded demonstration. No submission or upload has been made.
+Prepared project description. The working Lens, numerical checks, seven product scenarios and actual Preview footage are verified. The final narrated presentation, public YouTube URL and account-holder declarations remain pending. No Devpost submission or YouTube upload has been made.
 
 ## Tagline
 
@@ -32,7 +32,9 @@ Coverage uses exact roof projection and clipped rectangle union at seated and st
 
 Fourteen numerical tests verify solar reference values, geometry, occupancy units, constraints, search and state consistency. Every one of the 5,436 valid grid-pair scores is checked against full two-roof evaluation. The showcased five-minute results differ from one-minute checks by less than 0.004 percentage points.
 
-The local build, genuine SIK/UIKit interactions, deliberate test failure and subsequent passing LEAF smoke test, virtual camera operation and actual Preview recording have been verified while Lens Studio is signed out. Full-product integration and performance evidence will be linked here after those checks finish.
+Seven product LEAF scenarios verify the held timeline, every hour preset, valid and invalid placement, search/apply/undo, cancellation, stale results, full-scale inspection, commit/reset, exceptional-input recovery and an explicit indirect IK route. The final plan take preserves the same 62.3% layout through Apply, all full-scale observations and Commit. The local build and native Preview recording work while Lens Studio is signed out. [Verification and run history](../docs/verification.md) retain the failures as well as passing reruns.
+
+Desktop Preview cadence varies: fast checks reached approximately 30 updates/s, while selected capture runs measured 12–16 updates/s. Search took about 1.6–1.9 seconds in those takes. The 30 fps target is not consistently met, and the video's 30 fps encoding is not a physical-device performance result.
 
 The design lesson is that a higher total is not a complete planning answer. A spatial recommendation should expose the affected activities and the assumptions behind its score so that a human can accept or reject it.
 
@@ -48,7 +50,7 @@ SPECS 27, Lens Studio 5.24.1, Snap CLAD, Lens Studio MCP, Codex, TypeScript, Spe
 
 ## Submission fields still to complete
 
-Public repository: the existing Kirosho repository, after the tested project is pushed.
+Public repository: [Kirosho / ShadeShift](https://github.com/kaseyho/Kirosho), using the tested `codex/shadeshift` branch.
 
 Public YouTube demonstration URL: pending final footage and talking-head recording.
 

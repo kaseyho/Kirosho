@@ -4,7 +4,9 @@ Place the shelters you already own where they provide useful shade during the ho
 
 ShadeShift is a SPECS Lens for facilities and event planners. It uses a spatial courtyard model, activity schedules and a bounded solar model to compare two portable-shelter placements. It is being built for [Learn AR with SPECS](https://learn-specs.devpost.com/).
 
-**Build status:** the signed-out Lens Studio automation workflow and numerical engine are verified. The complete product interaction, final footage and submission package are in progress. See [execution status](docs/execution_status.md) for evidence and remaining work.
+**Build status:** the functional prototype and actual Preview interaction footage are verified. The presenter recording and final narrated edit remain pending. Preview performance varies and the 30 fps target is not consistently met. See [verification](docs/verification.md) and [execution status](docs/execution_status.md).
+
+[Watch the 74-second silent Preview sequence](docs/media/preview-sequence.mp4) · [Presentation script](docs/presentation_script.md) · [Model assumptions](devpost/model-assumptions.md)
 
 ## Why this problem
 
@@ -16,10 +18,21 @@ The prototype uses a fictional 12 × 8 m Singapore school courtyard with two 3 �
 
 1. Clone this repository with [Git LFS](https://git-lfs.com/) installed, and run `git lfs pull` in the checkout.
 2. Open `ShadeShift.esproj` in Lens Studio 5.24.1 (tested build `5.24.1.26100516`). Keep the project at the repository root.
-3. Use the SPECS 27 Preview and the bundled Sunlit Room interactive environment. The project includes its required native packages.
+3. Use the SPECS 27 Preview and the bundled **Plane** interactive environment, as used for the finished demonstration. The project includes its required native packages.
 4. Run the Preview. Runtime behavior is local and offline after installation.
 
 Lens Studio sign-in was not required for the verified local project build, package installation, compilation, interaction tests or recording. No Lens publication is needed for this competition's documented Preview submission route. Account-gated features outside that route may have separate requirements.
+
+## Try the planning flow
+
+1. Move the timeline knob or use the hour buttons to inspect moving shade. Select Lunch queue, Outdoor seating or Pickup queue to see that zone's schedule and activity height.
+2. Pinch and drag a cyan shelter handle. Release snaps it to the 0.5 m grid. Boundary, corridor and overlap violations show a reason and roll back on release.
+3. Choose **Find better placement**. Read the **Review** panel before applying: it shows the overall gain and each zone's gain or loss. The suggested layout is not applied until **Apply layout** is selected.
+4. Use **Undo** to restore the preceding placement. **Cancel** stops a search; changing an input invalidates its pending result.
+5. Choose **Inspect full scale**, cycle the three observation points, and **Return to overview**. The same layout and activity-height model are preserved.
+6. **Commit** displays a session plan summary with layout and input fingerprints. It is a reproducible session snapshot, not a cloud save. **Reset** restores the initial school-day scenario.
+
+The **Zones** page includes School, Event and Empty occupancy profiles. The same sun and courtyard produce different placement needs when the schedule changes. **Model** explains the assumptions; **Recall** brings the world-anchored overview back in front of the viewer.
 
 ## Calculation model
 
@@ -49,6 +62,12 @@ python3 -m venv .venv
 ```
 
 The fixture records generator inputs, timezone, versions and its SHA-256. The solar generator uses pvlib during development; the Lens does not require Python or pvlib.
+
+## Preview integration checks
+
+The included LEAF registry exposes `shadeshift-timeline`, `shadeshift-placement`, `shadeshift-search`, `shadeshift-cancel-stale`, `shadeshift-inspect-commit`, `shadeshift-recovery` and `shadeshift-ik-route`. Run them from Lens Studio's LEAF panel with the Preview running. They use actual SIK/UIKit interaction paths and assert observable state; they do not inject a recommendation to imitate the user flow. The separate `shadeshift-m0-smoke` entry is historical coverage for a disabled diagnostic scene.
+
+The timeline test checks updates while the knob is still held. The placement test covers all three constraint failures. Recovery-only fixtures supply invalid input through an Editor-only harness and recover with the actual Reset control. An intentional incorrect assertion was also verified to fail before relying on the harness. See [scene contract](Assets/QA/Runtime/SceneContract.md) and [current performance observations](docs/performance_observations.md). Desktop tests establish no physical-device or human-usability result.
 
 ## Project map
 

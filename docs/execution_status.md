@@ -7,7 +7,13 @@ The original user-supplied `implememtation_plan.md` is preserved at the reposito
 
 ## Current milestone
 
-**Milestones 0, 1 and 2 complete. Milestone 3: complete Lens interaction in progress.**
+**The working Lens, integration verification, recorded Preview footage and presentation script are ready. Final narration, edit, captions and public submission remain pending the presenter's recording.**
+
+Latest application checkpoint: **abaef65**. Exact-root save verified at **21 October, 09:51:29.874 SGT**. The saved scene is unchanged from the tested M4 scene. All seven product scenarios have passing runs; final capture also passed the full afternoon sweep, the recommended-plan inspection/commit sequence and the corrected placement test.
+
+The actual [74.1-second silent Preview sequence](media/preview-sequence.mp4), [331-word script](presentation_script.md), [shot list](demo_shot_list.md), [verification report](verification.md), model provenance and Devpost description are prepared. The silent cut is review material, not the final narrated competition video.
+
+**Known performance limit:** selected captures measured 12–16 updates/s; fast earlier runs reached approximately 30. The 30 fps target is not consistently met. Search was below two seconds in selected takes, with earlier slower runs retained. No physical SPECS result is claimed.
 
 Completed:
 
@@ -51,7 +57,11 @@ Completed:
 - Recompiled the same engine in Lens Studio successfully and refreshed and visually checked the running diagnostic fixture.
 - Retained the detailed M2 results in [NumericalVerification.md](../Assets/QA/Engine/NumericalVerification.md).
 
-The diagnostic fixture and calculation engine are verified. The complete Lens interaction is being built; its completion is not yet claimed.
+The complete Lens now renders the courtyard, real UIKit controls and SIK shelter handles. Its tested interactions include continuous timeline movement, valid and invalid shelter dragging, exhaustive placement search, explicit per-zone losses, apply, undo, cancellation, stale-result rejection, full-scale inspection, commit and reset. The seven product LEAF scenarios have passed; recent UI refinements are being checked again where they changed behavior.
+
+Performance is still below the approved targets in recent Preview runs. A warm idle trace recorded approximately 11.4 update/render cycles per second; recent placement searches took 2.05–2.67 seconds. These are desktop observations, not physical SPECS measurements. The profiler's automatic device classification and heuristic FPS estimate were unreliable for this mid-session Lens Studio capture; actual frame-start intervals and the Lens's own wall-clock instrumentation are used instead. Profiling and final footage are still in progress, so development and submission readiness are not claimed.
+
+A subsequent genuine Find interaction completed in 1,972.592 ms during a supported 20-second trace. That isolated result does not establish consistent performance. Native computer control later reported a locked Mac; the user unlocked it, native app access succeeded, and capture setup was completed. Lower Preview cadence also occurred after unlocking, so the lock is not an established sole cause. See [performance observations](performance_observations.md).
 
 ### Current setup handoff
 
@@ -150,10 +160,10 @@ runtime. Git LFS integrity verification passed; no remote publication occurred.
 | 0: automated workflow | Complete | Real button/drag/runtime/camera assertions, intentional LEAF failure followed by pass, and visually verified native preview clip; see `Assets/QA/M0Verification.md` |
 | 1: planning artifacts | Complete | `devpost/design-brief.md`, acceptance criteria, assumptions, attribution, and source-hash workflow record; template preservation check passed |
 | 2: calculation engine | Complete | Reproducible solar fixtures, 14 passing numerical tests, all 5,436 pair scores checked, occupancy-sensitive search; see `Assets/QA/Engine/NumericalVerification.md` |
-| 3: working Lens | In progress | Full user flow through SIK/UI Kit interactions |
-| 4: verification and polish | Pending | LEAF scenarios, visual QA, preview performance, model limits |
-| 5: presentation | Pending | Real Lens footage, verified results, timed script, user's talking-head recording |
-| 6: submission package | Pending | Edited video, captions, screenshots, complete repository, Devpost materials |
+| 3: working Lens | Complete | Saved real SIK/UI Kit flow at application checkpoint abaef65 |
+| 4: verification and polish | Verified with performance limit | 14 numerical checks, seven product cases, final changed-case reruns, visual QA and measurements; 30 fps target remains inconsistent |
+| 5: presentation | Capture and script ready | Genuine Preview clips, consistent recommended-plan take, 331-word script; presenter recording pending |
+| 6: submission package | Prepared in part | Working repository, silent cut, stills, verification and English Devpost draft; final narrated edit, synchronized captions, upload and submission pending |
 
 ## Ownership boundary
 

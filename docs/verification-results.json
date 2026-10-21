@@ -1,0 +1,231 @@
+{
+  "schema": "shadeshift-verification-1",
+  "applicationCommit": "abaef65",
+  "verifiedAtSGT": "2026-10-21",
+  "lensStudio": "5.24.1.26100516",
+  "preview": "SPECS 27 / Interactive / Plane",
+  "signedOutWorkflowVerified": true,
+  "physicalSpecsTested": false,
+  "packages": [
+    {
+      "name": "Bitmoji 3D",
+      "version": "10.0.1"
+    },
+    {
+      "name": "Unidentified local package (tool name: package)",
+      "version": "0.0.0"
+    },
+    {
+      "name": "Leaf (historical/transitive)",
+      "version": "2.0.0"
+    },
+    {
+      "name": "AiPreviewAgentInteract",
+      "version": "2.0.1"
+    },
+    {
+      "name": "SpectaclesUIKit",
+      "version": "2.0.0"
+    },
+    {
+      "name": "Unidentified local package (tool name: package)",
+      "version": "0.0.0"
+    },
+    {
+      "name": "SpectaclesInteractionKit",
+      "version": "2.0.0"
+    },
+    {
+      "name": "Leaf (active Leaf 2.lspkg)",
+      "version": "2.0.2"
+    },
+    {
+      "name": "AiPreviewAgentInspect",
+      "version": "2.0.2"
+    }
+  ],
+  "numericalTests": {
+    "passed": 14,
+    "engineSourceSHA256": "8ffd203377164ed031ac2569609d09d0eea369b8d2e36fb4c046bcbb803ac33a",
+    "solarPayloadSHA256": "66b249d8d122f56667d38c4af44e65bf022745b4361a6dbda719854d0fe3a1ee"
+  },
+  "sceneSHA256": "dee50f9f97758888ee4e170785b2e12062edc71fc8e6cd48a6fdd7f188089875",
+  "productScenarios": [
+    {
+      "id": "shadeshift-timeline",
+      "status": "PASSED",
+      "priorPassingRuns": [
+        {
+          "timestampLocal": "01:54:59.634",
+          "durationSeconds": 4.094,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-timeline"
+        },
+        {
+          "timestampLocal": "02:07:20.030",
+          "durationSeconds": 6.08,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-timeline"
+        },
+        {
+          "timestampLocal": "02:32:07.778",
+          "durationSeconds": 5.827,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-timeline"
+        },
+        {
+          "timestampLocal": "02:34:24.889",
+          "durationSeconds": 5.247,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-timeline"
+        }
+      ],
+      "verifiedBehavior": "Latest run observes minute changes during the actual held UIKit Slider drag; every zone control emits exactly one intent."
+    },
+    {
+      "id": "shadeshift-placement",
+      "status": "PASSED",
+      "priorPassingRuns": [
+        {
+          "timestampLocal": "01:55:33.309",
+          "durationSeconds": 16.32,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-placement"
+        },
+        {
+          "timestampLocal": "02:32:41.482",
+          "durationSeconds": 16.318,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-placement"
+        }
+      ],
+      "verifiedBehavior": "Actual shared hand drag; valid placement changes calculations; corridor, boundary and overlap ghosts all roll back to last valid layout."
+    },
+    {
+      "id": "shadeshift-search",
+      "status": "PASSED",
+      "priorPassingRuns": [
+        {
+          "timestampLocal": "01:56:20.014",
+          "durationSeconds": 12.58,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-search"
+        },
+        {
+          "timestampLocal": "02:08:29.044",
+          "durationSeconds": 9.085,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-search"
+        },
+        {
+          "timestampLocal": "02:32:53.707",
+          "durationSeconds": 4.545,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-search"
+        }
+      ],
+      "verifiedBehavior": "5436 layouts, same input hashes, explicit lunch loss to0.0%, unchanged original until Apply, Apply exactly once, no-better retains current, Undo restores baseline."
+    },
+    {
+      "id": "shadeshift-cancel-stale",
+      "status": "PASSED",
+      "priorPassingRuns": [
+        {
+          "timestampLocal": "01:59:59.176",
+          "durationSeconds": 6.256,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-cancel-stale"
+        }
+      ],
+      "verifiedBehavior": "Cancel preserves layout; edit during work cancels old revision; stale Apply cannot change layout."
+    },
+    {
+      "id": "shadeshift-inspect-commit",
+      "status": "PASSED",
+      "priorPassingRuns": [
+        {
+          "timestampLocal": "02:00:41.909",
+          "durationSeconds": 6.06,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-inspect-commit"
+        },
+        {
+          "timestampLocal": "02:32:47.655",
+          "durationSeconds": 4.348,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-inspect-commit"
+        }
+      ],
+      "verifiedBehavior": "Latest run traverses all3 observations and verifies exact20x model span, unchanged calculations/layout, one actual Commit, valid snapshot fingerprint, Reset clears plan."
+    },
+    {
+      "id": "shadeshift-recovery",
+      "status": "PASSED",
+      "priorPassingRuns": [
+        {
+          "timestampLocal": "02:01:29.862",
+          "durationSeconds": 10.827,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-recovery"
+        }
+      ],
+      "verifiedBehavior": "Empty activity, lunch-event alternative, no feasible grid and invalid input all exercise real public controls; only exceptional inputs use Editor QA harness."
+    },
+    {
+      "id": "shadeshift-ik-route",
+      "status": "PASSED",
+      "priorPassingRuns": [
+        {
+          "timestampLocal": "02:02:22.483",
+          "durationSeconds": 14.232,
+          "status": "PASSED",
+          "scenarioId": "shadeshift-ik-route"
+        }
+      ],
+      "verifiedBehavior": "Actual IK route succeeds exactly once, explicitly indirect/far-field. No fallback or direct reach/physical comfort claim."
+    }
+  ],
+  "captureReruns": [
+    {
+      "id": "shadeshift-search",
+      "result": "succeeded",
+      "note": "Actual search/apply/no-better/undo recorded."
+    },
+    {
+      "id": "shadeshift-timeline",
+      "result": "succeeded",
+      "note": "Expanded coverage: actual held slider plus every hour preset12:00 through17:00 and all3 zones."
+    },
+    {
+      "id": "shadeshift-inspect-commit",
+      "result": "succeeded",
+      "note": "Expanded coverage: real Find+Apply, all3 fullscale observations, overview and Commit preserve the62.3% plan, then Reset."
+    },
+    {
+      "id": "shadeshift-placement",
+      "result": "failed",
+      "timeSGT": "09:45:30.804",
+      "failure": "AssertionError: Expected: \"true\" - Received: \"false\"",
+      "diagnosis": "Fixed per-update test-hand cap stopped the final long drag at the access corridor during low Preview cadence. This did not establish the overlap case; failed take excluded."
+    },
+    {
+      "id": "shadeshift-placement",
+      "result": "succeeded",
+      "timeSGT": "09:50",
+      "note": "Test-hand velocity now uses elapsed wall time; all original assertions retained. Actual diagnostics reached corridor, boundary and overlap targets; nearest overlap endpoint0.0976 Preview cm."
+    }
+  ],
+  "limits": [
+    "Physical SPECS reach, comfort, tracking, lighting, thermal and device performance untested.",
+    "UIKit controls deliberately use indirect/far-field selection at200cm; direct reach is not proved.",
+    "Illustrative flat-site shade/occupancy model; no weather/thermal/temperature/health/carbon prediction.",
+    "No field survey or human usability study.",
+    "Final unlocked native video capture, talking-head edit and submission remain root tasks.",
+    "MCP name/UID Pinch timed out once; coordinate Hover then Pinch and actual event/UI verification worked. A coordinate command can return success without hitting a control; never equate that ack with a product action.",
+    "LEAF Widget uninitialized occurred around a save/reload; interrupted run excluded and later changed cases passed.",
+    "Depth fallback and material-batcher warnings remain; no final script exception observed.",
+    "Preview30fps target not consistently met; encoded video30fps is not a Lens performance claim.",
+    "CPU input-to-presentation timing excludes GPU/display latency.",
+    "Final narrated presentation, synchronized captions and public submission await presenter recording."
+  ]
+}

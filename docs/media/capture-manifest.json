@@ -1,0 +1,59 @@
+{
+  "environment": "Actual Lens Studio5.24.1 / SPECS27 simulated Plane Preview",
+  "applicationCommit": "abaef65",
+  "disclosure": "Silent Preview sequence; not the final narrated competition video.30fps encoding is not measured Lens frame rate.",
+  "clips": [
+    {
+      "file": "01-afternoon.mp4",
+      "duration": 23.1,
+      "bytes": 697518,
+      "sha256": "dde45e4405355f0801c76cf968707a4d04ddb47fdef7e6c06390c86f7cc05548",
+      "video": {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1"
+      }
+    },
+    {
+      "file": "02-placement.mp4",
+      "duration": 27.0,
+      "bytes": 1236471,
+      "sha256": "ae08ece9dab78ab373cdab8cfbabbfdde4a74f04d0808e3bcd09354a133feff0",
+      "video": {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1"
+      }
+    },
+    {
+      "file": "03-recommend-apply.mp4",
+      "duration": 9.466667,
+      "bytes": 687820,
+      "sha256": "19e7a9a830f839bb55cff8cf7a523a84149d5a453f82cea38e395a16d26287a2",
+      "video": {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1"
+      }
+    },
+    {
+      "file": "04-inspect-commit.mp4",
+      "duration": 14.533333,
+      "bytes": 650111,
+      "sha256": "b905cf9a5a5a4279d1c025f43f597ca8401e350203361c364a5fa8e6cbc39b9e",
+      "video": {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1"
+      }
+    }
+  ]
+}

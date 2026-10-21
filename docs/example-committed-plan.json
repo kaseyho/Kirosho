@@ -1,0 +1,115 @@
+{
+  "schema": "shadeshift-plan-v1",
+  "modelVersion": "shade-rect-1.0.0",
+  "scenarioId": "singapore-courtyard-v1",
+  "profile": "school-day",
+  "scenarioFingerprint": "fnv1a32:2b11c69e",
+  "solarSha256": "66b249d8d122f56667d38c4af44e65bf022745b4361a6dbda719854d0fe3a1ee",
+  "layoutFingerprint": "fnv1a32:6ac548da",
+  "fingerprintScheme": "Canonical JSON + FNV-1a 32-bit (non-cryptographic); solar fixture SHA-256",
+  "layout": {
+    "shelters": [
+      {
+        "id": "A",
+        "e": 2,
+        "n": 1.5
+      },
+      {
+        "id": "B",
+        "e": 8,
+        "n": 5.5
+      }
+    ]
+  },
+  "minute": 720,
+  "evaluation": {
+    "revision": 2,
+    "minute": 720,
+    "inputHash": "fnv1a32:dda5e7e5",
+    "layoutHash": "fnv1a32:6ac548da",
+    "zones": [
+      {
+        "id": "lunch",
+        "label": "Lunch queue",
+        "activityHeight": 1.6,
+        "currentPeople": 12,
+        "currentAreaPercent": 0,
+        "currentCoveragePercent": 0,
+        "scheduledPersonMinutes": 1200,
+        "shadedPersonMinutes": 0,
+        "coveragePercent": 0
+      },
+      {
+        "id": "seating",
+        "label": "Outdoor seating",
+        "activityHeight": 1.2,
+        "currentPeople": 8,
+        "currentAreaPercent": 67.68650630117092,
+        "currentCoveragePercent": 67.68650630117092,
+        "scheduledPersonMinutes": 1680,
+        "shadedPersonMinutes": 1341.7750395144656,
+        "coveragePercent": 79.86756187586104
+      },
+      {
+        "id": "pickup",
+        "label": "Pickup queue",
+        "activityHeight": 1.6,
+        "currentPeople": 0,
+        "currentAreaPercent": 37.782394833626945,
+        "currentCoveragePercent": null,
+        "scheduledPersonMinutes": 2160,
+        "shadedPersonMinutes": 1797.8853424449453,
+        "coveragePercent": 83.23543252059933
+      }
+    ],
+    "scheduledPersonMinutes": 5040,
+    "shadedPersonMinutes": 3139.660381959411,
+    "coveragePercent": 62.29484884840102,
+    "stepMinutes": 5
+  },
+  "baselineEvaluation": {
+    "revision": 2,
+    "minute": 720,
+    "inputHash": "fnv1a32:dda5e7e5",
+    "layoutHash": "fnv1a32:1f70eb40",
+    "zones": [
+      {
+        "id": "lunch",
+        "label": "Lunch queue",
+        "activityHeight": 1.6,
+        "currentPeople": 12,
+        "currentAreaPercent": 84.383813356255,
+        "currentCoveragePercent": 84.383813356255,
+        "scheduledPersonMinutes": 1200,
+        "shadedPersonMinutes": 913.6973486018452,
+        "coveragePercent": 76.14144571682043
+      },
+      {
+        "id": "seating",
+        "label": "Outdoor seating",
+        "activityHeight": 1.2,
+        "currentPeople": 8,
+        "currentAreaPercent": 0,
+        "currentCoveragePercent": 0,
+        "scheduledPersonMinutes": 1680,
+        "shadedPersonMinutes": 0,
+        "coveragePercent": 0
+      },
+      {
+        "id": "pickup",
+        "label": "Pickup queue",
+        "activityHeight": 1.6,
+        "currentPeople": 0,
+        "currentAreaPercent": 84.383813356255,
+        "currentCoveragePercent": null,
+        "scheduledPersonMinutes": 2160,
+        "shadedPersonMinutes": 702.6443153860038,
+        "coveragePercent": 32.52982941601869
+      }
+    ],
+    "scheduledPersonMinutes": 5040,
+    "shadedPersonMinutes": 1616.341663987849,
+    "coveragePercent": 32.07027111087002,
+    "stepMinutes": 5
+  }
+}
