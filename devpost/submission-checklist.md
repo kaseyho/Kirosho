@@ -10,7 +10,7 @@ Authoritative requirements: [official rules](https://learn-specs.devpost.com/rul
 - English [project description](submission-draft.md), [model assumptions](model-assumptions.md) and [source attribution](source-attribution.md).
 - Shared calculation engine, reproducible SPA fixtures, 14 passing numerical checks and seven product integration scenarios with retained run history.
 - Actual Preview footage, selected exports, thumbnail, verification report and 331-word presenter script.
-- Existing public repository destination: [kaseyho/Kirosho](https://github.com/kaseyho/Kirosho), tested branch `codex/shadeshift`.
+- Existing public repository destination: [kaseyho/Kirosho](https://github.com/kaseyho/Kirosho), tested branch `codex/kirosho`.
 - Documented model, physical-device and inconsistent Preview frame-rate limits.
 
 ## Remaining before submission

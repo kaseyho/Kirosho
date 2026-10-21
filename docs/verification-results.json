@@ -1,11 +1,18 @@
 {
-  "schema": "shadeshift-verification-1",
-  "applicationCommit": "abaef65",
+  "schema": "kirosho-verification-2",
+  "applicationCommit": "ec87528",
   "verifiedAtSGT": "2026-10-21",
   "lensStudio": "5.24.1.26100516",
-  "preview": "SPECS 27 / Interactive / Plane",
+  "preview": "SPECS 27 / Interactive / Plane / Preview 3",
   "signedOutWorkflowVerified": true,
   "physicalSpecsTested": false,
+  "project": {
+    "file": "Kirosho.esproj",
+    "lensName": "Kirosho",
+    "savedAtSGT": "2026-10-21T16:55:02+08:00",
+    "sha256": "9c85a6d09a7f358052cb1e20da2699979eb2bb75cf5eef5be7a374ce33ef9b11"
+  },
+  "sceneSHA256": "09ea0c41eea2d0f48485f7093127bbb777f251a801942d449baa1c3a3c47cec7",
   "packages": [
     {
       "name": "Bitmoji 3D",
@@ -46,186 +53,517 @@
   ],
   "numericalTests": {
     "passed": 14,
-    "engineSourceSHA256": "8ffd203377164ed031ac2569609d09d0eea369b8d2e36fb4c046bcbb803ac33a",
-    "solarPayloadSHA256": "66b249d8d122f56667d38c4af44e65bf022745b4361a6dbda719854d0fe3a1ee"
+    "failed": 0,
+    "durationMs": 343.880291,
+    "engineSourceSHA256": "64e3a8f59d2a32fa515bee5176000f00a0d5b856795d86f9fed31acd8fc07478",
+    "solarPayloadSHA256": "405dccbbcd144cf4a4a572c1efd3566e7e907d7338da2ab133d2f5b6b8249e7b",
+    "vectorsAndReferenceCaseUnchanged": true
   },
-  "sceneSHA256": "dee50f9f97758888ee4e170785b2e12062edc71fc8e6cd48a6fdd7f188089875",
+  "rename": {
+    "projectName": "Kirosho",
+    "branch": "codex/kirosho",
+    "renamedBrandedScriptAssets": 20,
+    "renamedGeneratedDataModules": 1,
+    "assetGuidsPreserved": 21,
+    "currentAuthoredTextAndFilenameBrandResiduals": 0,
+    "editorDefaultsCheckedAfterReloadAndSave": true,
+    "fixtureModule": "Assets/Data/KiroshoSolarFixtures.ts",
+    "solarGeneratorSHA256": "3beb8ce72489810e51e8d18273a91b41c1d48f090b734ac94afd1e914498f0dc",
+    "leafBridge": "Packages/Leaf 2.lspkg/Scenarios/scenario/MessagingBridge.ts"
+  },
   "productScenarios": [
     {
-      "id": "shadeshift-timeline",
+      "id": "kirosho-timeline",
       "status": "PASSED",
-      "priorPassingRuns": [
-        {
-          "timestampLocal": "01:54:59.634",
-          "durationSeconds": 4.094,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-timeline"
+      "target": "Preview 3 / SPECS 27 / Interactive Plane",
+      "toolWallMs": 33960,
+      "verifiedBehavior": "Latest run observes minute changes during the actual held UIKit Slider drag; every zone control emits exactly one intent.",
+      "actionCounts": {
+        "reset": 1,
+        "timeline-drag": 8,
+        "time:720": 1,
+        "time:780": 1,
+        "time:840": 1,
+        "time:900": 1,
+        "time:960": 1,
+        "time:1020": 1,
+        "zone:lunch": 1,
+        "zone:seating": 1,
+        "zone:pickup": 1
+      },
+      "performance": {
+        "environment": "Lens Studio macOS Preview",
+        "frameIntervals": {
+          "samples": 318,
+          "meanMs": 73.46197235220123,
+          "p50Ms": 70.205583,
+          "p95Ms": 101.1075,
+          "maxMs": 168.54075
         },
-        {
-          "timestampLocal": "02:07:20.030",
-          "durationSeconds": 6.08,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-timeline"
+        "allUpdateIntervalsIncludingStartup": {
+          "samples": 360,
+          "meanMs": 85.88400312499996,
+          "p50Ms": 70.205583,
+          "p95Ms": 103.934792,
+          "maxMs": 4292.855375
         },
-        {
-          "timestampLocal": "02:32:07.778",
-          "durationSeconds": 5.827,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-timeline"
+        "sampling": "Active window starts 3 s after the first world anchor; no later gaps are excluded. Both windows retain the most recent 1200 intervals.",
+        "meanUpdateFps": 13.612485044720362,
+        "evaluationCpu": {
+          "samples": 14,
+          "meanMs": 13.507160571428571,
+          "p50Ms": 13.359583,
+          "p95Ms": 17.206291,
+          "maxMs": 20.206833
         },
-        {
-          "timestampLocal": "02:34:24.889",
-          "durationSeconds": 5.247,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-timeline"
-        }
-      ],
-      "verifiedBehavior": "Latest run observes minute changes during the actual held UIKit Slider drag; every zone control emits exactly one intent."
+        "settledInputToPresentation": {
+          "samples": 14,
+          "meanMs": 18.349907642857143,
+          "p50Ms": 17.999666,
+          "p95Ms": 22.794958,
+          "maxMs": 24.331125
+        },
+        "searchWall": {
+          "samples": 0
+        },
+        "searchBatchCpu": {
+          "samples": 0
+        },
+        "dragCallbackToSceneUpdate": {
+          "samples": 0
+        },
+        "limitation": "Input-to-presentation ends after CPU geometry/UI setters, excluding GPU/display latency; no physical SPECS performance claim."
+      },
+      "recorded": true,
+      "parameters": {
+        "demoPauseMs": "1800",
+        "__leaf__log_level": "ERROR",
+        "__leaf__diagnostic_report_duration_ms": "0"
+      }
     },
     {
-      "id": "shadeshift-placement",
+      "id": "kirosho-placement",
       "status": "PASSED",
-      "priorPassingRuns": [
-        {
-          "timestampLocal": "01:55:33.309",
-          "durationSeconds": 16.32,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-placement"
+      "target": "Preview 3 / SPECS 27 / Interactive Plane",
+      "toolWallMs": 42244,
+      "verifiedBehavior": "Actual shared hand drag; valid placement changes calculations; corridor, boundary and overlap ghosts all roll back to last valid layout.",
+      "actionCounts": {
+        "reset": 1
+      },
+      "performance": {
+        "environment": "Lens Studio macOS Preview",
+        "frameIntervals": {
+          "samples": 343,
+          "meanMs": 67.72499866472306,
+          "p50Ms": 65.661542,
+          "p95Ms": 98.015583,
+          "maxMs": 195.74375
         },
-        {
-          "timestampLocal": "02:32:41.482",
-          "durationSeconds": 16.318,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-placement"
-        }
-      ],
-      "verifiedBehavior": "Actual shared hand drag; valid placement changes calculations; corridor, boundary and overlap ghosts all roll back to last valid layout."
-    },
-    {
-      "id": "shadeshift-search",
-      "status": "PASSED",
-      "priorPassingRuns": [
-        {
-          "timestampLocal": "01:56:20.014",
-          "durationSeconds": 12.58,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-search"
+        "allUpdateIntervalsIncludingStartup": {
+          "samples": 377,
+          "meanMs": 95.47193368700272,
+          "p50Ms": 66.225917,
+          "p95Ms": 102.820167,
+          "maxMs": 9329.2995
         },
-        {
-          "timestampLocal": "02:08:29.044",
-          "durationSeconds": 9.085,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-search"
+        "sampling": "Active window starts 3 s after the first world anchor; no later gaps are excluded. Both windows retain the most recent 1200 intervals.",
+        "meanUpdateFps": 14.76559645206586,
+        "evaluationCpu": {
+          "samples": 1,
+          "meanMs": 8.18075,
+          "p50Ms": 8.18075,
+          "p95Ms": 8.18075,
+          "maxMs": 8.18075
         },
-        {
-          "timestampLocal": "02:32:53.707",
-          "durationSeconds": 4.545,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-search"
-        }
-      ],
-      "verifiedBehavior": "5436 layouts, same input hashes, explicit lunch loss to0.0%, unchanged original until Apply, Apply exactly once, no-better retains current, Undo restores baseline."
-    },
-    {
-      "id": "shadeshift-cancel-stale",
-      "status": "PASSED",
-      "priorPassingRuns": [
-        {
-          "timestampLocal": "01:59:59.176",
-          "durationSeconds": 6.256,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-cancel-stale"
-        }
-      ],
-      "verifiedBehavior": "Cancel preserves layout; edit during work cancels old revision; stale Apply cannot change layout."
-    },
-    {
-      "id": "shadeshift-inspect-commit",
-      "status": "PASSED",
-      "priorPassingRuns": [
-        {
-          "timestampLocal": "02:00:41.909",
-          "durationSeconds": 6.06,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-inspect-commit"
+        "settledInputToPresentation": {
+          "samples": 1,
+          "meanMs": 17.940416,
+          "p50Ms": 17.940416,
+          "p95Ms": 17.940416,
+          "maxMs": 17.940416
         },
-        {
-          "timestampLocal": "02:32:47.655",
-          "durationSeconds": 4.348,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-inspect-commit"
-        }
-      ],
-      "verifiedBehavior": "Latest run traverses all3 observations and verifies exact20x model span, unchanged calculations/layout, one actual Commit, valid snapshot fingerprint, Reset clears plan."
+        "searchWall": {
+          "samples": 0
+        },
+        "searchBatchCpu": {
+          "samples": 0
+        },
+        "dragCallbackToSceneUpdate": {
+          "samples": 97,
+          "meanMs": 8.109985381443304,
+          "p50Ms": 7.096708,
+          "p95Ms": 14.898625,
+          "maxMs": 29.712333
+        },
+        "limitation": "Input-to-presentation ends after CPU geometry/UI setters, excluding GPU/display latency; no physical SPECS performance claim."
+      },
+      "recorded": true,
+      "parameters": {
+        "demoPauseMs": "1800",
+        "__leaf__log_level": "ERROR",
+        "__leaf__diagnostic_report_duration_ms": "0"
+      }
     },
     {
-      "id": "shadeshift-recovery",
+      "id": "kirosho-search",
       "status": "PASSED",
-      "priorPassingRuns": [
-        {
-          "timestampLocal": "02:01:29.862",
-          "durationSeconds": 10.827,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-recovery"
-        }
-      ],
-      "verifiedBehavior": "Empty activity, lunch-event alternative, no feasible grid and invalid input all exercise real public controls; only exceptional inputs use Editor QA harness."
+      "target": "Preview 3 / SPECS 27 / Interactive Plane",
+      "toolWallMs": 10670,
+      "verifiedBehavior": "5436 layouts, same input hashes, explicit lunch loss to0.0%, unchanged original until Apply, Apply exactly once, no-better retains current, Undo restores baseline.",
+      "actionCounts": {
+        "reset": 1,
+        "find": 2,
+        "apply": 1,
+        "undo": 1
+      },
+      "performance": {
+        "environment": "Lens Studio macOS Preview",
+        "frameIntervals": {
+          "samples": 55,
+          "meanMs": 54.133794690909085,
+          "p50Ms": 49.951792,
+          "p95Ms": 78.731334,
+          "maxMs": 156.998167
+        },
+        "allUpdateIntervalsIncludingStartup": {
+          "samples": 115,
+          "meanMs": 68.04639021739133,
+          "p50Ms": 47.758209,
+          "p95Ms": 85.359667,
+          "maxMs": 1587.526625
+        },
+        "sampling": "Active window starts 3 s after the first world anchor; no later gaps are excluded. Both windows retain the most recent 1200 intervals.",
+        "meanUpdateFps": 18.47274896780761,
+        "evaluationCpu": {
+          "samples": 2,
+          "meanMs": 6.9665625,
+          "p50Ms": 6.7645,
+          "p95Ms": 6.7645,
+          "maxMs": 7.168625
+        },
+        "settledInputToPresentation": {
+          "samples": 2,
+          "meanMs": 10.835167,
+          "p50Ms": 10.353417,
+          "p95Ms": 10.353417,
+          "maxMs": 11.316917
+        },
+        "searchWall": {
+          "samples": 2,
+          "meanMs": 1161.048917,
+          "p50Ms": 1133.798959,
+          "p95Ms": 1133.798959,
+          "maxMs": 1188.298875
+        },
+        "searchBatchCpu": {
+          "samples": 40,
+          "meanMs": 14.489365525000007,
+          "p50Ms": 2.933,
+          "p95Ms": 35.067917,
+          "maxMs": 52.530375
+        },
+        "dragCallbackToSceneUpdate": {
+          "samples": 0
+        },
+        "limitation": "Input-to-presentation ends after CPU geometry/UI setters, excluding GPU/display latency; no physical SPECS performance claim."
+      },
+      "scenarioManagerDurationMs": 5991,
+      "startedUtc": "2026-10-21T08:45:40.566Z",
+      "finishedUtc": "2026-10-21T08:45:51.236Z"
     },
     {
-      "id": "shadeshift-ik-route",
+      "id": "kirosho-cancel-stale",
       "status": "PASSED",
-      "priorPassingRuns": [
-        {
-          "timestampLocal": "02:02:22.483",
-          "durationSeconds": 14.232,
-          "status": "PASSED",
-          "scenarioId": "shadeshift-ik-route"
-        }
-      ],
-      "verifiedBehavior": "Actual IK route succeeds exactly once, explicitly indirect/far-field. No fallback or direct reach/physical comfort claim."
+      "target": "Preview 3 / SPECS 27 / Interactive Plane",
+      "toolWallMs": 10184,
+      "verifiedBehavior": "Cancel preserves layout; edit during work cancels old revision; stale Apply cannot change layout.",
+      "actionCounts": {
+        "reset": 1,
+        "find": 2,
+        "cancel": 1,
+        "later": 1,
+        "apply": 1
+      },
+      "performance": {
+        "environment": "Lens Studio macOS Preview",
+        "frameIntervals": {
+          "samples": 47,
+          "meanMs": 51.31172340425535,
+          "p50Ms": 47.888041,
+          "p95Ms": 76.199541,
+          "maxMs": 91.736625
+        },
+        "allUpdateIntervalsIncludingStartup": {
+          "samples": 110,
+          "meanMs": 67.70618409090908,
+          "p50Ms": 45.217625,
+          "p95Ms": 79.642,
+          "maxMs": 1779.684208
+        },
+        "sampling": "Active window starts 3 s after the first world anchor; no later gaps are excluded. Both windows retain the most recent 1200 intervals.",
+        "meanUpdateFps": 19.488723700071017,
+        "evaluationCpu": {
+          "samples": 1,
+          "meanMs": 7.7535,
+          "p50Ms": 7.7535,
+          "p95Ms": 7.7535,
+          "maxMs": 7.7535
+        },
+        "settledInputToPresentation": {
+          "samples": 1,
+          "meanMs": 12.331333,
+          "p50Ms": 12.331333,
+          "p95Ms": 12.331333,
+          "maxMs": 12.331333
+        },
+        "searchWall": {
+          "samples": 0
+        },
+        "searchBatchCpu": {
+          "samples": 14,
+          "meanMs": 34.618922714285716,
+          "p50Ms": 29.2425,
+          "p95Ms": 41.42325,
+          "maxMs": 100.500709
+        },
+        "dragCallbackToSceneUpdate": {
+          "samples": 0
+        },
+        "limitation": "Input-to-presentation ends after CPU geometry/UI setters, excluding GPU/display latency; no physical SPECS performance claim."
+      },
+      "scenarioManagerDurationMs": 5416,
+      "startedUtc": "2026-10-21T08:46:08.864Z",
+      "finishedUtc": "2026-10-21T08:46:19.048Z"
+    },
+    {
+      "id": "kirosho-inspect-commit",
+      "status": "PASSED",
+      "target": "Preview 3 / SPECS 27 / Interactive Plane",
+      "toolWallMs": 33911,
+      "verifiedBehavior": "Latest run traverses all3 observations and verifies exact20x model span, unchanged calculations/layout, one actual Commit, valid snapshot fingerprint, Reset clears plan.",
+      "actionCounts": {
+        "reset": 2,
+        "find": 1,
+        "apply": 1,
+        "fullscale": 1,
+        "next-observation": 3,
+        "overview": 1,
+        "commit": 1
+      },
+      "performance": {
+        "environment": "Lens Studio macOS Preview",
+        "frameIntervals": {
+          "samples": 339,
+          "meanMs": 68.17703773451326,
+          "p50Ms": 65.453,
+          "p95Ms": 93.829708,
+          "maxMs": 199.3265
+        },
+        "allUpdateIntervalsIncludingStartup": {
+          "samples": 385,
+          "meanMs": 80.51946385194806,
+          "p50Ms": 65.497208,
+          "p95Ms": 94.44925,
+          "maxMs": 4545.412917
+        },
+        "sampling": "Active window starts 3 s after the first world anchor; no later gaps are excluded. Both windows retain the most recent 1200 intervals.",
+        "meanUpdateFps": 14.66769506610244,
+        "evaluationCpu": {
+          "samples": 1,
+          "meanMs": 9.228209,
+          "p50Ms": 9.228209,
+          "p95Ms": 9.228209,
+          "maxMs": 9.228209
+        },
+        "settledInputToPresentation": {
+          "samples": 1,
+          "meanMs": 20.097291,
+          "p50Ms": 20.097291,
+          "p95Ms": 20.097291,
+          "maxMs": 20.097291
+        },
+        "searchWall": {
+          "samples": 1,
+          "meanMs": 1702.47875,
+          "p50Ms": 1702.47875,
+          "p95Ms": 1702.47875,
+          "maxMs": 1702.47875
+        },
+        "searchBatchCpu": {
+          "samples": 20,
+          "meanMs": 19.65120425,
+          "p50Ms": 4.1965,
+          "p95Ms": 49.332875,
+          "maxMs": 107.529625
+        },
+        "dragCallbackToSceneUpdate": {
+          "samples": 0
+        },
+        "limitation": "Input-to-presentation ends after CPU geometry/UI setters, excluding GPU/display latency; no physical SPECS performance claim."
+      },
+      "recorded": true,
+      "parameters": {
+        "demoPauseMs": "1800",
+        "__leaf__log_level": "ERROR",
+        "__leaf__diagnostic_report_duration_ms": "0"
+      }
+    },
+    {
+      "id": "kirosho-recovery",
+      "status": "PASSED",
+      "target": "Preview 3 / SPECS 27 / Interactive Plane",
+      "toolWallMs": 12068,
+      "verifiedBehavior": "Empty activity, lunch-event alternative, no feasible grid and invalid input all exercise real public controls; only exceptional inputs use Editor QA harness.",
+      "actionCounts": {
+        "reset": 2,
+        "profile:no-activity": 1,
+        "find": 3,
+        "profile:lunch-event": 1
+      },
+      "performance": {
+        "environment": "Lens Studio macOS Preview",
+        "frameIntervals": {
+          "samples": 59,
+          "meanMs": 54.78331355932204,
+          "p50Ms": 50.323792,
+          "p95Ms": 79.679167,
+          "maxMs": 139.020875
+        },
+        "allUpdateIntervalsIncludingStartup": {
+          "samples": 127,
+          "meanMs": 70.76033366141735,
+          "p50Ms": 44.524833,
+          "p95Ms": 79.679167,
+          "maxMs": 2507.958958
+        },
+        "sampling": "Active window starts 3 s after the first world anchor; no later gaps are excluded. Both windows retain the most recent 1200 intervals.",
+        "meanUpdateFps": 18.253733391229638,
+        "evaluationCpu": {
+          "samples": 3,
+          "meanMs": 8.101847333333334,
+          "p50Ms": 7.414875,
+          "p95Ms": 7.414875,
+          "maxMs": 10.486084
+        },
+        "settledInputToPresentation": {
+          "samples": 2,
+          "meanMs": 15.5224585,
+          "p50Ms": 13.174042,
+          "p95Ms": 13.174042,
+          "maxMs": 17.870875
+        },
+        "searchWall": {
+          "samples": 1,
+          "meanMs": 1207.585125,
+          "p50Ms": 1207.585125,
+          "p95Ms": 1207.585125,
+          "maxMs": 1207.585125
+        },
+        "searchBatchCpu": {
+          "samples": 20,
+          "meanMs": 15.012868849999993,
+          "p50Ms": 2.976334,
+          "p95Ms": 37.871917,
+          "maxMs": 52.587292
+        },
+        "dragCallbackToSceneUpdate": {
+          "samples": 0
+        },
+        "limitation": "Input-to-presentation ends after CPU geometry/UI setters, excluding GPU/display latency; no physical SPECS performance claim."
+      },
+      "scenarioManagerDurationMs": 6237,
+      "startedUtc": "2026-10-21T08:46:32.738Z",
+      "finishedUtc": "2026-10-21T08:46:44.806Z"
+    },
+    {
+      "id": "kirosho-ik-route",
+      "status": "PASSED",
+      "target": "Preview 3 / SPECS 27 / Interactive Plane",
+      "toolWallMs": 11240,
+      "verifiedBehavior": "Actual IK route succeeds exactly once, explicitly indirect/far-field. No fallback or direct reach/physical comfort claim.",
+      "actionCounts": {
+        "reset": 1,
+        "later": 1
+      },
+      "performance": {
+        "environment": "Lens Studio macOS Preview",
+        "frameIntervals": {
+          "samples": 62,
+          "meanMs": 52.08320229032259,
+          "p50Ms": 48.853958,
+          "p95Ms": 80.350625,
+          "maxMs": 132.131084
+        },
+        "allUpdateIntervalsIncludingStartup": {
+          "samples": 117,
+          "meanMs": 74.3852817008547,
+          "p50Ms": 47.106042,
+          "p95Ms": 101.978333,
+          "maxMs": 2159.413584
+        },
+        "sampling": "Active window starts 3 s after the first world anchor; no later gaps are excluded. Both windows retain the most recent 1200 intervals.",
+        "meanUpdateFps": 19.200048307817024,
+        "evaluationCpu": {
+          "samples": 1,
+          "meanMs": 15.053875,
+          "p50Ms": 15.053875,
+          "p95Ms": 15.053875,
+          "maxMs": 15.053875
+        },
+        "settledInputToPresentation": {
+          "samples": 1,
+          "meanMs": 24.741208,
+          "p50Ms": 24.741208,
+          "p95Ms": 24.741208,
+          "maxMs": 24.741208
+        },
+        "searchWall": {
+          "samples": 0
+        },
+        "searchBatchCpu": {
+          "samples": 0
+        },
+        "dragCallbackToSceneUpdate": {
+          "samples": 0
+        },
+        "limitation": "Input-to-presentation ends after CPU geometry/UI setters, excluding GPU/display latency; no physical SPECS performance claim."
+      },
+      "scenarioManagerDurationMs": 6298,
+      "startedUtc": "2026-10-21T08:46:53.675Z",
+      "finishedUtc": "2026-10-21T08:47:04.915Z"
     }
   ],
-  "captureReruns": [
-    {
-      "id": "shadeshift-search",
-      "result": "succeeded",
-      "note": "Actual search/apply/no-better/undo recorded."
-    },
-    {
-      "id": "shadeshift-timeline",
-      "result": "succeeded",
-      "note": "Expanded coverage: actual held slider plus every hour preset12:00 through17:00 and all3 zones."
-    },
-    {
-      "id": "shadeshift-inspect-commit",
-      "result": "succeeded",
-      "note": "Expanded coverage: real Find+Apply, all3 fullscale observations, overview and Commit preserve the62.3% plan, then Reset."
-    },
-    {
-      "id": "shadeshift-placement",
-      "result": "failed",
-      "timeSGT": "09:45:30.804",
-      "failure": "AssertionError: Expected: \"true\" - Received: \"false\"",
-      "diagnosis": "Fixed per-update test-hand cap stopped the final long drag at the access corridor during low Preview cadence. This did not establish the overlap case; failed take excluded."
-    },
-    {
-      "id": "shadeshift-placement",
-      "result": "succeeded",
-      "timeSGT": "09:50",
-      "note": "Test-hand velocity now uses elapsed wall time; all original assertions retained. Actual diagnostics reached corridor, boundary and overlap targets; nearest overlap endpoint0.0976 Preview cm."
-    }
+  "recoveryDuringRename": [
+    "Runtime detected an undefined generated-data export after successful compilation. A distinct generated TypeScript module basename resolved the import; numerical vectors and results remained unchanged.",
+    "Two serialized editor defaults were synchronized and checked after native Reload Project and Save.",
+    "The newly created LEAF bridge selected an older installed package. The same bridge was wired to active Leaf 2.0.2 through VirtualScene, then all seven cases passed; final save persists it."
   ],
+  "priorCaptureFailure": {
+    "timeSGT": "2026-10-21T09:45:30.804+08:00",
+    "scenario": "placement automation",
+    "failure": "AssertionError: Expected: \"true\" - Received: \"false\"",
+    "diagnosis": "Fixed per-update hand cap stopped a long drag at the access corridor during low Preview cadence.",
+    "correction": "Test-hand velocity normalized by elapsed wall time; original assertions retained.",
+    "failedTakeIncludedInCurrentMedia": false
+  },
+  "media": {
+    "sequence": "media/preview-sequence.mp4",
+    "durationSeconds": 68.5,
+    "freshlyRecordedKiroshoClips": 4,
+    "freshlyExtractedKiroshoStills": 2,
+    "motionInterpolated": false,
+    "interactionSpedUp": false,
+    "reviewed": "Sampled frames from every clip, recommendation still, applied 62.3% state and committed 62.3% endpoint."
+  },
   "limits": [
     "Physical SPECS reach, comfort, tracking, lighting, thermal and device performance untested.",
-    "UIKit controls deliberately use indirect/far-field selection at200cm; direct reach is not proved.",
-    "Illustrative flat-site shade/occupancy model; no weather/thermal/temperature/health/carbon prediction.",
+    "UIKit controls use indirect/far-field selection at 200 cm; direct reach is not proved.",
+    "Illustrative flat-site shade and occupancy model; no weather, thermal, health, energy or carbon prediction.",
     "No field survey or human usability study.",
-    "Final unlocked native video capture, talking-head edit and submission remain root tasks.",
-    "MCP name/UID Pinch timed out once; coordinate Hover then Pinch and actual event/UI verification worked. A coordinate command can return success without hitting a control; never equate that ack with a product action.",
-    "LEAF Widget uninitialized occurred around a save/reload; interrupted run excluded and later changed cases passed.",
-    "Depth fallback and material-batcher warnings remain; no final script exception observed.",
-    "Preview30fps target not consistently met; encoded video30fps is not a Lens performance claim.",
+    "Depth fallback and material-batching warnings remain; no final unexpected product script exception.",
+    "Preview 30 fps target remains unmet in these recordings; encoded 30 fps is not measured Lens performance.",
     "CPU input-to-presentation timing excludes GPU/display latency.",
+    "Opening a new LEAF panel after reload may recreate its bridge from the older installed Leaf package; verify active Leaf 2.0.2 when the scenario list is empty.",
     "Final narrated presentation, synchronized captions and public submission await presenter recording."
   ]
 }

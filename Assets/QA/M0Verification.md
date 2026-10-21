@@ -46,7 +46,7 @@ correctly failed. Correcting the test driver yielded the passing result above.
 
 ## Evidence
 
-Private generated evidence is under `/Users/kc/Work/Kirosho/.local/evidence/`:
+Private historical M0 evidence is preserved in a local artifact archive. In the original checkout, `.local/evidence/kirosho-archive-location.txt` records its location. The retained files include:
 
 - `m0-smoke-final-baseline.png`: the actual preview before capture, counter 0.
 - `m0-smoke-interacted.png`: actual earlier counter 1 and moved cube.

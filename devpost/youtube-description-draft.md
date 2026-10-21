@@ -2,11 +2,11 @@
 
 ## Title
 
-ShadeShift — Place existing shelters around the hours people need shade
+Kirosho — Place existing shelters around the hours people need shade
 
 ## Description
 
-ShadeShift is a working SPECS Lens for facilities and event planners deciding where to place a limited shelter inventory.
+Kirosho is a working SPECS Lens for facilities and event planners deciding where to place a limited shelter inventory.
 
 This demonstration uses the actual Lens Studio SPECS 27 Preview with simulated interactions and a fictional Singapore courtyard. It is not footage from physical glasses or a surveyed site.
 

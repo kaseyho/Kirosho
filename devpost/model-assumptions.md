@@ -1,4 +1,4 @@
-# ShadeShift model assumptions
+# Kirosho model assumptions
 
 The approved implementation plan defines a fictional Singapore school courtyard,
 12 × 8 m, with two identical, north-aligned 3 × 3 m roofs at 2.8 m height. Exact

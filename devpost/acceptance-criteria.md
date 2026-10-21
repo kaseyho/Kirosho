@@ -1,4 +1,4 @@
-# ShadeShift acceptance criteria
+# Kirosho acceptance criteria
 
 These expand the five preview criteria in [design-brief.md](design-brief.md).
 They are requirements, not claims that the current template implements them.

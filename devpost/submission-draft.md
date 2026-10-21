@@ -1,4 +1,4 @@
-# ShadeShift
+# Kirosho
 
 Prepared project description. The working Lens, numerical checks, seven product scenarios and actual Preview footage are verified. The final narrated presentation, public YouTube URL and account-holder declarations remain pending. No Devpost submission or YouTube upload has been made.
 
@@ -10,11 +10,11 @@ Put the shelters you already own where people need the shade, when they need it.
 
 A shelter can look perfectly positioned at noon and miss the queue later. Facilities teams and event organizers have limited shade equipment, while different groups use different areas throughout the day. A roof footprint cannot explain that changing demand.
 
-ShadeShift explores a practical climate-adaptation decision: where should two existing portable shelters go for this site's actual activity schedule?
+Kirosho explores a practical climate-adaptation decision: where should two existing portable shelters go for this site's actual activity schedule?
 
 ## What it does
 
-ShadeShift presents a courtyard as an AR planning model. A planner inspects moving afternoon shade, selects activity zones and moves shelters within boundary, access and overlap constraints. The model combines shade coverage with scheduled occupancy, reporting modeled shaded person-minutes and whole-period coverage.
+Kirosho presents a courtyard as an AR planning model. A planner inspects moving afternoon shade, selects activity zones and moves shelters within boundary, access and overlap constraints. The model combines shade coverage with scheduled occupancy, reporting modeled shaded person-minutes and whole-period coverage.
 
 A placement search evaluates every permitted pair on a 0.5 m grid. It previews its suggestion and each zone's gains or losses before the planner applies it. Undo, reset and a full-scale inspection view support review. A committed session summary records the layout, input fingerprints and calculated results.
 
@@ -50,7 +50,7 @@ SPECS 27, Lens Studio 5.24.1, Snap CLAD, Lens Studio MCP, Codex, TypeScript, Spe
 
 ## Submission fields still to complete
 
-Public repository: [Kirosho / ShadeShift](https://github.com/kaseyho/Kirosho), using the tested `codex/shadeshift` branch.
+Public repository: [Kirosho](https://github.com/kaseyho/Kirosho), using the tested `codex/kirosho` branch.
 
 Public YouTube demonstration URL: pending final footage and talking-head recording.
 

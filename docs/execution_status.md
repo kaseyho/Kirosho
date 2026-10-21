@@ -1,4 +1,4 @@
-# ShadeShift execution status
+# Kirosho execution status
 
 Updated: 21 October 2026 (Singapore time).
 
@@ -9,19 +9,21 @@ The original user-supplied `implememtation_plan.md` is preserved at the reposito
 
 **The working Lens, integration verification, recorded Preview footage and presentation script are ready. Final narration, edit, captions and public submission remain pending the presenter's recording.**
 
-Latest application checkpoint: **abaef65**. Exact-root save verified at **21 October, 09:51:29.874 SGT**. The saved scene is unchanged from the tested M4 scene. All seven product scenarios have passing runs; final capture also passed the full afternoon sweep, the recommended-plan inspection/commit sequence and the corrected placement test.
+Latest application checkpoint: **ec87528**. `Kirosho.esproj` and Lens metadata use Kirosho. Exact-root save verified at **21 October, 16:55:02 SGT**. All 21 renamed script/data assets retain their GUIDs. All 14 numerical checks and all seven product scenarios passed again with the new names; three passing runs also generated replacement footage. The final save includes the corrected active Leaf 2.0.2 bridge.
 
-The actual [74.1-second silent Preview sequence](media/preview-sequence.mp4), [331-word script](presentation_script.md), [shot list](demo_shot_list.md), [verification report](verification.md), model provenance and Devpost description are prepared. The silent cut is review material, not the final narrated competition video.
+The actual [68.5-second silent Kirosho Preview sequence](media/preview-sequence.mp4), [331-word script](presentation_script.md), [shot list](demo_shot_list.md), [verification report](verification.md), model provenance and Devpost description are prepared. All four clips and both stills were replaced with fresh Kirosho footage. The silent cut is review material, not the final narrated competition video.
 
-The complete project and presentation-preparation checkpoint **33abcd1** was pushed to the existing [public Kirosho repository](https://github.com/kaseyho/Kirosho). GitHub reports `codex/shadeshift` as its default branch and `isPrivate: false`; the remote branch hash matched the local checkpoint. Git LFS integrity checks passed and all eight required LFS objects uploaded. No YouTube upload or Devpost submission has occurred.
+The renamed application checkpoint **ec87528** is published in the existing [public Kirosho repository](https://github.com/kaseyho/Kirosho). GitHub's default branch and the local development branch are now `codex/kirosho`. Git LFS integrity checks passed. No YouTube upload or Devpost submission has occurred.
 
 **Known performance limit:** selected captures measured 12–16 updates/s; fast earlier runs reached approximately 30. The 30 fps target is not consistently met. Search was below two seconds in selected takes, with earlier slower runs retained. No physical SPECS result is claimed.
+
+The sections below retain earlier implementation checkpoints; current status is recorded above.
 
 Completed:
 
 - Inspected the saved plan and the initially empty Git repository.
 - Preserved the existing `https://github.com/kaseyho/Kirosho.git` remote.
-- Created the `codex/shadeshift` development branch.
+- Created the `codex/kirosho` development branch.
 - Added the official `lens-studio-devs/ls-extensions` marketplace and installed `ls-clad`.
 - Installed `challengepost/learn-specs`'s `plan-lens` skill into the project-local skill directory.
 - Added local-only exclusions for credentials, caches, and intermediate capture files.
@@ -32,7 +34,7 @@ Completed:
 - Installed and launched `/Applications/Lens Studio.app`, version `5.24.1.26100516`.
 - Verified the application signature and macOS assessment: accepted, notarized Developer ID, Snap Inc. (`424M5254LK`).
 - Verified accessible editor controls and the native Save As dialog work.
-- Created the official SPECS Base Template and saved `ShadeShift.esproj` at the repository root.
+- Created the official SPECS Base Template and saved `Kirosho.esproj` at the repository root.
 - Opened the root project in Lens Studio and verified the exact loaded path through MCP.
 - Loaded the Lens Studio MCP tools after the assistant-session restart; `ListAllPanels` and `VirtualScene read` succeeded.
 - Confirmed the template includes Spectacles Interaction Kit 2.0.0 and Spectacles UI Kit 2.0.0.
@@ -51,7 +53,7 @@ Completed:
 - Recorded a genuine Lens window stream with native ScreenCaptureKit and verified the before/after frames. The cropped proof clip is 20.8 seconds, 720 × 960, encoded at 30 fps; this is not a measured Lens frame-rate result.
 - Retained the detailed M0 evidence in [M0Verification.md](../Assets/QA/M0Verification.md), including the simulated pinch observation and capture limits.
 
-- Generated reproducible, timezone-aware SPA solar fixtures with payload SHA-256 `66b249d8d122f56667d38c4af44e65bf022745b4361a6dbda719854d0fe3a1ee`.
+- Generated reproducible, timezone-aware SPA solar fixtures with payload SHA-256 `405dccbbcd144cf4a4a572c1efd3566e7e907d7338da2ab133d2f5b6b8249e7b`.
 - Implemented the pure TypeScript projection, constraints, exact coverage, occupancy integration, placement search, revision guards, rollback, undo and snapshot state.
 - Passed all 14 numerical tests, including comparison of accelerated scores with complete two-roof evaluation for every permitted grid layout.
 - Verified the actual scenario regenerates 132 centers and 5,436 valid pairs. Changing occupancy changes the recommendation.
@@ -68,7 +70,7 @@ A subsequent genuine Find interaction completed in 1,972.592 ms during a support
 ### Current setup handoff
 
 The user opened **SPECS → Base Template**. Codex saved it, preserved a local staging
-copy, and opened `/Users/kc/Work/Kirosho/ShadeShift.esproj`. The project path is
+copy, and opened `/Users/kc/Work/Kirosho/Kirosho.esproj`. The project path is
 verified through `ExecuteEditorCode`, rather than inferred from the window title.
 
 The original chat and a child agent lacked the newly created MCP tools. A standalone
@@ -151,8 +153,8 @@ authentication, report that specific operation and preserve the local build.
 Do not include verification codes, OAuth parameters, or credentials in project
 documentation.
 
-Project and planning checkpoint: `7ced0fc` on `codex/shadeshift`. The checkpoint
-contains the starter Lens and planning documents, not an implemented ShadeShift
+Project and planning checkpoint: `7ced0fc` on `codex/kirosho`. The checkpoint
+contains the starter Lens and planning documents, not an implemented Kirosho
 runtime. Git LFS integrity verification passed; no remote publication occurred.
 
 ## Completion gates
@@ -162,7 +164,7 @@ runtime. Git LFS integrity verification passed; no remote publication occurred.
 | 0: automated workflow | Complete | Real button/drag/runtime/camera assertions, intentional LEAF failure followed by pass, and visually verified native preview clip; see `Assets/QA/M0Verification.md` |
 | 1: planning artifacts | Complete | `devpost/design-brief.md`, acceptance criteria, assumptions, attribution, and source-hash workflow record; template preservation check passed |
 | 2: calculation engine | Complete | Reproducible solar fixtures, 14 passing numerical tests, all 5,436 pair scores checked, occupancy-sensitive search; see `Assets/QA/Engine/NumericalVerification.md` |
-| 3: working Lens | Complete | Saved real SIK/UI Kit flow at application checkpoint abaef65 |
+| 3: working Lens | Complete | Saved real SIK/UI Kit flow at renamed application checkpoint ec87528 |
 | 4: verification and polish | Verified with performance limit | 14 numerical checks, seven product cases, final changed-case reruns, visual QA and measurements; 30 fps target remains inconsistent |
 | 5: presentation | Capture and script ready | Genuine Preview clips, consistent recommended-plan take, 331-word script; presenter recording pending |
 | 6: submission package | Prepared in part | Working repository, silent cut, stills, verification and English Devpost draft; final narrated edit, synchronized captions, upload and submission pending |

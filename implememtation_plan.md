@@ -1,10 +1,10 @@
-# ShadeShift: technical implementation and competition plan
+# Kirosho: technical implementation and competition plan
 
 ## 1. Product contract and competitive direction
 
 ### The problem and intended user
 
-Build ShadeShift for facilities and event planners deciding where to place a limited number of portable shelters.
+Build Kirosho for facilities and event planners deciding where to place a limited number of portable shelters.
 
 The specific problem: a shelter can appear correctly positioned while providing poor shade during the hours people actually occupy a space.
 

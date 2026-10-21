@@ -27,7 +27,7 @@ ls-live-instance.json
 ls-live-instance.json.tmp
 # END Lens Studio managed Agents-Docs block
 
-# ShadeShift local development
+# Kirosho local development
 # Local editor state, credentials, recordings, and generated caches
 .local/
 .mcp.json

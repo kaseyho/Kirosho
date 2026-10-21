@@ -1,10 +1,10 @@
 {
-  "schema": "shadeshift-plan-v1",
+  "schema": "kirosho-plan-v1",
   "modelVersion": "shade-rect-1.0.0",
   "scenarioId": "singapore-courtyard-v1",
   "profile": "school-day",
   "scenarioFingerprint": "fnv1a32:2b11c69e",
-  "solarSha256": "66b249d8d122f56667d38c4af44e65bf022745b4361a6dbda719854d0fe3a1ee",
+  "solarSha256": "405dccbbcd144cf4a4a572c1efd3566e7e907d7338da2ab133d2f5b6b8249e7b",
   "layoutFingerprint": "fnv1a32:6ac548da",
   "fingerprintScheme": "Canonical JSON + FNV-1a 32-bit (non-cryptographic); solar fixture SHA-256",
   "layout": {
@@ -25,7 +25,7 @@
   "evaluation": {
     "revision": 2,
     "minute": 720,
-    "inputHash": "fnv1a32:dda5e7e5",
+    "inputHash": "fnv1a32:4310a758",
     "layoutHash": "fnv1a32:6ac548da",
     "zones": [
       {
@@ -70,7 +70,7 @@
   "baselineEvaluation": {
     "revision": 2,
     "minute": 720,
-    "inputHash": "fnv1a32:dda5e7e5",
+    "inputHash": "fnv1a32:4310a758",
     "layoutHash": "fnv1a32:1f70eb40",
     "zones": [
       {

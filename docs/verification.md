@@ -1,8 +1,10 @@
-# ShadeShift verification
+# Kirosho verification
 
-Verified on 21 October 2026, Singapore time. Tested application checkpoint: **`abaef65`**. The earlier full-product checkpoint is `d7ba153`; the later checkpoint strengthens capture tests and the native recorder without changing product calculations or UI behavior.
+Verified on 21 October 2026, Singapore time. Tested Kirosho application checkpoint: **`ec87528`**. All 14 numerical checks and all seven product scenarios passed again after the rename. The calculation results and shelter layouts are unchanged.
 
-The exact root project was saved through the supported Lens Studio Editor API at **09:51:29.874 SGT**. Its scene SHA-256 is `dee50f9f97758888ee4e170785b2e12062edc71fc8e6cd48a6fdd7f188089875`. Application sources were compiled and the refreshed Preview was visually checked after each TypeScript change.
+The exact root project, `Kirosho.esproj`, was renamed through the supported Editor API and finally saved through Lens Studio at **16:55:02 SGT**. Its scene SHA-256 is `09ea0c41eea2d0f48485f7093127bbb777f251a801942d449baa1c3a3c47cec7`. All 21 renamed script/data assets retain their GUIDs. Application sources were compiled and the refreshed Preview was visually checked after each TypeScript change. The saved project, authored asset paths, text and metadata contain zero previous-brand matches.
+
+Runtime verification caught an undefined generated-data import despite successful compilation. Giving the generated TypeScript module the distinct basename `KiroshoSolarFixtures.ts` resolved it. Solar arrays and reference values are unchanged; schema and generator provenance were regenerated. Reopening also exposed a LEAF bridge using the older installed package; the saved bridge now references active Leaf 2.0.2. Editor defaults were checked after reloading and saving, rather than relying on an in-memory label change.
 
 ## Environment
 
@@ -22,24 +24,24 @@ The illustrative school-day result is **32.0703% → 62.2948%**, a **30.2246 per
 
 | LEAF scenario | Verified behavior |
 |---|---|
-| `shadeshift-timeline` | Held Slider updates before release; every hour preset from 12:00 through 17:00 sets the real clock; all three zone controls select the correct activity height; placement is preserved |
-| `shadeshift-placement` | A real SIK drag changes placement and coverage; corridor, boundary and overlap attempts show invalid ghosts and roll back |
-| `shadeshift-search` | Actual exhaustive search, same-input comparison, explicit lunch loss, no mutation before Apply, one Apply event, no-better state and Undo |
-| `shadeshift-cancel-stale` | Cancel preserves placement; an edit cancels an older job; stale Apply cannot replace the current layout |
-| `shadeshift-inspect-commit` | Find and Apply the 62.3% plan, inspect all three full-scale observations at exactly 20× overview span, return with the same layout/results, Commit its fingerprint, Reset |
-| `shadeshift-recovery` | Empty occupancy, different lunch-event recommendation, no feasible grid and corrupt input, followed by recovery through the actual Reset control |
-| `shadeshift-ik-route` | Fail-fast IK interaction succeeds once through the explicitly logged indirect/far-field route |
+| `kirosho-timeline` | Held Slider updates before release; every hour preset from 12:00 through 17:00 sets the real clock; all three zone controls select the correct activity height; placement is preserved |
+| `kirosho-placement` | A real SIK drag changes placement and coverage; corridor, boundary and overlap attempts show invalid ghosts and roll back |
+| `kirosho-search` | Actual exhaustive search, same-input comparison, explicit lunch loss, no mutation before Apply, one Apply event, no-better state and Undo |
+| `kirosho-cancel-stale` | Cancel preserves placement; an edit cancels an older job; stale Apply cannot replace the current layout |
+| `kirosho-inspect-commit` | Find and Apply the 62.3% plan, inspect all three full-scale observations at exactly 20× overview span, return with the same layout/results, Commit its fingerprint, Reset |
+| `kirosho-recovery` | Empty occupancy, different lunch-event recommendation, no feasible grid and corrupt input, followed by recovery through the actual Reset control |
+| `kirosho-ik-route` | Fail-fast IK interaction succeeds once through the explicitly logged indirect/far-field route |
 
-All seven have passing runs. The expanded timeline and combined plan/inspection checks were rerun successfully for capture. Normal interaction tests use real controls and observe the session; they do not write layout, score or suggestion state. Only exceptional-input fixtures use the Editor-only QA harness.
+All seven have fresh passing runs with the Kirosho scenario IDs. Timeline, placement and the combined plan/inspection check also generated the replacement recordings. Normal interaction tests use real controls and observe the session; they do not write layout, score or suggestion state. Only exceptional-input fixtures use the Editor-only QA harness.
 
 Before relying on the harness, the M0 smoke case was deliberately run with an incorrect expected increment: it failed, then passed with the correct expectation. [M0 evidence](../Assets/QA/M0Verification.md) records this negative control.
 
 ### A capture failure was retained and fixed
 
-The first slow-frame-rate placement take failed at 09:45:30.804:
+An earlier slow-frame-rate placement take failed at 09:45:30.804, before the current Kirosho recordings:
 
 ```text
-FAILED: shadeshift-placement - AssertionError: Expected: "true" - Received: "false"
+Placement scenario: AssertionError: Expected: "true" - Received: "false"
 ```
 
 The screenshot showed the last drag's corridor reason, rather than the intended overlap reason. A fixed per-update distance cap in the simulated hand made the long drag too slow at low Preview cadence. That take did not establish the overlap check and is excluded from the demonstration.
@@ -58,9 +60,9 @@ Depth-format fallback and material-batching warnings remain. No final product sc
 
 ## Recorded result
 
-The [74.1-second silent Preview sequence](media/preview-sequence.mp4) and four component clips show actual Lens Studio window frames captured with native ScreenCaptureKit. Sampled exported frames were visually checked. All exports are **1920 × 1080**, H.264, encoded at **30 fps**. Encoding does not establish Lens frame rate. Loading time, editor chrome and test overlays are excluded; no interaction is sped up and no results are inserted into the runtime.
+The [68.5-second silent Kirosho Preview sequence](media/preview-sequence.mp4) and four component clips show freshly recorded Lens Studio window frames captured with native ScreenCaptureKit. Sampled exported frames, the applied 62.3% state and the committed endpoint were visually checked. All exports are **1920 × 1080**, H.264, encoded at **30 fps**. Encoding does not establish Lens frame rate. Loading time, editor chrome and test overlays are excluded; no interaction is sped up and no results are inserted into the runtime.
 
-The recommendation, full-scale views and committed summary in the final plan take all use the same **62.3%** layout. The separate placement demonstration intentionally uses a manually changed layout. [Capture manifest](media/capture-manifest.json) identifies exports; raw takes and traces remain in ignored local evidence directories.
+The recommendation, full-scale views and committed summary in the final plan take all use the same **62.3%** layout. The separate placement demonstration intentionally uses a manually changed layout. [Capture manifest](media/capture-manifest.json) identifies exports; current raw takes use ignored local evidence directories, and earlier records remain in a private local artifact archive.
 
 The final narrated competition presentation, synchronized captions, YouTube URL and submission remain pending the presenter's talking-head recording. The silent sequence is review material, not the final submission video.
 

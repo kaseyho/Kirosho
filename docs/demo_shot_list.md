@@ -15,7 +15,7 @@ The spoken script is [presentation_script.md](presentation_script.md), **331 wor
 
 ## Verified visual material
 
-- [Silent sequence](media/preview-sequence.mp4): 74.1 seconds, 1920×1080, H.264, 30 fps encoding.
+- [Silent Kirosho sequence](media/preview-sequence.mp4): 68.5 seconds, 1920×1080, H.264, 30 fps encoding. All four clips were recorded again after the project rename.
 - [Recommendation still](media/recommendation.jpg) and [thumbnail](media/thumbnail.jpg) are extracted from the actual recorded take.
 - Full-scale and committed-plan footage uses the exact suggested layout shown immediately beforehand. No different baseline is substituted for the applied plan.
 - Native takes include Preview startup, which is trimmed away. Product interaction speed is unchanged. A static recorded recommendation frame may be held for reading; it must not be used to disguise search duration.

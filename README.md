@@ -1,8 +1,8 @@
-# ShadeShift
+# Kirosho
 
 Place the shelters you already own where they provide useful shade during the hours people actually occupy a space.
 
-ShadeShift is a SPECS Lens for facilities and event planners. It uses a spatial courtyard model, activity schedules and a bounded solar model to compare two portable-shelter placements. It is being built for [Learn AR with SPECS](https://learn-specs.devpost.com/).
+Kirosho is a SPECS Lens for facilities and event planners. It uses a spatial courtyard model, activity schedules and a bounded solar model to compare two portable-shelter placements. It is being built for [Learn AR with SPECS](https://learn-specs.devpost.com/).
 
 **Build status:** the functional prototype and actual Preview interaction footage are verified. The presenter recording and final narrated edit remain pending. Preview performance varies and the 30 fps target is not consistently met. See [verification](docs/verification.md) and [execution status](docs/execution_status.md).
 
@@ -10,14 +10,14 @@ ShadeShift is a SPECS Lens for facilities and event planners. It uses a spatial 
 
 ## Why this problem
 
-A shelter placed over a queue at noon may miss it later in the afternoon. A static roof footprint also says little about who uses each part of a site and when. ShadeShift combines moving shade with activity schedules and a fixed shelter inventory. It makes placement tradeoffs visible before a planner accepts a suggestion.
+A shelter placed over a queue at noon may miss it later in the afternoon. A static roof footprint also says little about who uses each part of a site and when. Kirosho combines moving shade with activity schedules and a fixed shelter inventory. It makes placement tradeoffs visible before a planner accepts a suggestion.
 
 The prototype uses a fictional 12 × 8 m Singapore school courtyard with two 3 × 3 m shelters. Site geometry and occupancy counts are illustrative. Solar positions are calculated for 20 October 2026; there is no live site scan, weather feed or physical-glasses footage.
 
 ## Open and run
 
 1. Clone this repository with [Git LFS](https://git-lfs.com/) installed, and run `git lfs pull` in the checkout.
-2. Open `ShadeShift.esproj` in Lens Studio 5.24.1 (tested build `5.24.1.26100516`). Keep the project at the repository root.
+2. Open `Kirosho.esproj` in Lens Studio 5.24.1 (tested build `5.24.1.26100516`). Keep the project at the repository root.
 3. Use the SPECS 27 Preview and the bundled **Plane** interactive environment, as used for the finished demonstration. The project includes its required native packages.
 4. Run the Preview. Runtime behavior is local and offline after installation.
 
@@ -65,7 +65,9 @@ The fixture records generator inputs, timezone, versions and its SHA-256. The so
 
 ## Preview integration checks
 
-The included LEAF registry exposes `shadeshift-timeline`, `shadeshift-placement`, `shadeshift-search`, `shadeshift-cancel-stale`, `shadeshift-inspect-commit`, `shadeshift-recovery` and `shadeshift-ik-route`. Run them from Lens Studio's LEAF panel with the Preview running. They use actual SIK/UIKit interaction paths and assert observable state; they do not inject a recommendation to imitate the user flow. The separate `shadeshift-m0-smoke` entry is historical coverage for a disabled diagnostic scene.
+The included LEAF registry exposes `kirosho-timeline`, `kirosho-placement`, `kirosho-search`, `kirosho-cancel-stale`, `kirosho-inspect-commit`, `kirosho-recovery` and `kirosho-ik-route`. Run them from Lens Studio's LEAF panel with the Preview running. They use actual SIK/UIKit interaction paths and assert observable state; they do not inject a recommendation to imitate the user flow. The separate `kirosho-m0-smoke` entry is historical coverage for a disabled diagnostic scene.
+
+The saved `LEAF Plugin Bridge` uses `Packages/Leaf 2.lspkg/Scenarios/scenario/MessagingBridge.ts` (Leaf 2.0.2). If a newly opened LEAF panel shows no scenarios after reloading the project, verify this reference: the editor can recreate the bridge from the older installed Leaf package. Refresh the Preview after selecting the active bridge.
 
 The timeline test checks updates while the knob is still held. The placement test covers all three constraint failures. Recovery-only fixtures supply invalid input through an Editor-only harness and recover with the actual Reset control. An intentional incorrect assertion was also verified to fail before relying on the harness. See [scene contract](Assets/QA/Runtime/SceneContract.md) and [current performance observations](docs/performance_observations.md). Desktop tests establish no physical-device or human-usability result.
 
@@ -73,7 +75,7 @@ The timeline test checks updates while the knob is still held. The placement tes
 
 | Path | Purpose |
 |---|---|
-| `ShadeShift.esproj`, `Assets/Scene.scene` | Actual SPECS Lens Studio project |
+| `Kirosho.esproj`, `Assets/Scene.scene` | Actual SPECS Lens Studio project |
 | `Assets/Scripts/Engine/` | Shared calculation, search and session state |
 | `Assets/Data/` | Illustrative scenario and generated solar fixtures |
 | `Assets/QA/` | Numerical tests, runtime test sources and verification evidence |
@@ -87,6 +89,6 @@ Generated Cache, Support, private connection files and local capture intermediat
 
 The project was planned with Devpost Learn's `plan-lens` skill and is built by Codex through Snap CLAD and the Lens Studio MCP. See [planning workflow](devpost/planning-workflow.md), [source attribution](devpost/source-attribution.md) and [model assumptions](devpost/model-assumptions.md).
 
-Original ShadeShift code is licensed under the [MIT License](LICENSE). Snap template assets and native packages retain their original terms and are excluded from that grant. pvlib's BSD license is retained in [Assets/ThirdParty](Assets/ThirdParty/pvlib-LICENSE.txt).
+Original Kirosho code is licensed under the [MIT License](LICENSE). Snap template assets and native packages retain their original terms and are excluded from that grant. pvlib's BSD license is retained in [Assets/ThirdParty](Assets/ThirdParty/pvlib-LICENSE.txt).
 
 Preview testing establishes desktop behavior only. Physical SPECS, field accuracy, structural suitability and human usability have not been validated.

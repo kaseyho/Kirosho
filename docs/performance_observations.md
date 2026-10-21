@@ -27,8 +27,8 @@ Both traces used CLAD's `specs-capture-perf-trace` scheduled Editor API procedur
 
 | Capture | Recorded duration | Bytes | Actual interaction |
 |---|---:|---:|---|
-| `shadeshift_representative_2026-10-20T18-16-55-388Z_preview0.pftrace` | 20,197 ms | 5,589,090 | Idle baseline only; the name does not establish a representative workflow |
-| `shadeshift_active_search_2026-10-20T18-21-45-665Z_preview0.pftrace` | 19,919 ms | 5,455,934 | Coordinate-targeted SIK Pinch on Find; real 5,436-layout search and tradeoff review |
+| Idle baseline (SHA-256 below) | 20,197 ms | 5,589,090 | Idle baseline only; the name does not establish a representative workflow |
+| Active search (SHA-256 below) | 19,919 ms | 5,455,934 | Coordinate-targeted SIK Pinch on Find; real 5,436-layout search and tradeoff review |
 
 The second capture started at 18:21:45.665 UTC. Find was observed at 18:21:47.728 and the suggestion at 18:21:49.655. The Lens's search instrumentation reported 1,972.592 ms. Its screenshot showed baseline/current 32.1%, suggested 62.3%, and the lunch loss from 76.1% to 0.0%. Results were observed through runtime inspection and logs, without injecting a layout or recommendation.
 
@@ -39,7 +39,7 @@ idle:   0c23314e0af3104082434d9867ba371e460d8970daa730435ed736e216f940e4
 search: f00dc99e1bdaad5f1d873ceb741e27ed8ba2c39a7a81fd92459a3b322ae4f9af
 ```
 
-Raw traces and local screenshots are retained under ignored `.local/` directories. The canonical CLAD Phase 1 analyzer was followed by bounded hierarchical SQL through its trace server. Analysis dependencies were perfetto 0.58.2 and protobuf 7.36.2; the downloaded trace processor identified its artifact as v57.2/mac-arm64.
+Raw traces and earlier screenshots are retained in a private local artifact archive. Current Kirosho verification evidence uses the ignored `.local/` directory. The canonical CLAD Phase 1 analyzer was followed by bounded hierarchical SQL through its trace server. Analysis dependencies were perfetto 0.58.2 and protobuf 7.36.2; the downloaded trace processor identified its artifact as v57.2/mac-arm64.
 
 ## What the trace establishes
 
@@ -65,8 +65,22 @@ The analyzer automatically classified this as a low-confidence mobile trace and 
 
 ## Later capture results and final boundary
 
-The passing recorded afternoon sweep measured 13.145 mean updates/s; the complete recommendation→Apply→full-scale→Commit flow measured 15.986; the passing placement take measured 12.072. All use the documented active-window method, retaining later gaps. Native recording ran concurrently. These are application update cadence, not measured display throughput.
+The earlier passing recorded afternoon sweep measured 13.145 mean updates/s; the complete recommendation→Apply→full-scale→Commit flow measured 15.986; the earlier passing placement take measured 12.072. All use the documented active-window method, retaining later gaps. Native recording ran concurrently. These are application update cadence, not measured display throughput.
 
 The placement automation originally failed because its fixed per-frame input cap did not reach the far overlap target at low cadence. Normalizing the **test hand's movement** by wall time resolved that input failure with all original assertions retained. It is not a product performance fix and is not counted as an increase in Lens frame rate. [Verification](verification.md) preserves the failure and passing rerun.
 
-The saved, demonstrated application checkpoint is **abaef65**. All selected exports are 1920×1080 and encoded at 30 fps for editing; no motion interpolation or interaction speed-up is used. The target of consistently reaching 30 Preview fps remains unmet under these capture conditions. No physical-device performance claim follows from these results.
+Those earlier measurements used application checkpoint **abaef65** and remain historical evidence. The current renamed, demonstrated application checkpoint is **ec87528**.
+
+## Fresh Kirosho recording checks
+
+All three recorded scenarios passed on the same application sources, with native window recording running concurrently:
+
+| Scenario | Mean updates/s | CPU input-to-settled-UI maximum | Other observation |
+|---|---:|---:|---|
+| Timeline | 13.612 | 24.331 ms | All hour presets and all three zones verified |
+| Placement | 14.766 | 17.940 ms | 97 drag callbacks; callback-to-scene maximum 29.712 ms |
+| Find, Apply, inspect, Commit | 14.668 | 20.097 ms | Exhaustive search 1,702.479 ms; same 62.3% plan throughout |
+
+The four shorter, docked-Preview scenarios measured 18.25–19.49 mean updates/s. Their successful school-day searches took 1,133.799–1,188.299 ms; the alternative lunch-event search took 1,207.585 ms. A cancelled search batch reached 100.501 ms CPU time and is retained rather than omitted.
+
+All current exports are 1920×1080 and encoded at 30 fps for editing; no motion interpolation or interaction speed-up is used. The target of consistently reaching 30 Preview fps remains unmet under these capture conditions. CPU timings exclude GPU/display latency. No physical-device performance claim follows from these results.

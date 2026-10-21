@@ -1,13 +1,28 @@
 {
-  "environment": "Actual Lens Studio5.24.1 / SPECS27 simulated Plane Preview",
-  "applicationCommit": "abaef65",
-  "disclosure": "Silent Preview sequence; not the final narrated competition video.30fps encoding is not measured Lens frame rate.",
+  "projectName": "Kirosho",
+  "environment": "Actual Lens Studio 5.24.1 / SPECS 27 simulated Plane Preview",
+  "applicationCommit": "ec87528",
+  "capturedOnSGT": "2026-10-21",
+  "disclosure": "Fresh silent Kirosho Preview sequence; final narrated competition video is pending. Encoded 30 fps is not measured Lens frame rate.",
+  "nativeCapture": {
+    "method": "macOS ScreenCaptureKit window frames",
+    "windowTitle": "Kirosho* - Lens Studio v5.24.1.26100516",
+    "width": 2048,
+    "height": 1600,
+    "simulatedHandInput": true,
+    "previewName": "Preview 3",
+    "audio": false
+  },
   "clips": [
     {
       "file": "01-afternoon.mp4",
-      "duration": 23.1,
-      "bytes": 697518,
-      "sha256": "dde45e4405355f0801c76cf968707a4d04ddb47fdef7e6c06390c86f7cc05548",
+      "source": "afternoon-native.mp4",
+      "startSeconds": 18.5,
+      "requestedDurationSeconds": 24.0,
+      "filter": "crop=1536:864:256:420,scale=1920:1080,fps=30,setsar=1",
+      "duration": 23.166667,
+      "bytes": 466265,
+      "sha256": "781f66823512241bcb9e73572dc35c040a75f4d9d217291e25c1c94d30cb9e35",
       "video": {
         "codec_name": "h264",
         "width": 1920,
@@ -18,9 +33,13 @@
     },
     {
       "file": "02-placement.mp4",
-      "duration": 27.0,
-      "bytes": 1236471,
-      "sha256": "ae08ece9dab78ab373cdab8cfbabbfdde4a74f04d0808e3bcd09354a133feff0",
+      "source": "placement-native.mp4",
+      "startSeconds": 26.2,
+      "requestedDurationSeconds": 24.6,
+      "filter": "crop=1536:864:256:420,scale=1920:1080,fps=30,setsar=1",
+      "duration": 24.566667,
+      "bytes": 847822,
+      "sha256": "8048daa93df1cab17b7e92f2df10757f23e7d2e8cbdf782dafc63297955f5c74",
       "video": {
         "codec_name": "h264",
         "width": 1920,
@@ -31,9 +50,13 @@
     },
     {
       "file": "03-recommend-apply.mp4",
-      "duration": 9.466667,
-      "bytes": 687820,
-      "sha256": "19e7a9a830f839bb55cff8cf7a523a84149d5a453f82cea38e395a16d26287a2",
+      "source": "plan-native.mp4",
+      "startSeconds": 16.2,
+      "requestedDurationSeconds": 7.0,
+      "filter": "crop=1536:864:256:420,scale=1920:1080,fps=30,setsar=1",
+      "duration": 7.0,
+      "bytes": 226568,
+      "sha256": "2986f556e011e8e8733d9345def8ece56ca9ef1c16225a618f80b7ba9a16b220",
       "video": {
         "codec_name": "h264",
         "width": 1920,
@@ -44,9 +67,13 @@
     },
     {
       "file": "04-inspect-commit.mp4",
-      "duration": 14.533333,
-      "bytes": 650111,
-      "sha256": "b905cf9a5a5a4279d1c025f43f597ca8401e350203361c364a5fa8e6cbc39b9e",
+      "source": "plan-native.mp4",
+      "startSeconds": 23.2,
+      "requestedDurationSeconds": 13.8,
+      "filter": "crop=2044:1232:2:268,scale=1792:1080,pad=1920:1080:64:0:black,fps=30,setsar=1",
+      "duration": 13.766667,
+      "bytes": 443880,
+      "sha256": "f15885c849c6e2469068c26e4d17d86cc3a2057dc9e6426049c08b334271c308",
       "video": {
         "codec_name": "h264",
         "width": 1920,
@@ -55,5 +82,69 @@
         "r_frame_rate": "30/1"
       }
     }
+  ],
+  "sequence": {
+    "file": "preview-sequence.mp4",
+    "durationSeconds": 68.5,
+    "width": 1920,
+    "height": 1080,
+    "encodingFps": 30,
+    "motionInterpolation": false,
+    "speedChange": false
+  },
+  "stills": [
+    {
+      "file": "thumbnail.jpg",
+      "source": "afternoon-native.mp4",
+      "sourceSecond": 22.0
+    },
+    {
+      "file": "recommendation.jpg",
+      "source": "plan-native.mp4",
+      "sourceSecond": 20.2
+    }
+  ],
+  "files": [
+    {
+      "file": "01-afternoon.mp4",
+      "bytes": 466265,
+      "sha256": "781f66823512241bcb9e73572dc35c040a75f4d9d217291e25c1c94d30cb9e35"
+    },
+    {
+      "file": "02-placement.mp4",
+      "bytes": 847822,
+      "sha256": "8048daa93df1cab17b7e92f2df10757f23e7d2e8cbdf782dafc63297955f5c74"
+    },
+    {
+      "file": "03-recommend-apply.mp4",
+      "bytes": 226568,
+      "sha256": "2986f556e011e8e8733d9345def8ece56ca9ef1c16225a618f80b7ba9a16b220"
+    },
+    {
+      "file": "04-inspect-commit.mp4",
+      "bytes": 443880,
+      "sha256": "f15885c849c6e2469068c26e4d17d86cc3a2057dc9e6426049c08b334271c308"
+    },
+    {
+      "file": "preview-sequence.mp4",
+      "bytes": 1982134,
+      "sha256": "07a1cfb829c9326244fd0a0a6fc4b96d25361c03f0322f1da71e79d6fdd2f65f"
+    },
+    {
+      "file": "recommendation.jpg",
+      "bytes": 146482,
+      "sha256": "790e42564e4eef10b175906e8da7c332b94dc0c7c282769a7ad02035688a3b9b"
+    },
+    {
+      "file": "thumbnail.jpg",
+      "bytes": 132198,
+      "sha256": "aad58cacb6242dd4fbe377a523d53c49ca3bb5fa84829b907030efe0309eef97"
+    }
+  ],
+  "visualReview": [
+    "All clips sampled at multiple timestamps.",
+    "Kirosho visible in actual Lens frames.",
+    "Applied and committed endpoints both retain the same 62.3% layout.",
+    "No editor chrome or test-status overlay in selected exports."
   ]
 }
