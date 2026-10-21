@@ -13,6 +13,8 @@ Latest application checkpoint: **abaef65**. Exact-root save verified at **21 Oct
 
 The actual [74.1-second silent Preview sequence](media/preview-sequence.mp4), [331-word script](presentation_script.md), [shot list](demo_shot_list.md), [verification report](verification.md), model provenance and Devpost description are prepared. The silent cut is review material, not the final narrated competition video.
 
+The complete project and presentation-preparation checkpoint **33abcd1** was pushed to the existing [public Kirosho repository](https://github.com/kaseyho/Kirosho). GitHub reports `codex/shadeshift` as its default branch and `isPrivate: false`; the remote branch hash matched the local checkpoint. Git LFS integrity checks passed and all eight required LFS objects uploaded. No YouTube upload or Devpost submission has occurred.
+
 **Known performance limit:** selected captures measured 12–16 updates/s; fast earlier runs reached approximately 30. The 30 fps target is not consistently met. Search was below two seconds in selected takes, with earlier slower runs retained. No physical SPECS result is claimed.
 
 Completed:
